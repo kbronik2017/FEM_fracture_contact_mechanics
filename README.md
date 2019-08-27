@@ -2,19 +2,14 @@
  <br>
  <img height="500" src="largedeformationteartest.png" />
  </br>
-    <div>
-            <a class="btn-octicon tooltipped tooltipped-nw hide-sm"
-               href="x-github-client://openRepo/https://github.com/kbronik2017/FEBIO2extended?branch=master&amp;filepath=FEBio_Theory_Manual.pdf"
-               aria-label="Open this file in GitHub Desktop"
-               data-ga-click="Repository, open with desktop, type:windows">
-                <svg class="octicon octicon-device-desktop" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M15 2H1c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1h5.34c-.25.61-.86 1.39-2.34 2h8c-1.48-.61-2.09-1.39-2.34-2H15c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm0 9H1V3h14v8z"/></svg>
-            </a>
-
-          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form" action="/kbronik2017/FEBIO2extended/delete/master/FEBio_Theory_Manual.pdf" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="/7jKzQ5yOfcYkAuE9gRidsgZz6wDvepEZrvukT/NyZTi9G7XrW6eFq0VmS6u/hEWY6IlkOf19tSWIslrkUUZDQ==" />
-            <button class="btn-octicon btn-octicon-danger tooltipped tooltipped-nw" type="submit"
-              aria-label="Delete this file" data-disable-with>
-              <svg class="octicon octicon-trashcan" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"/></svg>
-            </button>
-   </div>
+<div class="render-container js-render-target is-render-automatic is-render-requested is-render-ready" data-identity="4fe82d88-2693-4833-a317-6b30adec0832" data-host="https://render.githubusercontent.com" data-type="pdf" style="height: 19529px;">
+      <img class="octospinner mx-auto" alt="" src="https://github.githubassets.com/images/spinners/octocat-spinner-128.gif" width="64" height="64">
+      <div class="render-viewer-error">Sorry, something went wrong. <a href="https://github.com/kbronik2017/FEBIO2extended/blob/master/FEBio_Theory_Manual.pdf">Reload?</a></div>
+      <div class="render-viewer-fatal">Sorry, we cannot display this file.</div>
+      <div class="render-viewer-invalid">Sorry, this file is invalid so it cannot be displayed.</div>
+      <iframe class="render-viewer " src="https://render.githubusercontent.com/view/pdf?commit=0f981d087518b9bda6d64257dfc62fe44d4241b8&amp;enc_url=68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f6b62726f6e696b323031372f464542494f32657874656e6465642f306639383164303837353138623962646136643634323537646663363266653434643432343162382f464542696f5f5468656f72795f4d616e75616c2e706466&amp;nwo=kbronik2017%2FFEBIO2extended&amp;path=FEBio_Theory_Manual.pdf&amp;repository_id=204695627&amp;repository_type=Repository#4fe82d88-2693-4833-a317-6b30adec0832" sandbox="allow-scripts allow-same-origin allow-top-navigation " title="File display">
+          Viewer requires iframe.
+      </iframe>
+    </div>
 
  
