@@ -10,7 +10,7 @@
   </head>
   <body>
     <h1>How to disable downloading of the PDF document</h1>
-    <iframe src="https://github.com/kbronik2017/FEBIO2extended/FEBio_Theory_Manual.pdf" width="100%" height="500px">
+    <iframe src="FEBio_Theory_Manual.pdf" width="100%" height="500px">
     </iframe>
   </body>
 </html>
