@@ -1,0 +1,143 @@
+﻿Build started 07/10/2014 15:40:55.
+     1>Project "C:\Users\Kevin\Documents\febiosourcexxxx\VS2010\FEBioMix\FEBioMix.vcxproj" on node 3 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /FR"Debug\\" /Gd /TP /analyze- /errorReport:prompt ..\..\FEBioMix\FEBioMix.cpp ..\..\FEBioMix\FEBioMixData.cpp ..\..\FEBioMix\FEBioMixPlot.cpp ..\..\FEBioMix\FEBiphasic.cpp ..\..\FEBioMix\FEBiphasicAnalysis.cpp ..\..\FEBioMix\FEBiphasicContactSurface.cpp ..\..\FEBioMix\FEBiphasicSoluteAnalysis.cpp ..\..\FEBioMix\FEDiffAlbroIso.cpp ..\..\FEBioMix\FEHydraulicPermeability.cpp ..\..\FEBioMix\FEMixDomainFactory.cpp ..\..\FEBioMix\FEBiphasicSolidDomain.cpp ..\..\FEBioMix\FEBiphasicSolute.cpp ..\..\FEBioMix\FEBiphasicSoluteDomain.cpp ..\..\FEBioMix\FEBiphasicSoluteSolver.cpp ..\..\FEBioMix\FEBiphasicSolver.cpp ..\..\FEBioMix\FECarterHayes.cpp ..\..\FEBioMix\FEChemicalReaction.cpp ..\..\FEBioMix\FEConcentrationIndependentReaction.cpp ..\..\FEBioMix\FEDiffConstIso.cpp ..\..\FEBioMix\FEDiffConstOrtho.cpp ..\..\FEBioMix\FEDiffRefIso.cpp ..\..\FEBioMix\FEFluidFlux.cpp ..\..\FEBioMix\FEMassActionForward.cpp ..\..\FEBioMix\FEMassActionReversible.cpp ..\..\FEBioMix\FEMichaelisMenten.cpp ..\..\FEBioMix\FEMultiphasic.cpp ..\..\FEBioMix\FEMultiphasicAnalysis.cpp ..\..\FEBioMix\FEMultiphasicDomain.cpp ..\..\FEBioMix\FEMultiphasicMultigeneration.cpp ..\..\FEBioMix\FEMultiphasicSolver.cpp ..\..\FEBioMix\FEMultiphasicStandard.cpp ..\..\FEBioMix\FEOsmCoefConst.cpp ..\..\FEBioMix\FEOsmoticCoefficient.cpp ..\..\FEBioMix\FEPermConstIso.cpp ..\..\FEBioMix\FEPermHolmesMow.cpp ..\..\FEBioMix\FEPermRefIso.cpp ..\..\FEBioMix\FEPermRefOrtho.cpp ..\..\FEBioMix\FEPermRefTransIso.cpp ..\..\FEBioMix\FEPoroTraction.cpp ..\..\FEBioMix\FEReactionRateConst.cpp ..\..\FEBioMix\FEReactionRateHuiskes.cpp ..\..\FEBioMix\FESFDSBM.cpp ..\..\FEBioMix\FESlidingInterface2.cpp ..\..\FEBioMix\FESlidingInterface3.cpp ..\..\FEBioMix\FESlidingInterfaceMP.cpp ..\..\FEBioMix\FESolubConst.cpp ..\..\FEBioMix\FESolute.cpp ..\..\FEBioMix\FESoluteFlux.cpp ..\..\FEBioMix\FESolutesMaterialPoint.cpp ..\..\FEBioMix\FESolventSupply.cpp ..\..\FEBioMix\FESolventSupplyStarling.cpp ..\..\FEBioMix\FESupplyBinding.cpp ..\..\FEBioMix\FESupplyConst.cpp ..\..\FEBioMix\FESupplyMichaelisMenten.cpp ..\..\FEBioMix\FESupplySynthesisBinding.cpp ..\..\FEBioMix\FETiedBiphasicInterface.cpp ..\..\FEBioMix\FETriphasic.cpp ..\..\FEBioMix\FETriphasicDomain.cpp
+         FETriphasicDomain.cpp
+         FETriphasic.cpp
+         FETiedBiphasicInterface.cpp
+         FESupplySynthesisBinding.cpp
+         FESupplyMichaelisMenten.cpp
+         FESupplyConst.cpp
+         FESupplyBinding.cpp
+         FESolventSupplyStarling.cpp
+         FESolventSupply.cpp
+         FESolutesMaterialPoint.cpp
+         FESoluteFlux.cpp
+         FESolute.cpp
+     1>c:\users\kevin\documents\febiosourcexxxx\febiomix\fesolute.cpp(39): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(112) : see declaration of 'strcpy'
+     1>c:\users\kevin\documents\febiosourcexxxx\febiomix\fesolute.cpp(276): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(112) : see declaration of 'strcpy'
+         FESolubConst.cpp
+         FESlidingInterfaceMP.cpp
+     1>c:\users\kevin\documents\febiosourcexxxx\febiomix\feslidinginterfacemp.cpp(574): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\kevin\documents\febiosourcexxxx\febiomix\feslidinginterfacemp.cpp(575): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\kevin\documents\febiosourcexxxx\febiomix\feslidinginterfacemp.cpp(692): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\kevin\documents\febiosourcexxxx\febiomix\feslidinginterfacemp.cpp(695): warning C4018: '<' : signed/unsigned mismatch
+         FESlidingInterface3.cpp
+         FESlidingInterface2.cpp
+         FESFDSBM.cpp
+         FEReactionRateHuiskes.cpp
+         FEReactionRateConst.cpp
+         FEPoroTraction.cpp
+         Generating Code...
+         Compiling...
+         FEPermRefTransIso.cpp
+         FEPermRefOrtho.cpp
+         FEPermRefIso.cpp
+         FEPermHolmesMow.cpp
+         FEPermConstIso.cpp
+         FEOsmoticCoefficient.cpp
+         FEOsmCoefConst.cpp
+         FEMultiphasicStandard.cpp
+         FEMultiphasicSolver.cpp
+         FEMultiphasicMultigeneration.cpp
+         FEMultiphasicDomain.cpp
+         FEMultiphasicAnalysis.cpp
+         FEMultiphasic.cpp
+         FEMichaelisMenten.cpp
+         FEMassActionReversible.cpp
+         FEMassActionForward.cpp
+         FEFluidFlux.cpp
+         FEDiffRefIso.cpp
+         FEDiffConstOrtho.cpp
+         FEDiffConstIso.cpp
+         Generating Code...
+         Compiling...
+         FEConcentrationIndependentReaction.cpp
+         FEChemicalReaction.cpp
+         FECarterHayes.cpp
+         FEBiphasicSolver.cpp
+         FEBiphasicSoluteSolver.cpp
+         FEBiphasicSoluteDomain.cpp
+         FEBiphasicSolute.cpp
+         FEBiphasicSolidDomain.cpp
+         FEMixDomainFactory.cpp
+         FEHydraulicPermeability.cpp
+         FEDiffAlbroIso.cpp
+         FEBiphasicSoluteAnalysis.cpp
+         FEBiphasicContactSurface.cpp
+         FEBiphasicAnalysis.cpp
+         FEBiphasic.cpp
+         FEBioMixPlot.cpp
+         FEBioMixData.cpp
+         FEBioMix.cpp
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\Kevin\Documents\febiosourcexxxx\VS2010\Debug\FEBioMixd.lib" /NOLOGO Debug\FEBioMix.obj
+         Debug\FEBioMixData.obj
+         Debug\FEBioMixPlot.obj
+         Debug\FEBiphasic.obj
+         Debug\FEBiphasicAnalysis.obj
+         Debug\FEBiphasicContactSurface.obj
+         Debug\FEBiphasicSoluteAnalysis.obj
+         Debug\FEDiffAlbroIso.obj
+         Debug\FEHydraulicPermeability.obj
+         Debug\FEMixDomainFactory.obj
+         Debug\FEBiphasicSolidDomain.obj
+         Debug\FEBiphasicSolute.obj
+         Debug\FEBiphasicSoluteDomain.obj
+         Debug\FEBiphasicSoluteSolver.obj
+         Debug\FEBiphasicSolver.obj
+         Debug\FECarterHayes.obj
+         Debug\FEChemicalReaction.obj
+         Debug\FEConcentrationIndependentReaction.obj
+         Debug\FEDiffConstIso.obj
+         Debug\FEDiffConstOrtho.obj
+         Debug\FEDiffRefIso.obj
+         Debug\FEFluidFlux.obj
+         Debug\FEMassActionForward.obj
+         Debug\FEMassActionReversible.obj
+         Debug\FEMichaelisMenten.obj
+         Debug\FEMultiphasic.obj
+         Debug\FEMultiphasicAnalysis.obj
+         Debug\FEMultiphasicDomain.obj
+         Debug\FEMultiphasicMultigeneration.obj
+         Debug\FEMultiphasicSolver.obj
+         Debug\FEMultiphasicStandard.obj
+         Debug\FEOsmCoefConst.obj
+         Debug\FEOsmoticCoefficient.obj
+         Debug\FEPermConstIso.obj
+         Debug\FEPermHolmesMow.obj
+         Debug\FEPermRefIso.obj
+         Debug\FEPermRefOrtho.obj
+         Debug\FEPermRefTransIso.obj
+         Debug\FEPoroTraction.obj
+         Debug\FEReactionRateConst.obj
+         Debug\FEReactionRateHuiskes.obj
+         Debug\FESFDSBM.obj
+         Debug\FESlidingInterface2.obj
+         Debug\FESlidingInterface3.obj
+         Debug\FESlidingInterfaceMP.obj
+         Debug\FESolubConst.obj
+         Debug\FESolute.obj
+         Debug\FESoluteFlux.obj
+         Debug\FESolutesMaterialPoint.obj
+         Debug\FESolventSupply.obj
+         Debug\FESolventSupplyStarling.obj
+         Debug\FESupplyBinding.obj
+         Debug\FESupplyConst.obj
+         Debug\FESupplyMichaelisMenten.obj
+         Debug\FESupplySynthesisBinding.obj
+         Debug\FETiedBiphasicInterface.obj
+         Debug\FETriphasic.obj
+         Debug\FETriphasicDomain.obj
+     1>FEOsmoticCoefficient.obj : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+         FEBioMix.vcxproj -> C:\Users\Kevin\Documents\febiosourcexxxx\VS2010\Debug\FEBioMixd.lib
+       BscMake:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\bscmake.exe /nologo /o"C:\Users\Kevin\Documents\febiosourcexxxx\VS2010\Debug\FEBioMixd.bsc" /n Debug\FEBioMix.sbr Debug\FEBioMixData.sbr Debug\FEBioMixPlot.sbr Debug\FEBiphasic.sbr Debug\FEBiphasicAnalysis.sbr Debug\FEBiphasicContactSurface.sbr Debug\FEBiphasicSoluteAnalysis.sbr Debug\FEDiffAlbroIso.sbr Debug\FEHydraulicPermeability.sbr Debug\FEMixDomainFactory.sbr Debug\FEBiphasicSolidDomain.sbr Debug\FEBiphasicSolute.sbr Debug\FEBiphasicSoluteDomain.sbr Debug\FEBiphasicSoluteSolver.sbr Debug\FEBiphasicSolver.sbr Debug\FECarterHayes.sbr Debug\FEChemicalReaction.sbr Debug\FEConcentrationIndependentReaction.sbr Debug\FEDiffConstIso.sbr Debug\FEDiffConstOrtho.sbr Debug\FEDiffRefIso.sbr Debug\FEFluidFlux.sbr Debug\FEMassActionForward.sbr Debug\FEMassActionReversible.sbr Debug\FEMichaelisMenten.sbr Debug\FEMultiphasic.sbr Debug\FEMultiphasicAnalysis.sbr Debug\FEMultiphasicDomain.sbr Debug\FEMultiphasicMultigeneration.sbr Debug\FEMultiphasicSolver.sbr Debug\FEMultiphasicStandard.sbr Debug\FEOsmCoefConst.sbr Debug\FEOsmoticCoefficient.sbr Debug\FEPermConstIso.sbr Debug\FEPermHolmesMow.sbr Debug\FEPermRefIso.sbr Debug\FEPermRefOrtho.sbr Debug\FEPermRefTransIso.sbr Debug\FEPoroTraction.sbr Debug\FEReactionRateConst.sbr Debug\FEReactionRateHuiskes.sbr Debug\FESFDSBM.sbr Debug\FESlidingInterface2.sbr Debug\FESlidingInterface3.sbr Debug\FESlidingInterfaceMP.sbr Debug\FESolubConst.sbr Debug\FESolute.sbr Debug\FESoluteFlux.sbr Debug\FESolutesMaterialPoint.sbr Debug\FESolventSupply.sbr Debug\FESolventSupplyStarling.sbr Debug\FESupplyBinding.sbr Debug\FESupplyConst.sbr Debug\FESupplyMichaelisMenten.sbr Debug\FESupplySynthesisBinding.sbr Debug\FETiedBiphasicInterface.sbr Debug\FETriphasic.sbr Debug\FETriphasicDomain.sbr
+     1>Done Building Project "C:\Users\Kevin\Documents\febiosourcexxxx\VS2010\FEBioMix\FEBioMix.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:01:54.34

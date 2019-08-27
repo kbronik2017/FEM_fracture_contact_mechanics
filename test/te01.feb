@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Problem Description:
+	A tetrahedral element has a prescribed displacement of -0.5 units in the z-direction
+	on the top node.
+Main Features:
+	Tetrahedral element
+Secondary Features:
+	
+Materials:
+	Mooney-Rivlin
+Degrees of Freedom: 3
+Results:
+	Steps Completed: 1
+	Equilibrium Iterations: 12
+	Right Hand Evaluations: 17
+	Siffness Reformations: 2
+	Other:
+		Top node has a displacement of 0.3224 at time t=1.
+Comments:
+	
+-->
+<febio_spec version="1.2">
+	<Control>
+		<title>Tetrahedral Element</title>
+		<time_steps>1</time_steps>
+		<step_size>1</step_size>
+		<max_refs>15</max_refs>
+		<max_ups>10</max_ups>
+		<dtol>0.001</dtol>
+		<etol>0.01</etol>
+		<rtol>0</rtol>
+		<lstol>0.9</lstol>
+		<plot_level>PLOT_DEFAULT</plot_level>
+	</Control>
+	<Material>
+		<material id="1" name="Material 1" type="Mooney-Rivlin">
+			<c1>1</c1>
+			<c2>0</c2>
+			<k>1000</k>
+		</material>
+	</Material>
+	<Geometry>
+		<Nodes>
+			<node id="1">0,0,0</node>
+			<node id="2">1,0,0</node>
+			<node id="3">0,1,0</node>
+			<node id="4">0,0,1</node>
+		</Nodes>
+		<Elements>
+			<tet4 id="1" mat="1">     1,     2,     3,     4</tet4>
+		</Elements>
+	</Geometry>
+	<Boundary>
+		<fix>
+			<node id="1" bc="xyz"></node>
+			<node id="2" bc="yz"></node>
+			<node id="3" bc="xz"></node>
+			<node id="4" bc="xy"></node>
+		</fix>
+	</Boundary>
+	<Loads>
+		<force>
+			<node id="4" bc="z" lc="1">1</node>
+		</force>
+	</Loads>
+	<LoadData>
+		<loadcurve id="1">
+			<loadpoint>0,0</loadpoint>
+			<loadpoint>1,-0.5</loadpoint>
+		</loadcurve>
+	</LoadData>
+	<Output>
+		<logfile>
+			<element_data data="Ex;Ey;Ez;Exy;Eyz;Exz"></element_data>
+		</logfile>
+	</Output>
+	<Output>
+		<plotfile type="febio"></plotfile>
+        <logfile>
+          <element_data data="sz">1</element_data>
+        </logfile>		
+	</Output>
+</febio_spec>

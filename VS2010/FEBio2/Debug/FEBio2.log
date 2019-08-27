@@ -1,0 +1,53 @@
+﻿Build started 07/10/2014 15:44:24.
+     1>Project "C:\Users\Kevin\Documents\febiosourcexxxx\VS2010\FEBio2\FEBio2.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _CRT_SECURE_NO_WARNINGS /D PARDISO /D MKL_ISS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /FR"Debug\\" /Gd /TP /analyze- /errorReport:prompt ..\..\FEBio2\CommandManager.cpp ..\..\FEBio2\console.cpp ..\..\FEBio2\diagnose.cpp ..\..\FEBio2\FEBio.cpp ..\..\FEBio2\FEBioCommand.cpp ..\..\FEBio2\FEBioStdSolver.cpp ..\..\FEBio2\FEContactDiagnostic.cpp ..\..\FEBio2\FEDiagnostic.cpp ..\..\FEBio2\FEMemoryDiagnostic.cpp ..\..\FEBio2\FEPrintHBMatrixDiagnostic.cpp ..\..\FEBio2\FEPrintMatrixDiagnostic.cpp ..\..\FEBio2\FETangentDiagnostic.cpp ..\..\FEBio2\Interrupt.cpp ..\..\FEBio2\plugin.cpp ..\..\FEBio2\stdafx.cpp
+         stdafx.cpp
+         plugin.cpp
+         Interrupt.cpp
+         FETangentDiagnostic.cpp
+         FEPrintMatrixDiagnostic.cpp
+         FEPrintHBMatrixDiagnostic.cpp
+         FEMemoryDiagnostic.cpp
+         FEDiagnostic.cpp
+         FEContactDiagnostic.cpp
+         FEBioStdSolver.cpp
+         FEBioCommand.cpp
+         FEBio.cpp
+         diagnose.cpp
+         console.cpp
+         CommandManager.cpp
+         Generating Code...
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /nologo /fo"Debug\FEBio2.res" FEBio2.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Kevin\Documents\febiosourcexxxx\VS2010\Debug\FEBio2.exe" /INCREMENTAL /NOLOGO fecored.lib numcored.lib febiolibd.lib febiomechd.lib febioheatd.lib febiomixd.lib febiooptd.lib febioplotd.lib febioxmld.lib mkl_intel_c.lib mkl_intel_thread.lib mkl_core.lib libiomp5mt.lib levmard.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Kevin\Documents\febiosourcexxxx\VS2010\Debug\FEBio2.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Kevin\Documents\febiosourcexxxx\VS2010\Debug\FEBio2.lib" /MACHINE:X86 Debug\FEBio2.res
+         Debug\CommandManager.obj
+         Debug\console.obj
+         Debug\diagnose.obj
+         Debug\FEBio.obj
+         Debug\FEBioCommand.obj
+         Debug\FEBioStdSolver.obj
+         Debug\FEContactDiagnostic.obj
+         Debug\FEDiagnostic.obj
+         Debug\FEMemoryDiagnostic.obj
+         Debug\FEPrintHBMatrixDiagnostic.obj
+         Debug\FEPrintMatrixDiagnostic.obj
+         Debug\FETangentDiagnostic.obj
+         Debug\Interrupt.obj
+         Debug\plugin.obj
+         Debug\stdafx.obj
+     1>levmard.lib(lm.obj) : warning LNK4099: PDB 'levmard.pdb' was not found with 'levmard.lib(lm.obj)' or at 'C:\Users\Kevin\Documents\febiosourcexxxx\VS2010\Debug\levmard.pdb'; linking object as if no debug info
+     1>levmard.lib(Axb.obj) : warning LNK4099: PDB 'levmard.pdb' was not found with 'levmard.lib(Axb.obj)' or at 'C:\Users\Kevin\Documents\febiosourcexxxx\VS2010\Debug\levmard.pdb'; linking object as if no debug info
+     1>levmard.lib(misc.obj) : warning LNK4099: PDB 'levmard.pdb' was not found with 'levmard.lib(misc.obj)' or at 'C:\Users\Kevin\Documents\febiosourcexxxx\VS2010\Debug\levmard.pdb'; linking object as if no debug info
+     1>levmard.lib(lmlec.obj) : warning LNK4099: PDB 'levmard.pdb' was not found with 'levmard.lib(lmlec.obj)' or at 'C:\Users\Kevin\Documents\febiosourcexxxx\VS2010\Debug\levmard.pdb'; linking object as if no debug info
+     1>levmard.lib(lmbc.obj) : warning LNK4099: PDB 'levmard.pdb' was not found with 'levmard.lib(lmbc.obj)' or at 'C:\Users\Kevin\Documents\febiosourcexxxx\VS2010\Debug\levmard.pdb'; linking object as if no debug info
+     1>levmard.lib(lmblec.obj) : warning LNK4099: PDB 'levmard.pdb' was not found with 'levmard.lib(lmblec.obj)' or at 'C:\Users\Kevin\Documents\febiosourcexxxx\VS2010\Debug\levmard.pdb'; linking object as if no debug info
+         FEBio2.vcxproj -> C:\Users\Kevin\Documents\febiosourcexxxx\VS2010\Debug\FEBio2.exe
+       BscMake:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\bscmake.exe /nologo /o"C:\Users\Kevin\Documents\febiosourcexxxx\VS2010\Debug\FEBio2.bsc" /n Debug\CommandManager.sbr Debug\console.sbr Debug\diagnose.sbr Debug\FEBio.sbr Debug\FEBioCommand.sbr Debug\FEBioStdSolver.sbr Debug\FEContactDiagnostic.sbr Debug\FEDiagnostic.sbr Debug\FEMemoryDiagnostic.sbr Debug\FEPrintHBMatrixDiagnostic.sbr Debug\FEPrintMatrixDiagnostic.sbr Debug\FETangentDiagnostic.sbr Debug\Interrupt.sbr Debug\plugin.sbr Debug\stdafx.sbr
+     1>Done Building Project "C:\Users\Kevin\Documents\febiosourcexxxx\VS2010\FEBio2\FEBio2.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:42.04

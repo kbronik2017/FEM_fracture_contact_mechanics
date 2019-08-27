@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Problem Description:
+	An element of muscle material with fiber orientation in the x-direction has a
+	prescribed x-displacement of 0.2 units at time t=1.
+Main Features:
+	Muscle Material
+Secondary Features:
+	
+Materials:
+	Muscle Material
+Degrees of Freedom: 12
+Results:
+	Steps Completed: 10
+	Equilibrium Iterations: 30
+	Right Hand Evaluations: 40
+	Siffness Reformations: 10
+	Other:
+		The top of the element has a z-displacement of -0.864 at time t=1.
+Comments:
+	
+-->
+<febio_spec version="1.2">
+	<Control>
+		<title>Muscle Element</title>
+		<time_steps>10</time_steps>
+		<step_size>0.1</step_size>
+		<max_refs>15</max_refs>
+		<max_ups>10</max_ups>
+		<dtol>0.001</dtol>
+		<etol>0.01</etol>
+		<rtol>0</rtol>
+		<lstol>0.9</lstol>
+		<time_stepper>
+			<dtmin>0.01</dtmin>
+			<dtmax>0.1</dtmax>
+			<max_retries>5</max_retries>
+			<opt_iter>10</opt_iter>
+		</time_stepper>
+		<plot_level>PLOT_DEFAULT</plot_level>
+	</Control>
+	<Material>
+		<material id="1" name="Material 1" type="muscle material">
+			<g1>5e2</g1>
+			<g2>5e2</g2>
+			<p1>0.05</p1>
+			<p2>6.6</p2>
+			<k>1e7</k>
+			<Lofl>1.0</Lofl>
+			<smax>3e5</smax>
+			<lam_max>1.4</lam_max>
+			<fiber type="vector">1,0,0</fiber>
+		</material>
+	</Material>
+	<Geometry>
+		<Nodes>
+			<node id="1">-5.0000000e-001,-5.0000000e-001, 0.0000000e+000</node>
+			<node id="2">-5.0000000e-001,-5.0000000e-001, 1.0000000e+000</node>
+			<node id="3">-5.0000000e-001, 5.0000000e-001, 0.0000000e+000</node>
+			<node id="4">-5.0000000e-001, 5.0000000e-001, 1.0000000e+000</node>
+			<node id="5"> 5.0000000e-001,-5.0000000e-001, 0.0000000e+000</node>
+			<node id="6"> 5.0000000e-001,-5.0000000e-001, 1.0000000e+000</node>
+			<node id="7"> 5.0000000e-001, 5.0000000e-001, 0.0000000e+000</node>
+			<node id="8"> 5.0000000e-001, 5.0000000e-001, 1.0000000e+000</node>
+		</Nodes>
+		<Elements>
+			<hex8 id="1" mat="1">     1,     5,     7,     3,     2,     6,     8,     4</hex8>
+		</Elements>
+	</Geometry>
+	<Boundary>
+		<fix>
+			<node id="1" bc="xyz"></node>
+			<node id="2" bc="xy"></node>
+			<node id="3" bc="xz"></node>
+			<node id="4" bc="x"></node>
+			<node id="5" bc="yz"></node>
+			<node id="6" bc="y"></node>
+			<node id="7" bc="z"></node>
+		</fix>
+		<prescribe>
+			<node id="5" bc="x" lc="1">1</node>
+			<node id="6" bc="x" lc="1">1</node>
+			<node id="7" bc="x" lc="1">1</node>
+			<node id="8" bc="x" lc="1">1</node>
+		</prescribe>
+	</Boundary>
+	<LoadData>
+		<loadcurve id="1">
+			<loadpoint>0,0</loadpoint>
+			<loadpoint>1,0.2</loadpoint>
+		</loadcurve>
+	</LoadData>
+	<Output>
+		<plotfile type="febio"></plotfile>
+		<logfile>
+			<element_data data="Ey">1</element_data>
+		</logfile>
+	</Output>
+</febio_spec>

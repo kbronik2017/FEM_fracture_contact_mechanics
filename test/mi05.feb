@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Problem Description:
+	Two element structure.  Node 1 is constrained in x,y,z.  Node 12 has an x-displacement of
+	1 unit at time t=1.  The z-displacement of node 10 is the negative of the x-displacement
+	of node 12.  Node 3 is constrained to move only in the y-direction.
+Main Features:
+	Linear constraints
+Secondary Features:
+	
+Materials:
+	Neo-Hookean
+Degrees of Freedom: 28
+Results:
+	Steps Completed: 10
+	Equilibrium Iterations: 50
+	Right Hand Evaluations: 60
+	Siffness Reformations: 10
+	Other:
+		The coordinates of node 10 at t=1 are: x=1.312, y=-0.4283, z=0.
+Comments:
+	
+-->
+<febio_spec version="1.2">
+	<Control>
+		<title>Linear Constraints</title>
+		<time_steps>10</time_steps>
+		<step_size>0.1</step_size>
+		<max_refs>15</max_refs>
+		<max_ups>10</max_ups>
+		<dtol>0.001</dtol>
+		<etol>0.01</etol>
+		<rtol>0</rtol>
+		<lstol>0.9</lstol>
+		<pressure_stiffness>1</pressure_stiffness>
+		<time_stepper>
+			<dtmin>0.01</dtmin>
+			<dtmax>0.1</dtmax>
+			<max_retries>5</max_retries>
+			<opt_iter>10</opt_iter>
+		</time_stepper>
+		<plot_level>PLOT_DEFAULT</plot_level>
+	</Control>
+	<Material>
+		<material id="1" name="Material 1" type="neo-Hookean">
+			<E>1</E>
+			<v>0</v>
+		</material>
+	</Material>
+	<Geometry>
+		<Nodes>
+			<node id="1">-1.0000000e+000,-5.0000000e-001, 0.0000000e+000</node>
+			<node id="2">-1.0000000e+000,-5.0000000e-001, 1.0000000e+000</node>
+			<node id="3">-1.0000000e+000, 5.0000000e-001, 0.0000000e+000</node>
+			<node id="4">-1.0000000e+000, 5.0000000e-001, 1.0000000e+000</node>
+			<node id="5"> 0.0000000e+000,-5.0000000e-001, 0.0000000e+000</node>
+			<node id="6"> 0.0000000e+000,-5.0000000e-001, 1.0000000e+000</node>
+			<node id="7"> 0.0000000e+000, 5.0000000e-001, 0.0000000e+000</node>
+			<node id="8"> 0.0000000e+000, 5.0000000e-001, 1.0000000e+000</node>
+			<node id="9"> 1.0000000e+000,-5.0000000e-001, 0.0000000e+000</node>
+			<node id="10"> 1.0000000e+000,-5.0000000e-001, 1.0000000e+000</node>
+			<node id="11"> 1.0000000e+000, 5.0000000e-001, 0.0000000e+000</node>
+			<node id="12"> 1.0000000e+000, 5.0000000e-001, 1.0000000e+000</node>
+		</Nodes>
+		<Elements>
+			<hex8 id="1" mat="1">     1,     5,     7,     3,     2,     6,     8,     4</hex8>
+			<hex8 id="2" mat="1">     5,     9,    11,     7,     6,    10,    12,     8</hex8>
+		</Elements>
+	</Geometry>
+	<Boundary>
+		<fix>
+			<node id="1" bc="xyz"></node>
+			<node id="3" bc="xz"></node>
+			<node id="12" bc="yz"></node>
+		</fix>
+		<prescribe>
+			<node id="12" bc="x" lc="1">1</node>
+		</prescribe>
+		<linear_constraint node="10" bc="z">
+			<node id="12" bc="x">-1</node>
+		</linear_constraint>
+	</Boundary>
+	<LoadData>
+		<loadcurve id="1">
+			<loadpoint>0,0</loadpoint>
+			<loadpoint>1,1</loadpoint>
+		</loadcurve>
+	</LoadData>
+	<Output>
+		<plotfile type="febio"></plotfile>
+		<logfile>
+			<element_data data="sx">2</element_data>
+		</logfile>
+	</Output>
+</febio_spec>

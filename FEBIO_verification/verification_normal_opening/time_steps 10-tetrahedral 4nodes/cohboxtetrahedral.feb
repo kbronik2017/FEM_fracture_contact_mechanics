@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<febio_spec version="2.0">
+	<Globals>
+		<Constants>
+			<T>0</T>
+			<R>0</R>
+			<Fc>0</Fc>
+		</Constants>
+	</Globals>
+	<Material>
+		<material id="1" name="Material1" type="isotropic elastic">
+			<density>1</density>
+			<E>5e+006</E>
+			<v>0.48</v>
+		</material>
+	</Material>
+	<Geometry>
+		<Nodes>
+			<node id="1">-5.0000000e-001,-5.0000000e-001, 0.0000000e+000</node>
+			<node id="2"> 5.0000000e-001,-5.0000000e-001, 0.0000000e+000</node>
+			<node id="3"> 5.0000000e-001, 5.0000000e-001, 0.0000000e+000</node>
+			<node id="4">-5.0000000e-001, 5.0000000e-001, 0.0000000e+000</node>
+			<node id="5">-5.0000000e-001,-5.0000000e-001, 1.0000000e+000</node>
+			<node id="6"> 5.0000000e-001,-5.0000000e-001, 1.0000000e+000</node>
+			<node id="7"> 5.0000000e-001, 5.0000000e-001, 1.0000000e+000</node>
+			<node id="8">-5.0000000e-001, 5.0000000e-001, 1.0000000e+000</node>
+			<node id="9">-5.0000000e-001,-5.0000000e-001, 1.0000000e+000</node>
+			<node id="10"> 5.0000000e-001,-5.0000000e-001, 1.0000000e+000</node>
+			<node id="11"> 5.0000000e-001, 5.0000000e-001, 1.0000000e+000</node>
+			<node id="12">-5.0000000e-001, 5.0000000e-001, 1.0000000e+000</node>
+			<node id="13">-5.0000000e-001,-5.0000000e-001, 2.0000000e+000</node>
+			<node id="14"> 5.0000000e-001,-5.0000000e-001, 2.0000000e+000</node>
+			<node id="15"> 5.0000000e-001, 5.0000000e-001, 2.0000000e+000</node>
+			<node id="16">-5.0000000e-001, 5.0000000e-001, 2.0000000e+000</node>
+		</Nodes>
+		<Elements type="tet4" mat="1" elset="Part1">
+			<elem id="1">     1,     4,     8,     3</elem>
+			<elem id="2">     1,     8,     5,     7</elem>
+			<elem id="3">     6,     1,     5,     7</elem>
+			<elem id="4">     1,     8,     7,     3</elem>
+			<elem id="5">     6,     1,     7,     2</elem>
+			<elem id="6">     7,     1,     3,     2</elem>
+		</Elements>
+		<Elements type="tet4" mat="1" elset="Part2">
+			<elem id="7">     9,    12,    16,    11</elem>
+			<elem id="8">     9,    16,    13,    15</elem>
+			<elem id="9">    14,     9,    13,    15</elem>
+			<elem id="10">     9,    16,    15,    11</elem>
+			<elem id="11">    14,     9,    15,    10</elem>
+			<elem id="12">    15,     9,    11,    10</elem>
+		</Elements>
+	</Geometry>
+	<Boundary>
+		<fix bc="xyz">
+			<node id="1"/>
+			<node id="2"/>
+			<node id="3"/>
+			<node id="4"/>
+			<node id="5"/>
+			<node id="6"/>
+			<node id="7"/>
+			<node id="8"/>
+		</fix>
+		<fix bc="uvw">
+			<node id="1"/>
+			<node id="2"/>
+			<node id="3"/>
+			<node id="4"/>
+			<node id="5"/>
+			<node id="6"/>
+			<node id="7"/>
+			<node id="8"/>
+		</fix>
+	</Boundary>
+	<LoadData>
+		<loadcurve id="1" type="linear">
+			<loadpoint>0,0</loadpoint>
+			<loadpoint>0.111111111111,0.111111111111</loadpoint>
+			<loadpoint>0.222222222222,0.222222222222</loadpoint>
+			<loadpoint>0.333333333333,0.333333333333</loadpoint>
+			<loadpoint>0.444444444444,0.444444444444</loadpoint>
+			<loadpoint>0.555555555556,0.555555555556</loadpoint>
+			<loadpoint>0.666666666667,0.666666666667</loadpoint>
+			<loadpoint>0.777777777778,0.777777777778</loadpoint>
+			<loadpoint>0.888888888889,0.888888888889</loadpoint>
+			<loadpoint>1,1</loadpoint>
+		</loadcurve>
+	</LoadData>
+	<Output>
+		<plotfile type="febio">
+			<var type="acceleration"/>
+			<var type="contact force"/>
+			<var type="contact gap"/>
+			<var type="contact pressure"/>
+			<var type="contact traction"/>
+			<var type="displacement"/>
+			<var type="effective fluid pressure"/>
+			<var type="fluid flux"/>
+			<var type="reaction forces"/>
+			<var type="relative volume"/>
+			<var type="shell thickness"/>
+			<var type="stress"/>
+			<var type="velocity"/>
+		</plotfile>
+	</Output>
+	<Step name="Step01">
+		<Module type="solid"/>
+		<Control>
+			<time_steps>10</time_steps>
+			<step_size>0.1</step_size>
+			<max_refs>3500</max_refs>
+			<max_ups>0</max_ups>
+			<dtol>0.001</dtol>
+			<etol>0.01</etol>
+			<rtol>0</rtol>
+			<lstol>0.9</lstol>
+			<time_stepper>
+				<dtmin>0.01</dtmin>
+				<dtmax>0.1</dtmax>
+				<max_retries>5</max_retries>
+				<opt_iter>10</opt_iter>
+			</time_stepper>
+			<analysis type="static"/>
+		</Control>
+		<Boundary>
+			<prescribe type="relative" bc="z" lc="1">
+				<node id="9">0.00035</node>
+				<node id="10">0.00035</node>
+				<node id="11">0.00035</node>
+				<node id="12">0.00035</node>
+				<node id="13">0.00035</node>
+				<node id="14">0.00035</node>
+				<node id="15">0.00035</node>
+				<node id="16">0.00035</node>
+			</prescribe>
+		</Boundary>
+		<Contact>
+			<contact type="facet-to-facet sliding" name="Sliding01">
+				<laugon>1</laugon>
+				<tolerance>0.2</tolerance>
+				<penalty>1</penalty>
+				<two_pass>1</two_pass>
+				<auto_penalty>1</auto_penalty>
+				<fric_coeff>0</fric_coeff>
+				<fric_penalty>0</fric_penalty>
+				<search_tol>0.01</search_tol>
+				<n_interf_strength>1</n_interf_strength>
+			    <t_interf_strength>1</t_interf_strength>
+			    <n_char_op>0.0001</n_char_op>
+			    <t_char_op>0.0001</t_char_op>
+				<minaug>0</minaug>
+				<maxaug>10</maxaug>
+				<gaptol>0</gaptol>
+				<seg_up>0</seg_up>
+				<surface type="master">
+					<tri3 id="1">     6,     7,     5</tri3>
+					<tri3 id="2">     8,     5,     7</tri3>
+				</surface>
+				<surface type="slave">
+					<tri3 id="1">     9,    12,    11</tri3>
+					<tri3 id="2">    10,     9,    11</tri3>
+				</surface>
+			</contact>
+		</Contact>
+	</Step>
+</febio_spec>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="a9f8d592-e544-4847-867c-5ccd684b1bf7" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="e0624683-65b8-4e7c-bf1a-258460a32ef4" name="FEBio2">
+      <childLayers>
+        <layer Id="72f3a5cd-ce25-4e0d-894b-063f872c4c49" name="Layer1" />
+      </childLayers>
+      <references>
+        <reference Id="41b3b99d-a82e-4f5d-aa44-7e929448bb1d" name="FEBio2">
+          <ArtifactNode Label="FEBio2" Category="CodeSchema_Project" Id="(Assembly=&quot;$(PersonalUri)/febiosourcexxxx/VS2013/FEBio2/FEBio2.vcxproj&quot;)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=FEBio2.exe)" Label="FEBio2.exe" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.exe" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+  </layers>
+</layerModel>

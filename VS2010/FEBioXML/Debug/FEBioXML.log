@@ -1,0 +1,52 @@
+﻿Build started 07/10/2014 15:43:11.
+     1>Project "C:\Users\Kevin\Documents\febiosourcexxxx\VS2010\FEBioXML\FEBioXML.vcxproj" on node 3 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /FR"Debug\\" /Gd /TP /analyze- /errorReport:prompt ..\..\FEBioXML\FEBioBoundarySection.cpp ..\..\FEBioXML\FEBioConstraintsSection.cpp ..\..\FEBioXML\FEBioContactSection.cpp ..\..\FEBioXML\FEBioControlSection.cpp ..\..\FEBioXML\FEBioDiscreteSection.cpp ..\..\FEBioXML\FEBioGeometrySection.cpp ..\..\FEBioXML\FEBioGlobalsSection.cpp ..\..\FEBioXML\FEBioImport.cpp ..\..\FEBioXML\FEBioInitialSection.cpp ..\..\FEBioXML\FEBioLoadDataSection.cpp ..\..\FEBioXML\FEBioLoadsSection.cpp ..\..\FEBioXML\FEBioMaterialSection.cpp ..\..\FEBioXML\FEBioModuleSection.cpp ..\..\FEBioXML\FEBioOutputSection.cpp ..\..\FEBioXML\FEBioStepSection.cpp ..\..\FEBioXML\FERestartImport.cpp ..\..\FEBioXML\FileImport.cpp ..\..\FEBioXML\XMLReader.cpp
+         XMLReader.cpp
+     1>c:\users\kevin\documents\febiosourcexxxx\febioxml\xmlreader.cpp(162): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(245) : see declaration of 'strdup'
+         FileImport.cpp
+         FERestartImport.cpp
+         FEBioStepSection.cpp
+         FEBioOutputSection.cpp
+         FEBioModuleSection.cpp
+         FEBioMaterialSection.cpp
+         FEBioLoadsSection.cpp
+         FEBioLoadDataSection.cpp
+         FEBioInitialSection.cpp
+         FEBioImport.cpp
+         FEBioGlobalsSection.cpp
+         FEBioGeometrySection.cpp
+         FEBioDiscreteSection.cpp
+         FEBioControlSection.cpp
+         FEBioContactSection.cpp
+         FEBioConstraintsSection.cpp
+         FEBioBoundarySection.cpp
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\Kevin\Documents\febiosourcexxxx\VS2010\Debug\FEBioXMLd.lib" /NOLOGO Debug\FEBioBoundarySection.obj
+         Debug\FEBioConstraintsSection.obj
+         Debug\FEBioContactSection.obj
+         Debug\FEBioControlSection.obj
+         Debug\FEBioDiscreteSection.obj
+         Debug\FEBioGeometrySection.obj
+         Debug\FEBioGlobalsSection.obj
+         Debug\FEBioImport.obj
+         Debug\FEBioInitialSection.obj
+         Debug\FEBioLoadDataSection.obj
+         Debug\FEBioLoadsSection.obj
+         Debug\FEBioMaterialSection.obj
+         Debug\FEBioModuleSection.obj
+         Debug\FEBioOutputSection.obj
+         Debug\FEBioStepSection.obj
+         Debug\FERestartImport.obj
+         Debug\FileImport.obj
+         Debug\XMLReader.obj
+         FEBioXML.vcxproj -> C:\Users\Kevin\Documents\febiosourcexxxx\VS2010\Debug\FEBioXMLd.lib
+       BscMake:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\bscmake.exe /nologo /o"C:\Users\Kevin\Documents\febiosourcexxxx\VS2010\Debug\FEBioXMLd.bsc" /n Debug\FEBioBoundarySection.sbr Debug\FEBioConstraintsSection.sbr Debug\FEBioContactSection.sbr Debug\FEBioControlSection.sbr Debug\FEBioDiscreteSection.sbr Debug\FEBioGeometrySection.sbr Debug\FEBioGlobalsSection.sbr Debug\FEBioImport.sbr Debug\FEBioInitialSection.sbr Debug\FEBioLoadDataSection.sbr Debug\FEBioLoadsSection.sbr Debug\FEBioMaterialSection.sbr Debug\FEBioModuleSection.sbr Debug\FEBioOutputSection.sbr Debug\FEBioStepSection.sbr Debug\FERestartImport.sbr Debug\FileImport.sbr Debug\XMLReader.sbr
+     1>Done Building Project "C:\Users\Kevin\Documents\febiosourcexxxx\VS2010\FEBioXML\FEBioXML.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:53.15

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<febio_spec version="1.2">
+	<Globals>
+		<Constants>
+			<T>0</T>
+			<R>0</R>
+			<Fc>0</Fc>
+		</Constants>
+	</Globals>
+	<Material>
+		<material id="1" name="Materialisotropicelastic" type="isotropic elastic">
+			<density>1</density>
+			<E>5e+006</E>
+			<v>0.48</v>
+		</material>
+	</Material>
+	<Geometry>
+		<Nodes>
+			<node id="1">-5.0000000e-001,-5.0000000e-001, 0.0000000e+000</node>
+			<node id="2">-5.0000000e-001,-5.0000000e-001, 1.0000000e+000</node>
+			<node id="3">-5.0000000e-001, 5.0000000e-001, 0.0000000e+000</node>
+			<node id="4">-5.0000000e-001, 5.0000000e-001, 1.0000000e+000</node>
+			<node id="5"> 5.0000000e-001,-5.0000000e-001, 0.0000000e+000</node>
+			<node id="6"> 5.0000000e-001,-5.0000000e-001, 1.0000000e+000</node>
+			<node id="7"> 5.0000000e-001, 5.0000000e-001, 0.0000000e+000</node>
+			<node id="8"> 5.0000000e-001, 5.0000000e-001, 1.0000000e+000</node>
+			<node id="9">-5.0000000e-001,-5.0000000e-001, 1.0000000e+000</node>
+			<node id="10">-5.0000000e-001,-5.0000000e-001, 2.0000000e+000</node>
+			<node id="11">-5.0000000e-001, 5.0000000e-001, 1.0000000e+000</node>
+			<node id="12">-5.0000000e-001, 5.0000000e-001, 2.0000000e+000</node>
+			<node id="13"> 5.0000000e-001,-5.0000000e-001, 1.0000000e+000</node>
+			<node id="14"> 5.0000000e-001,-5.0000000e-001, 2.0000000e+000</node>
+			<node id="15"> 5.0000000e-001, 5.0000000e-001, 1.0000000e+000</node>
+			<node id="16"> 5.0000000e-001, 5.0000000e-001, 2.0000000e+000</node>
+		</Nodes>
+		<Elements>
+			<hex8 id="1" mat="1">     1,     5,     7,     3,     2,     6,     8,     4</hex8>
+			<hex8 id="2" mat="1">     9,    13,    15,    11,    10,    14,    16,    12</hex8>
+		</Elements>
+	</Geometry>
+	<Boundary>
+		<fix>
+			<node id="1" bc="xyz"/>
+			<node id="2" bc="xyz"/>
+			<node id="3" bc="xyz"/>
+			<node id="4" bc="xyz"/>
+			<node id="5" bc="xyz"/>
+			<node id="7" bc="xyz"/>
+			<node id="8" bc="xyz"/>
+			<node id="1" bc="xyz"/>
+			<node id="2" bc="xyz"/>
+			<node id="3" bc="xyz"/>
+			<node id="4" bc="xyz"/>
+			<node id="5" bc="xyz"/>
+			<node id="7" bc="xyz"/>
+			<node id="8" bc="xyz"/>
+			<node id="1" bc="xyz"/>
+			<node id="2" bc="xyz"/>
+			<node id="3" bc="xyz"/>
+			<node id="4" bc="xyz"/>
+			<node id="5" bc="xyz"/>
+			<node id="7" bc="xyz"/>
+			<node id="8" bc="xyz"/>
+		</fix>
+	</Boundary>
+	<LoadData>
+		<loadcurve id="1" type="linear">
+			<loadpoint>0,0</loadpoint>
+			<loadpoint>0.111111111111,0.111111111111</loadpoint>
+			<loadpoint>0.222222222222,0.222222222222</loadpoint>
+			<loadpoint>0.333333333333,0.333333333333</loadpoint>
+			<loadpoint>0.444444444444,0.444444444444</loadpoint>
+			<loadpoint>0.555555555556,0.555555555556</loadpoint>
+			<loadpoint>0.666666666667,0.666666666667</loadpoint>
+			<loadpoint>0.777777777778,0.777777777778</loadpoint>
+			<loadpoint>0.888888888889,0.888888888889</loadpoint>
+			<loadpoint>1,1</loadpoint>
+		</loadcurve>
+	</LoadData>
+	<Output>
+		<plotfile type="febio">
+			<var type="acceleration"/>
+			<var type="contact force"/>
+			<var type="contact gap"/>
+			<var type="contact pressure"/>
+			<var type="contact traction"/>
+			<var type="displacement"/>
+			<var type="effective fluid pressure"/>
+			<var type="fluid flux"/>
+			<var type="reaction forces"/>
+			<var type="relative volume"/>
+			<var type="shell thickness"/>
+			<var type="stress"/>
+			<var type="velocity"/>
+		</plotfile>
+	</Output>
+	<Step name="Stepstatic">
+		<Module type="solid"/>
+		<Control>
+			<time_steps>100</time_steps>
+			<step_size>0.01</step_size>
+			<max_refs>3500</max_refs>
+			<max_ups>0</max_ups>
+			<dtol>0.001</dtol>
+			<etol>0.01</etol>
+			<rtol>0</rtol>
+			<lstol>0.9</lstol>
+			<analysis type="static"/>
+		</Control>
+		<Boundary>
+			<prescribe type="relative">
+				<node id="9" bc="z" lc="1">0.00048</node>
+				<node id="10" bc="z" lc="1">0.00048</node>
+				<node id="11" bc="z" lc="1">0.00048</node>
+				<node id="12" bc="z" lc="1">0.00048</node>
+				<node id="13" bc="z" lc="1">0.00048</node>
+				<node id="14" bc="z" lc="1">0.00048</node>
+				<node id="15" bc="z" lc="1">0.00048</node>
+				<node id="16" bc="z" lc="1">0.00048</node>
+			</prescribe>
+			<contact type="facet-to-facet sliding">
+				<laugon>1</laugon>
+				<tolerance>0.2</tolerance>
+				<penalty>1</penalty>
+				<two_pass>1</two_pass>
+				<auto_penalty>0</auto_penalty>
+				<fric_coeff>0</fric_coeff>
+				<fric_penalty>0</fric_penalty>
+				<search_tol>0.01</search_tol>
+			    <n_interf_strength>1</n_interf_strength>
+			    <t_interf_strength>1</t_interf_strength>
+			    <n_char_op>0.0001</n_char_op>
+			    <t_char_op>0.0001</t_char_op>
+				<minaug>0</minaug>
+				<maxaug>10</maxaug>
+				<gaptol>0</gaptol>
+				<seg_up>0</seg_up>
+				<surface type="master" name="">
+					<quad4 id="1">     2,     6,     8,     4</quad4>
+				</surface>
+				<surface type="slave" name="">
+					<quad4 id="1">     9,    11,    15,    13</quad4>
+				</surface>
+			</contact>
+		</Boundary>
+	</Step>
+</febio_spec>

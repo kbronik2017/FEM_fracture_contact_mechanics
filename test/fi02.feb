@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Problem Description:
+	An element of trans iso Mooney-Rivlin material has a prescribed displacement
+	in the x-direction on the right end nodes of 1 unit at time t=1.  The left end
+	nodes are constrained in the x-direction.
+Main Features:
+	Trans Iso Mooney-Rivlin material
+Secondary Features:
+	
+Materials:
+	Trans Iso Mooney-Rivlin
+Degrees of Freedom: 12
+Results:
+	Steps Completed: 10
+	Equilibrium Iterations: 55
+	Right Hand Evaluations: 65
+	Siffness Reformations: 10
+	Other:
+		The top nodes have a displacement of -0.295 at time t=1.
+Comments:
+	
+-->
+<febio_spec version="1.2">
+	<Control>
+		<title>Trans Iso Mooney-Rivlin Material</title>
+		<time_steps>10</time_steps>
+		<step_size>0.1</step_size>
+		<max_refs>15</max_refs>
+		<max_ups>10</max_ups>
+		<dtol>0.001</dtol>
+		<etol>0.01</etol>
+		<rtol>0</rtol>
+		<lstol>0.9</lstol>
+		<pressure_stiffness>1</pressure_stiffness>
+		<time_stepper>
+			<dtmin>0.01</dtmin>
+			<dtmax>0.1</dtmax>
+			<max_retries>5</max_retries>
+			<opt_iter>10</opt_iter>
+		</time_stepper>
+		<plot_level>PLOT_DEFAULT</plot_level>
+	</Control>
+	<Material>
+		<material id="1" name="Material 1" type="trans iso Mooney-Rivlin">
+			<c1>1</c1>
+			<c2>0</c2>
+			<c3>5</c3>
+			<c4>1</c4>
+			<c5>0</c5>
+			<k>1000</k>
+			<lam_max>10</lam_max>
+			<fiber type="vector"> 0.866, 0.5, 0.0</fiber>
+		</material>
+	</Material>
+	<Geometry>
+		<Nodes>
+			<node id="1">-5.0000000e-001,-5.0000000e-001, 0.0000000e+000</node>
+			<node id="2">-5.0000000e-001,-5.0000000e-001, 1.0000000e+000</node>
+			<node id="3">-5.0000000e-001, 5.0000000e-001, 0.0000000e+000</node>
+			<node id="4">-5.0000000e-001, 5.0000000e-001, 1.0000000e+000</node>
+			<node id="5"> 5.0000000e-001,-5.0000000e-001, 0.0000000e+000</node>
+			<node id="6"> 5.0000000e-001,-5.0000000e-001, 1.0000000e+000</node>
+			<node id="7"> 5.0000000e-001, 5.0000000e-001, 0.0000000e+000</node>
+			<node id="8"> 5.0000000e-001, 5.0000000e-001, 1.0000000e+000</node>
+		</Nodes>
+		<Elements>
+			<hex8 id="1" mat="1">     1,     5,     7,     3,     2,     6,     8,     4</hex8>
+		</Elements>
+	</Geometry>
+	<Boundary>
+		<fix>
+			<node id="1" bc="xz"></node>
+			<node id="2" bc="x"></node>
+			<node id="3" bc="xyz"></node>
+			<node id="4" bc="xy"></node>
+			<node id="5" bc="z"></node>
+			<node id="7" bc="yz"></node>
+			<node id="8" bc="y"></node>
+		</fix>
+		<prescribe>
+			<node id="5" bc="x" lc="1">1</node>
+			<node id="6" bc="x" lc="1">1</node>
+			<node id="7" bc="x" lc="1">1</node>
+			<node id="8" bc="x" lc="1">1</node>
+		</prescribe>
+	</Boundary>
+	<LoadData>
+		<loadcurve id="1">
+			<loadpoint>0,0</loadpoint>
+			<loadpoint>1,1</loadpoint>
+		</loadcurve>
+	</LoadData>
+	<Output>
+		<plotfile type="febio"></plotfile>
+	    <logfile>
+           <element_data data="sx">1</element_data>
+	    </logfile></Output>
+</febio_spec>

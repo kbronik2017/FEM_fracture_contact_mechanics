@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Problem Description:
+	An element with friction has a z-displacement of -0.1 units from time t=0 to t=0.2
+	and an x-displacement of 3 units from time t=0.2 to t=1 along a rigid body.
+Main Features:
+	Sliding Contact with Friction
+	Rigid Bodies
+Secondary Features:
+	
+Materials:
+	Neo-Hookean
+	Rigid Body
+Degrees of Freedom: 20
+Results:
+	Steps Completed: 100
+	Equilibrium Iterations: 894
+	Right Hand Evaluations: 1484
+	Siffness Reformations: 106
+	Other:
+		The effective strain of the element is 0.121 at time t=1.
+Comments:
+	Similar to problem c017, but with a greater coefficient of friction.
+-->
+<febio_spec version="1.2">
+	<Module type="solid"/>
+	<Control>
+		<title>Sliding with Friction</title>
+		<time_steps>100</time_steps>
+		<step_size>0.01</step_size>
+		<max_refs>15</max_refs>
+		<max_ups>10</max_ups>
+		<dtol>0.001</dtol>
+		<etol>0.01</etol>
+		<rtol>0</rtol>
+		<lstol>0.9</lstol>
+		<plot_level>PLOT_DEFAULT</plot_level>
+		<time_stepper>
+			<dtmin>0.01</dtmin>
+			<dtmax lc="3"></dtmax>
+			<max_retries>5</max_retries>
+			<opt_iter>100</opt_iter>
+		</time_stepper>
+	</Control>
+	<Material>
+		<material id="1" name="Material 3" type="neo-Hookean">
+			<E>1</E>
+			<v>0</v>
+		</material>
+		<material id="2" name="Material 4" type="rigid body">
+			<density>1</density>
+		</material>
+	</Material>
+	<Geometry>
+		<Nodes>
+			<node id="1">-2.5000000e+000,-5.0000000e-001, 0.0000000e+000</node>
+			<node id="2">-2.5000000e+000,-5.0000000e-001, 1.0000000e+000</node>
+			<node id="3">-2.5000000e+000, 5.0000000e-001, 0.0000000e+000</node>
+			<node id="4">-2.5000000e+000, 5.0000000e-001, 1.0000000e+000</node>
+			<node id="5">-1.5000000e+000,-5.0000000e-001, 0.0000000e+000</node>
+			<node id="6">-1.5000000e+000,-5.0000000e-001, 1.0000000e+000</node>
+			<node id="7">-1.5000000e+000, 5.0000000e-001, 0.0000000e+000</node>
+			<node id="8">-1.5000000e+000, 5.0000000e-001, 1.0000000e+000</node>
+			<node id="9">-3.0000000e+000,-1.0000000e+000,-1.0000000e-001</node>
+			<node id="10">-3.0000000e+000,-1.0000000e+000, 0.0000000e+000</node>
+			<node id="11">-3.0000000e+000, 1.0000000e+000,-1.0000000e-001</node>
+			<node id="12">-3.0000000e+000, 1.0000000e+000, 0.0000000e+000</node>
+			<node id="13"> 3.0000000e+000,-1.0000000e+000,-1.0000000e-001</node>
+			<node id="14"> 3.0000000e+000,-1.0000000e+000, 0.0000000e+000</node>
+			<node id="15"> 3.0000000e+000, 1.0000000e+000,-1.0000000e-001</node>
+			<node id="16"> 3.0000000e+000, 1.0000000e+000, 0.0000000e+000</node>
+		</Nodes>
+		<Elements>
+			<hex8 id="1" mat="1">     1,     5,     7,     3,     2,     6,     8,     4</hex8>
+			<hex8 id="2" mat="2">     9,    13,    15,    11,    10,    14,    16,    12</hex8>
+		</Elements>
+	</Geometry>
+	<Boundary>
+		<fix>
+			<node id="2" bc="y"></node>
+			<node id="4" bc="y"></node>
+			<node id="6" bc="y"></node>
+			<node id="8" bc="y"></node>
+		</fix>
+		<prescribe>
+			<node id="2" bc="x" lc="1">1</node>
+			<node id="2" bc="z" lc="2">1</node>
+			<node id="4" bc="x" lc="1">1</node>
+			<node id="4" bc="z" lc="2">1</node>
+			<node id="6" bc="x" lc="1">1</node>
+			<node id="6" bc="z" lc="2">1</node>
+			<node id="8" bc="x" lc="1">1</node>
+			<node id="8" bc="z" lc="2">1</node>
+		</prescribe>
+		<contact type="sliding_with_gaps">
+			<laugon>1</laugon>
+			<tolerance>0.001</tolerance>
+			<penalty>5</penalty>
+			<two_pass>0</two_pass>
+			<fric_coeff>0.5</fric_coeff>
+			<fric_penalty>0.05</fric_penalty>
+			<minaug>5</minaug>
+			<surface type="master">
+				<quad4 id="1">    10,    14,    16,    12</quad4>
+			</surface>
+			<surface type="slave">
+				<quad4 id="2">     3,     7,     5,     1</quad4>
+			</surface>
+		</contact>
+	</Boundary>
+	<Constraints>
+		<rigid_body mat="2">
+			<trans_x type="fixed"></trans_x>
+			<trans_y type="fixed"></trans_y>
+			<trans_z type="fixed"></trans_z>
+			<rot_x type="fixed"></rot_x>
+			<rot_y type="fixed"></rot_y>
+			<rot_z type="fixed"></rot_z>
+		</rigid_body>
+	</Constraints>
+	<LoadData>
+		<loadcurve id="1">
+			<loadpoint>0,0</loadpoint>
+			<loadpoint>0.2,0</loadpoint>
+			<loadpoint>1,3</loadpoint>
+		</loadcurve>
+		<loadcurve id="2">
+			<loadpoint>0,0</loadpoint>
+			<loadpoint>0.2,-0.1</loadpoint>
+			<loadpoint>1,-0.1</loadpoint>
+		</loadcurve>
+		<loadcurve id="3" type="step">
+		    <loadpoint>0,0</loadpoint>
+			<loadpoint>0.3,0.01</loadpoint>
+			<loadpoint>1,0.01</loadpoint>
+		</loadcurve>	
+	</LoadData>
+	<Output>
+		<plotfile type="febio"></plotfile>
+	    <logfile>
+			<element_data data="sx">1</element_data>
+		</logfile>
+	</Output>
+</febio_spec>

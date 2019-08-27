@@ -1,0 +1,7 @@
+<map id="SparseMatrix" name="SparseMatrix">
+<area shape="rect" id="node3" href="$class_compact_matrix.html" title="This class stores a sparse matrix in Harwell&#45;Boeing format. " alt="" coords="133,86,264,117"/>
+<area shape="rect" id="node9" href="$class_dense_matrix.html" title="This class implements a full matrix. " alt="" coords="288,86,400,117"/>
+<area shape="rect" id="node11" href="$class_skyline_matrix.html" title="Implements a sparse matrix using the skyline storage. " alt="" coords="425,86,543,117"/>
+<area shape="rect" id="node5" href="$class_compact_symm_matrix.html" title="This class stores a sparse matrix in Harwell&#45;Boeing format. " alt="" coords="5,166,181,197"/>
+<area shape="rect" id="node7" href="$class_compact_un_symm_matrix.html" title="This class stores a sparse matrix in Harwell&#45;Boeing format. " alt="" coords="206,166,401,197"/>
+</map>

@@ -1,0 +1,40 @@
+﻿Build started 09/02/2018 15:47:26.
+     1>Project "C:\Users\kbronik.ANNASACH\Desktop\working folder\test febio\febiosourceextendedversion2\febiosource2extended\VS2013\FEBioHeat\FEBioHeat.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /FR"Debug\\" /Gd /TP /analyze- /errorReport:prompt ..\..\FEBioHeat\FEBioHeat.cpp ..\..\FEBioHeat\FEConvectiveHeatFlux.cpp ..\..\FEBioHeat\FECoupledHeatSolidSolver.cpp ..\..\FEBioHeat\FEHeatDomainFactory.cpp ..\..\FEBioHeat\FEHeatFlux.cpp ..\..\FEBioHeat\FEHeatSolidDomain.cpp ..\..\FEBioHeat\FEHeatSolver.cpp ..\..\FEBioHeat\FEHeatSource.cpp ..\..\FEBioHeat\FEHeatStiffnessMatrix.cpp ..\..\FEBioHeat\FEHeatTransferAnalysis.cpp ..\..\FEBioHeat\FEIsotropicFourier.cpp ..\..\FEBioHeat\FEPlotHeatFlux.cpp ..\..\FEBioHeat\FEPlotNodeTemperature.cpp
+         FEPlotNodeTemperature.cpp
+         FEPlotHeatFlux.cpp
+         FEIsotropicFourier.cpp
+         FEHeatTransferAnalysis.cpp
+         FEHeatStiffnessMatrix.cpp
+         FEHeatSource.cpp
+         FEHeatSolver.cpp
+         FEHeatSolidDomain.cpp
+         FEHeatFlux.cpp
+         FEHeatDomainFactory.cpp
+         FECoupledHeatSolidSolver.cpp
+         FEConvectiveHeatFlux.cpp
+         FEBioHeat.cpp
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\kbronik.ANNASACH\Desktop\working folder\test febio\febiosourceextendedversion2\febiosource2extended\VS2013\Debug\FEBioHeatd.lib" /NOLOGO Debug\FEBioHeat.obj
+         Debug\FEConvectiveHeatFlux.obj
+         Debug\FECoupledHeatSolidSolver.obj
+         Debug\FEHeatDomainFactory.obj
+         Debug\FEHeatFlux.obj
+         Debug\FEHeatSolidDomain.obj
+         Debug\FEHeatSolver.obj
+         Debug\FEHeatSource.obj
+         Debug\FEHeatStiffnessMatrix.obj
+         Debug\FEHeatTransferAnalysis.obj
+         Debug\FEIsotropicFourier.obj
+         Debug\FEPlotHeatFlux.obj
+         Debug\FEPlotNodeTemperature.obj
+         FEBioHeat.vcxproj -> C:\Users\kbronik.ANNASACH\Desktop\working folder\test febio\febiosourceextendedversion2\febiosource2extended\VS2013\Debug\FEBioHeatd.lib
+       BscMake:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\bscmake.exe /nologo /o"C:\Users\kbronik.ANNASACH\Desktop\working folder\test febio\febiosourceextendedversion2\febiosource2extended\VS2013\Debug\FEBioHeatd.bsc" /n Debug\FEBioHeat.sbr Debug\FEConvectiveHeatFlux.sbr Debug\FECoupledHeatSolidSolver.sbr Debug\FEHeatDomainFactory.sbr Debug\FEHeatFlux.sbr Debug\FEHeatSolidDomain.sbr Debug\FEHeatSolver.sbr Debug\FEHeatSource.sbr Debug\FEHeatStiffnessMatrix.sbr Debug\FEHeatTransferAnalysis.sbr Debug\FEIsotropicFourier.sbr Debug\FEPlotHeatFlux.sbr Debug\FEPlotNodeTemperature.sbr
+     1>Done Building Project "C:\Users\kbronik.ANNASACH\Desktop\working folder\test febio\febiosourceextendedversion2\febiosource2extended\VS2013\FEBioHeat\FEBioHeat.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:20.20

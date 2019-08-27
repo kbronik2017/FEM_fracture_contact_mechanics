@@ -1,0 +1,8 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_f_e_element.html" title="Base class for all element classes. " alt="" coords="5,114,107,145"/>
+<area shape="rect" id="node3" href="$class_f_e_discrete_element.html" title="Discrete element class. " alt="" coords="155,5,317,35"/>
+<area shape="rect" id="node5" href="$class_f_e_shell_element.html" title="This class defines the shell element. " alt="" coords="168,59,304,90"/>
+<area shape="rect" id="node7" href="$class_f_e_solid_element.html" title="This class defines a solid element. " alt="" coords="167,114,305,145"/>
+<area shape="rect" id="node9" href="$class_f_e_surface_element.html" title="This class defines a surface element. " alt="" coords="157,169,315,199"/>
+<area shape="rect" id="node11" href="$class_f_e_truss_element.html" title="FETrussElement" alt="" coords="165,223,307,254"/>
+</map>

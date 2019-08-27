@@ -1,0 +1,5 @@
+<map id="FELogRigidBodyTorqueY" name="FELogRigidBodyTorqueY">
+<area shape="rect" id="node2" href="$class_f_e_log_object_data.html" title="Base class for object log data (e.g. rigid bodies) " alt="" coords="33,166,183,197"/>
+<area shape="rect" id="node4" href="$class_f_e_core_base.html" title="FECoreBase" alt="" coords="50,86,165,117"/>
+<area shape="rect" id="node6" href="$class_f_e_param_container.html" title="Base class for classes that wish to support parameter lists. " alt="" coords="27,6,189,37"/>
+</map>

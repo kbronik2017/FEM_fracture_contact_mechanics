@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_f_e_global_matrix.html" title="This class implements a global system matrix. " alt="" coords="5,33,136,63"/>
+<area shape="rect" id="node3" href="$class_f_e_heat_stiffness_matrix.html" title="The &quot;stiffness&quot; matrix for a heat&#45;transfer problem. " alt="" coords="185,5,367,35"/>
+<area shape="rect" id="node5" href="$class_f_e_stiffness_matrix.html" title="FEStiffnessMatrix" alt="" coords="201,59,351,90"/>
+</map>

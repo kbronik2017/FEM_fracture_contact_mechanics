@@ -1,0 +1,93 @@
+﻿1>------ Clean started: Project: mycuda, Configuration: Debug Win32 ------
+1>Build started 30/07/2014 13:34:12.
+1>_PrepareForClean:
+1>  Deleting file "Debug\mycuda.lastbuildstate".
+1>CudaClean:
+1>  
+1>  C:\Users\Kevin\Documents\febiosource-2.0\VS2010\mycuda>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.5\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin"  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.5\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v5.5\include"  -G   --keep-dir Debug -maxrregcount=0  --machine 32 --compile   -g   -DWIN32 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MDd  " -o Debug\kernel.cu.obj "C:\Users\Kevin\Documents\febiosource-2.0\VS2010\mycuda\kernel.cu" -clean 
+1>  Deleting file "Debug\kernel.cu.deps".
+1>
+1>Build succeeded.
+1>
+1>Time Elapsed 00:00:01.21
+2>------ Clean started: Project: FEBio2, Configuration: Debug Win32 ------
+2>Build started 30/07/2014 13:34:13.
+2>_PrepareForClean:
+2>  Deleting file "Debug\FEBio2.lastbuildstate".
+2>
+2>Build succeeded.
+2>
+2>Time Elapsed 00:00:00.04
+3>------ Clean started: Project: FEBioOpt, Configuration: Debug Win32 ------
+3>Build started 30/07/2014 13:34:13.
+3>_PrepareForClean:
+3>  Deleting file "Debug\FEBioOpt.lastbuildstate".
+3>
+3>Build succeeded.
+3>
+3>Time Elapsed 00:00:00.02
+4>------ Clean started: Project: FEBioXML, Configuration: Debug Win32 ------
+4>Build started 30/07/2014 13:34:13.
+4>_PrepareForClean:
+4>  Deleting file "Debug\FEBioXML.lastbuildstate".
+4>
+4>Build succeeded.
+4>
+4>Time Elapsed 00:00:00.02
+5>------ Clean started: Project: FEBioPlot, Configuration: Debug Win32 ------
+5>Build started 30/07/2014 13:34:13.
+5>_PrepareForClean:
+5>  Deleting file "Debug\FEBioPlot.lastbuildstate".
+5>
+5>Build succeeded.
+5>
+5>Time Elapsed 00:00:00.07
+6>------ Clean started: Project: FEBioLib, Configuration: Debug Win32 ------
+6>Build started 30/07/2014 13:34:13.
+6>_PrepareForClean:
+6>  Deleting file "Debug\FEBioLib.lastbuildstate".
+6>
+6>Build succeeded.
+6>
+6>Time Elapsed 00:00:00.02
+7>------ Clean started: Project: FEBioMix, Configuration: Debug Win32 ------
+7>Build started 30/07/2014 13:34:13.
+7>_PrepareForClean:
+7>  Deleting file "Debug\FEBioMix.lastbuildstate".
+7>
+7>Build succeeded.
+7>
+7>Time Elapsed 00:00:00.05
+8>------ Clean started: Project: FEBioHeat, Configuration: Debug Win32 ------
+8>Build started 30/07/2014 13:34:13.
+8>_PrepareForClean:
+8>  Deleting file "Debug\FEBioHeat.lastbuildstate".
+8>
+8>Build succeeded.
+8>
+8>Time Elapsed 00:00:00.02
+9>------ Clean started: Project: NumCore, Configuration: Debug Win32 ------
+9>Build started 30/07/2014 13:34:14.
+9>_PrepareForClean:
+9>  Deleting file "Debug\NumCore.lastbuildstate".
+9>
+9>Build succeeded.
+9>
+9>Time Elapsed 00:00:00.02
+10>------ Clean started: Project: FEBioMech, Configuration: Debug Win32 ------
+10>Build started 30/07/2014 13:34:14.
+10>_PrepareForClean:
+10>  Deleting file "Debug\FEBioMech.lastbuildstate".
+10>
+10>Build succeeded.
+10>
+10>Time Elapsed 00:00:00.07
+11>------ Clean started: Project: FECore, Configuration: Debug Win32 ------
+11>Build started 30/07/2014 13:34:14.
+11>_PrepareForClean:
+11>  Deleting file "Debug\FECore.lastbuildstate".
+11>
+11>Build succeeded.
+11>
+11>Time Elapsed 00:00:00.05
+========== Clean: 11 succeeded, 0 failed, 0 skipped ==========

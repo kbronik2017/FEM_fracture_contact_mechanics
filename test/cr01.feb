@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- 
+Problem Description:
+This analysis reproduces the results of the study by DiMicco and Sah (2003) who examined 
+the one-dimensional spatial distribution of synthesized cartilage matrix products under the
+following assumptions: (1) Cells synthesize matrix products in soluble form, at a constant rate.
+(2) The soluble matrix product binds to the pre-existing solid matrix. (3) The bound product may 
+subsequently degrade into a soluble waste product. Their analysis may be represented by three 
+chemical reactions:
+
+Soluble Synthesis:
+[cells]+[nutrients] -> [cells] + [soluble matrix product]
+
+Binding:
+[soluble matrix product] -> [bound matrix product]
+
+Degradation:
+[bound matrix product] -> [soluble degraded product]
+
+In this analysis, cells and nutrients are not modeled explicitly.  The [soluble matrix product] is modeled as a solute named "soluble", the [soluble degraded product] is modeled as a soluted named "degraded", and the [bound matrix product] is modeled as a solid-bound molecule named "bound".  Three chemical reactions are defined in this mixture, named "soluble synthesis", "binding" and "degradation".  The analysis is performed over a one-dimensional domain.
+
+Main Features:
+	Multiphasic material with chemical reactions.
+Secondary Features:
+	Solid-bound molecules.
+Materials:
+	Multiphasic
+	Neo-Hookean
+	Constant Isotropic Permeability
+	Constant Osmotic Coefficient
+	Constant Isotropic Diffusivity
+	Constant Solubility
+	Mass-Action-Forward
+	Constant Reaction Rate
+Degrees of Freedom: 720
+Results:
+	Steps Completed: 45
+	Equilibrium Iterations: 227
+	Right Hand Evaluations: 441
+	Siffness Reformations: 227
+	Other:
+		The peak concentration of soluble matrix product is 0.00158 at z=0  and time t=4e7.
+ 
+Comments:
+	
+-->
+<febio_spec version="1.2">
+	<Module type="multiphasic"/>
+	<Control>
+		<time_steps>400</time_steps>
+		<step_size>1e+05</step_size>
+		<max_refs>15</max_refs>
+		<max_ups>0</max_ups>
+		<dtol>0</dtol>
+		<etol>0.01</etol>
+		<rtol>0</rtol>
+		<ptol>0.01</ptol>
+		<ctol>0.01</ctol>
+		<lstol>0.9</lstol>
+		<time_stepper>
+			<dtmin>1000</dtmin>
+			<dtmax>1e+06</dtmax>
+			<max_retries>5</max_retries>
+			<opt_iter>10</opt_iter>
+		</time_stepper>
+		<symmetric_biphasic>0</symmetric_biphasic>
+	</Control>
+	<Globals>
+		<Constants>
+			<T>293</T>
+			<R>83140</R>
+			<Fc>0</Fc>
+		</Constants>
+		<Solutes>
+			<solute id="1" name="soluble">
+				<charge_number>0</charge_number>
+				<density>1</density>
+				<molar_mass>1</molar_mass>
+			</solute>
+			<solute id="2" name="degraded">
+				<charge_number>0</charge_number>
+				<density>1</density>
+				<molar_mass>1</molar_mass>
+			</solute>
+		</Solutes>
+		<SolidBoundMolecules>
+			<solid_bound id="1" name="bound">
+				<charge_number>0</charge_number>
+				<density>1</density>
+				<molar_mass>1</molar_mass>
+			</solid_bound>
+		</SolidBoundMolecules>
+	</Globals>
+	<Material>
+		<material id="1" name="Cartilage" type="multiphasic">
+			<phi0>0</phi0>
+			<fixed_charge_density>0</fixed_charge_density>
+			<solid type="neo-Hookean">
+				<density>1</density>
+				<E>1e+08</E>
+				<v>0</v>
+			</solid>
+			<permeability type="perm-const-iso">
+				<perm>1e-12</perm>
+			</permeability>
+			<osmotic_coefficient type="osm-coef-const">
+				<osmcoef>1</osmcoef>
+			</osmotic_coefficient>
+			<solute sol="1">
+				<diffusivity type="diff-const-iso">
+					<free_diff>2.93e-09</free_diff>
+					<diff>2.93e-09</diff>
+				</diffusivity>
+				<solubility type="solub-const">
+					<solub>1</solub>
+				</solubility>
+			</solute>
+			<solute sol="2">
+				<diffusivity type="diff-const-iso">
+					<free_diff>1e-09</free_diff>
+					<diff>1e-09</diff>
+				</diffusivity>
+				<solubility type="solub-const">
+					<solub>1</solub>
+				</solubility>
+			</solute>
+			<solid_bound sbm="1">
+				<rho0>0</rho0>
+			</solid_bound>
+			<reaction name="soluble synthesis" type="mass-action-forward">
+			  <Vbar>0</Vbar>
+			  <vP sol="1">1</vP>
+			  <forward_rate type="constant reaction rate">
+			    <k>1.9e-8</k>
+			  </forward_rate>
+			</reaction>
+			<reaction name="binding" type="mass-action-forward">
+			  <Vbar>0</Vbar>
+			  <vR sol="1">1</vR>
+			  <vP sbm="1">1</vP>
+			  <forward_rate type="constant reaction rate">
+			    <k>1.2e-5</k>
+			  </forward_rate>
+			</reaction>
+			<reaction name="degradation" type="mass-action-forward">
+			  <Vbar>0</Vbar>
+			  <vR sbm="1">1</vR>
+			  <vP sol="2">1</vP>
+			  <forward_rate type="constant reaction rate">
+			    <k>3.7e-7</k>
+			  </forward_rate>
+			</reaction>
+		</material>
+	</Material>
+	<Geometry>
+		<Nodes>
+			<node id="1"> -5.0000000e-01, -5.0000000e-01,  0.0000000e+00</node>
+			<node id="2"> -5.0000000e-01, -5.0000000e-01,  1.4179906e-02</node>
+			<node id="3"> -5.0000000e-01, -5.0000000e-01,  2.6800022e-02</node>
+			<node id="4"> -5.0000000e-01, -5.0000000e-01,  3.8031926e-02</node>
+			<node id="5"> -5.0000000e-01, -5.0000000e-01,  4.8028320e-02</node>
+			<node id="6"> -5.0000000e-01, -5.0000000e-01,  5.6925111e-02</node>
+			<node id="7"> -5.0000000e-01, -5.0000000e-01,  6.4843255e-02</node>
+			<node id="8"> -5.0000000e-01, -5.0000000e-01,  7.1890403e-02</node>
+			<node id="9"> -5.0000000e-01, -5.0000000e-01,  7.8162365e-02</node>
+			<node id="10"> -5.0000000e-01, -5.0000000e-01,  8.3744411e-02</node>
+			<node id="11"> -5.0000000e-01, -5.0000000e-01,  8.8712431e-02</node>
+			<node id="12"> -5.0000000e-01, -5.0000000e-01,  9.3133970e-02</node>
+			<node id="13"> -5.0000000e-01, -5.0000000e-01,  9.7069139e-02</node>
+			<node id="14"> -5.0000000e-01, -5.0000000e-01,  1.0057144e-01</node>
+			<node id="15"> -5.0000000e-01, -5.0000000e-01,  1.0368849e-01</node>
+			<node id="16"> -5.0000000e-01, -5.0000000e-01,  1.0646266e-01</node>
+			<node id="17"> -5.0000000e-01, -5.0000000e-01,  1.0893167e-01</node>
+			<node id="18"> -5.0000000e-01, -5.0000000e-01,  1.1112910e-01</node>
+			<node id="19"> -5.0000000e-01, -5.0000000e-01,  1.1308480e-01</node>
+			<node id="20"> -5.0000000e-01, -5.0000000e-01,  1.1482538e-01</node>
+			<node id="21"> -5.0000000e-01, -5.0000000e-01,  1.1637449e-01</node>
+			<node id="22"> -5.0000000e-01, -5.0000000e-01,  1.1775321e-01</node>
+			<node id="23"> -5.0000000e-01, -5.0000000e-01,  1.1898026e-01</node>
+			<node id="24"> -5.0000000e-01, -5.0000000e-01,  1.2007234e-01</node>
+			<node id="25"> -5.0000000e-01, -5.0000000e-01,  1.2104429e-01</node>
+			<node id="26"> -5.0000000e-01, -5.0000000e-01,  1.2190932e-01</node>
+			<node id="27"> -5.0000000e-01, -5.0000000e-01,  1.2267920e-01</node>
+			<node id="28"> -5.0000000e-01, -5.0000000e-01,  1.2336439e-01</node>
+			<node id="29"> -5.0000000e-01, -5.0000000e-01,  1.2397422e-01</node>
+			<node id="30"> -5.0000000e-01, -5.0000000e-01,  1.2451696e-01</node>
+			<node id="31"> -5.0000000e-01, -5.0000000e-01,  1.2500000e-01</node>
+			<node id="32"> -5.0000000e-01,  5.0000000e-01,  0.0000000e+00</node>
+			<node id="33"> -5.0000000e-01,  5.0000000e-01,  1.4179906e-02</node>
+			<node id="34"> -5.0000000e-01,  5.0000000e-01,  2.6800022e-02</node>
+			<node id="35"> -5.0000000e-01,  5.0000000e-01,  3.8031926e-02</node>
+			<node id="36"> -5.0000000e-01,  5.0000000e-01,  4.8028320e-02</node>
+			<node id="37"> -5.0000000e-01,  5.0000000e-01,  5.6925111e-02</node>
+			<node id="38"> -5.0000000e-01,  5.0000000e-01,  6.4843255e-02</node>
+			<node id="39"> -5.0000000e-01,  5.0000000e-01,  7.1890403e-02</node>
+			<node id="40"> -5.0000000e-01,  5.0000000e-01,  7.8162365e-02</node>
+			<node id="41"> -5.0000000e-01,  5.0000000e-01,  8.3744411e-02</node>
+			<node id="42"> -5.0000000e-01,  5.0000000e-01,  8.8712431e-02</node>
+			<node id="43"> -5.0000000e-01,  5.0000000e-01,  9.3133970e-02</node>
+			<node id="44"> -5.0000000e-01,  5.0000000e-01,  9.7069139e-02</node>
+			<node id="45"> -5.0000000e-01,  5.0000000e-01,  1.0057144e-01</node>
+			<node id="46"> -5.0000000e-01,  5.0000000e-01,  1.0368849e-01</node>
+			<node id="47"> -5.0000000e-01,  5.0000000e-01,  1.0646266e-01</node>
+			<node id="48"> -5.0000000e-01,  5.0000000e-01,  1.0893167e-01</node>
+			<node id="49"> -5.0000000e-01,  5.0000000e-01,  1.1112910e-01</node>
+			<node id="50"> -5.0000000e-01,  5.0000000e-01,  1.1308480e-01</node>
+			<node id="51"> -5.0000000e-01,  5.0000000e-01,  1.1482538e-01</node>
+			<node id="52"> -5.0000000e-01,  5.0000000e-01,  1.1637449e-01</node>
+			<node id="53"> -5.0000000e-01,  5.0000000e-01,  1.1775321e-01</node>
+			<node id="54"> -5.0000000e-01,  5.0000000e-01,  1.1898026e-01</node>
+			<node id="55"> -5.0000000e-01,  5.0000000e-01,  1.2007234e-01</node>
+			<node id="56"> -5.0000000e-01,  5.0000000e-01,  1.2104429e-01</node>
+			<node id="57"> -5.0000000e-01,  5.0000000e-01,  1.2190932e-01</node>
+			<node id="58"> -5.0000000e-01,  5.0000000e-01,  1.2267920e-01</node>
+			<node id="59"> -5.0000000e-01,  5.0000000e-01,  1.2336439e-01</node>
+			<node id="60"> -5.0000000e-01,  5.0000000e-01,  1.2397422e-01</node>
+			<node id="61"> -5.0000000e-01,  5.0000000e-01,  1.2451696e-01</node>
+			<node id="62"> -5.0000000e-01,  5.0000000e-01,  1.2500000e-01</node>
+			<node id="63">  5.0000000e-01, -5.0000000e-01,  0.0000000e+00</node>
+			<node id="64">  5.0000000e-01, -5.0000000e-01,  1.4179906e-02</node>
+			<node id="65">  5.0000000e-01, -5.0000000e-01,  2.6800022e-02</node>
+			<node id="66">  5.0000000e-01, -5.0000000e-01,  3.8031926e-02</node>
+			<node id="67">  5.0000000e-01, -5.0000000e-01,  4.8028320e-02</node>
+			<node id="68">  5.0000000e-01, -5.0000000e-01,  5.6925111e-02</node>
+			<node id="69">  5.0000000e-01, -5.0000000e-01,  6.4843255e-02</node>
+			<node id="70">  5.0000000e-01, -5.0000000e-01,  7.1890403e-02</node>
+			<node id="71">  5.0000000e-01, -5.0000000e-01,  7.8162365e-02</node>
+			<node id="72">  5.0000000e-01, -5.0000000e-01,  8.3744411e-02</node>
+			<node id="73">  5.0000000e-01, -5.0000000e-01,  8.8712431e-02</node>
+			<node id="74">  5.0000000e-01, -5.0000000e-01,  9.3133970e-02</node>
+			<node id="75">  5.0000000e-01, -5.0000000e-01,  9.7069139e-02</node>
+			<node id="76">  5.0000000e-01, -5.0000000e-01,  1.0057144e-01</node>
+			<node id="77">  5.0000000e-01, -5.0000000e-01,  1.0368849e-01</node>
+			<node id="78">  5.0000000e-01, -5.0000000e-01,  1.0646266e-01</node>
+			<node id="79">  5.0000000e-01, -5.0000000e-01,  1.0893167e-01</node>
+			<node id="80">  5.0000000e-01, -5.0000000e-01,  1.1112910e-01</node>
+			<node id="81">  5.0000000e-01, -5.0000000e-01,  1.1308480e-01</node>
+			<node id="82">  5.0000000e-01, -5.0000000e-01,  1.1482538e-01</node>
+			<node id="83">  5.0000000e-01, -5.0000000e-01,  1.1637449e-01</node>
+			<node id="84">  5.0000000e-01, -5.0000000e-01,  1.1775321e-01</node>
+			<node id="85">  5.0000000e-01, -5.0000000e-01,  1.1898026e-01</node>
+			<node id="86">  5.0000000e-01, -5.0000000e-01,  1.2007234e-01</node>
+			<node id="87">  5.0000000e-01, -5.0000000e-01,  1.2104429e-01</node>
+			<node id="88">  5.0000000e-01, -5.0000000e-01,  1.2190932e-01</node>
+			<node id="89">  5.0000000e-01, -5.0000000e-01,  1.2267920e-01</node>
+			<node id="90">  5.0000000e-01, -5.0000000e-01,  1.2336439e-01</node>
+			<node id="91">  5.0000000e-01, -5.0000000e-01,  1.2397422e-01</node>
+			<node id="92">  5.0000000e-01, -5.0000000e-01,  1.2451696e-01</node>
+			<node id="93">  5.0000000e-01, -5.0000000e-01,  1.2500000e-01</node>
+			<node id="94">  5.0000000e-01,  5.0000000e-01,  0.0000000e+00</node>
+			<node id="95">  5.0000000e-01,  5.0000000e-01,  1.4179906e-02</node>
+			<node id="96">  5.0000000e-01,  5.0000000e-01,  2.6800022e-02</node>
+			<node id="97">  5.0000000e-01,  5.0000000e-01,  3.8031926e-02</node>
+			<node id="98">  5.0000000e-01,  5.0000000e-01,  4.8028320e-02</node>
+			<node id="99">  5.0000000e-01,  5.0000000e-01,  5.6925111e-02</node>
+			<node id="100">  5.0000000e-01,  5.0000000e-01,  6.4843255e-02</node>
+			<node id="101">  5.0000000e-01,  5.0000000e-01,  7.1890403e-02</node>
+			<node id="102">  5.0000000e-01,  5.0000000e-01,  7.8162365e-02</node>
+			<node id="103">  5.0000000e-01,  5.0000000e-01,  8.3744411e-02</node>
+			<node id="104">  5.0000000e-01,  5.0000000e-01,  8.8712431e-02</node>
+			<node id="105">  5.0000000e-01,  5.0000000e-01,  9.3133970e-02</node>
+			<node id="106">  5.0000000e-01,  5.0000000e-01,  9.7069139e-02</node>
+			<node id="107">  5.0000000e-01,  5.0000000e-01,  1.0057144e-01</node>
+			<node id="108">  5.0000000e-01,  5.0000000e-01,  1.0368849e-01</node>
+			<node id="109">  5.0000000e-01,  5.0000000e-01,  1.0646266e-01</node>
+			<node id="110">  5.0000000e-01,  5.0000000e-01,  1.0893167e-01</node>
+			<node id="111">  5.0000000e-01,  5.0000000e-01,  1.1112910e-01</node>
+			<node id="112">  5.0000000e-01,  5.0000000e-01,  1.1308480e-01</node>
+			<node id="113">  5.0000000e-01,  5.0000000e-01,  1.1482538e-01</node>
+			<node id="114">  5.0000000e-01,  5.0000000e-01,  1.1637449e-01</node>
+			<node id="115">  5.0000000e-01,  5.0000000e-01,  1.1775321e-01</node>
+			<node id="116">  5.0000000e-01,  5.0000000e-01,  1.1898026e-01</node>
+			<node id="117">  5.0000000e-01,  5.0000000e-01,  1.2007234e-01</node>
+			<node id="118">  5.0000000e-01,  5.0000000e-01,  1.2104429e-01</node>
+			<node id="119">  5.0000000e-01,  5.0000000e-01,  1.2190932e-01</node>
+			<node id="120">  5.0000000e-01,  5.0000000e-01,  1.2267920e-01</node>
+			<node id="121">  5.0000000e-01,  5.0000000e-01,  1.2336439e-01</node>
+			<node id="122">  5.0000000e-01,  5.0000000e-01,  1.2397422e-01</node>
+			<node id="123">  5.0000000e-01,  5.0000000e-01,  1.2451696e-01</node>
+			<node id="124">  5.0000000e-01,  5.0000000e-01,  1.2500000e-01</node>
+		</Nodes>
+		<Elements>
+			<hex8 id="1" mat="1">     1,    63,    94,    32,     2,    64,    95,    33</hex8>
+			<hex8 id="2" mat="1">     2,    64,    95,    33,     3,    65,    96,    34</hex8>
+			<hex8 id="3" mat="1">     3,    65,    96,    34,     4,    66,    97,    35</hex8>
+			<hex8 id="4" mat="1">     4,    66,    97,    35,     5,    67,    98,    36</hex8>
+			<hex8 id="5" mat="1">     5,    67,    98,    36,     6,    68,    99,    37</hex8>
+			<hex8 id="6" mat="1">     6,    68,    99,    37,     7,    69,   100,    38</hex8>
+			<hex8 id="7" mat="1">     7,    69,   100,    38,     8,    70,   101,    39</hex8>
+			<hex8 id="8" mat="1">     8,    70,   101,    39,     9,    71,   102,    40</hex8>
+			<hex8 id="9" mat="1">     9,    71,   102,    40,    10,    72,   103,    41</hex8>
+			<hex8 id="10" mat="1">    10,    72,   103,    41,    11,    73,   104,    42</hex8>
+			<hex8 id="11" mat="1">    11,    73,   104,    42,    12,    74,   105,    43</hex8>
+			<hex8 id="12" mat="1">    12,    74,   105,    43,    13,    75,   106,    44</hex8>
+			<hex8 id="13" mat="1">    13,    75,   106,    44,    14,    76,   107,    45</hex8>
+			<hex8 id="14" mat="1">    14,    76,   107,    45,    15,    77,   108,    46</hex8>
+			<hex8 id="15" mat="1">    15,    77,   108,    46,    16,    78,   109,    47</hex8>
+			<hex8 id="16" mat="1">    16,    78,   109,    47,    17,    79,   110,    48</hex8>
+			<hex8 id="17" mat="1">    17,    79,   110,    48,    18,    80,   111,    49</hex8>
+			<hex8 id="18" mat="1">    18,    80,   111,    49,    19,    81,   112,    50</hex8>
+			<hex8 id="19" mat="1">    19,    81,   112,    50,    20,    82,   113,    51</hex8>
+			<hex8 id="20" mat="1">    20,    82,   113,    51,    21,    83,   114,    52</hex8>
+			<hex8 id="21" mat="1">    21,    83,   114,    52,    22,    84,   115,    53</hex8>
+			<hex8 id="22" mat="1">    22,    84,   115,    53,    23,    85,   116,    54</hex8>
+			<hex8 id="23" mat="1">    23,    85,   116,    54,    24,    86,   117,    55</hex8>
+			<hex8 id="24" mat="1">    24,    86,   117,    55,    25,    87,   118,    56</hex8>
+			<hex8 id="25" mat="1">    25,    87,   118,    56,    26,    88,   119,    57</hex8>
+			<hex8 id="26" mat="1">    26,    88,   119,    57,    27,    89,   120,    58</hex8>
+			<hex8 id="27" mat="1">    27,    89,   120,    58,    28,    90,   121,    59</hex8>
+			<hex8 id="28" mat="1">    28,    90,   121,    59,    29,    91,   122,    60</hex8>
+			<hex8 id="29" mat="1">    29,    91,   122,    60,    30,    92,   123,    61</hex8>
+			<hex8 id="30" mat="1">    30,    92,   123,    61,    31,    93,   124,    62</hex8>
+		</Elements>
+	</Geometry>
+	<Boundary>
+		<fix>
+			<node id="1" bc="xyz"/>
+			<node id="32" bc="xyz"/>
+			<node id="63" bc="xyz"/>
+			<node id="94" bc="xyz"/>
+		</fix>
+		<fix>
+			<node id="31" bc="c1"/>
+			<node id="31" bc="c2"/>
+			<node id="62" bc="c1"/>
+			<node id="62" bc="c2"/>
+			<node id="93" bc="c1"/>
+			<node id="93" bc="c2"/>
+			<node id="124" bc="c1"/>
+			<node id="124" bc="c2"/>
+		</fix>
+		<fix>
+			<node id="31" bc="p"/>
+			<node id="62" bc="p"/>
+			<node id="93" bc="p"/>
+			<node id="124" bc="p"/>
+		</fix>
+	</Boundary>
+	<Output>
+		<plotfile type="febio">
+			<var type="displacement"/>
+			<var type="effective fluid pressure"/>
+			<var type="effective solute 1 concentration"/>
+			<var type="effective solute 2 concentration"/>
+			<var type="fluid flux"/>
+			<var type="fluid pressure"/>
+			<var type="relative volume"/>
+			<var type="solute 1 concentration"/>
+			<var type="solute 2 concentration"/>
+			<var type="sbm 1 concentration"/>
+			<var type="solute 1 flux"/>
+			<var type="solute 2 flux"/>
+			<var type="stress"/>
+		</plotfile>
+		<logfile>
+			<element_data data="c2">11</element_data>
+		</logfile>
+	</Output>
+</febio_spec>

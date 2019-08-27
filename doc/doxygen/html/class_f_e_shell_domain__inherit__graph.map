@@ -1,0 +1,5 @@
+<map id="FEShellDomain" name="FEShellDomain">
+<area shape="rect" id="node5" href="$class_f_e_elastic_shell_domain.html" title="Domain described by 3D shell elements. " alt="" coords="5,166,187,197"/>
+<area shape="rect" id="node2" href="$class_f_e_domain.html" title="FEDomain" alt="" coords="47,6,145,37"/>
+<area shape="rect" id="node7" href="$class_f_e_rigid_shell_domain.html" title="FERigidShellDomain" alt="" coords="11,246,181,277"/>
+</map>

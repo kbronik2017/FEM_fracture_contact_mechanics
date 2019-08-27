@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Problem Description:
+	This is the optimization file that runs oi02.feb as an input file.  See that file for more details.
+Main Features:
+	Optimization
+Results:
+	Major Iterations: 3
+	Minor Iterations: 12
+	Final objective value: 9.18575e-12
+	Other:
+		Biphasic.solid.E : 1.000002087210346
+		Biphasic.permeability.perm : 0.0009999990398228266
+Comments:
+	
+-->
+<febio_optimize>
+  <Model>oi02.feb</Model>
+  <Options type="constrained levmar">
+    <obj_tol>0.001</obj_tol>
+    <f_diff_scale>0.001</f_diff_scale>
+  </Options>
+  <Function>
+    <fnc lc="1">Indentor.Fz</fnc>
+  </Function>
+  <Parameters>
+    <param name="Biphasic.solid.E">0.5, 0.0, 5.0,1.0</param>
+    <param name="Biphasic.permeability.perm">0.0005, 0.00005, 0.01,0.001</param>
+  </Parameters>
+  <LoadData>
+    <loadcurve id="1">
+      <point>163.03811, -0.455468</point>
+      <point>172.950488, -0.47018</point>
+      <point>182.880391, -0.484683</point>
+      <point>192.824312, -0.499028</point>
+      <point>200, -0.509347</point>
+      <point>209.74055, -0.4083</point>
+      <point>221.53299, -0.362995</point>
+      <point>234.966942, -0.332189</point>
+      <point>249.714104, -0.309285</point>
+      <point>265.511833, -0.291729</point>
+      <point>282.150017, -0.27815</point>
+      <point>299.460563, -0.267652</point>
+      <point>317.309001, -0.259575</point>
+      <point>335.587751, -0.253401</point>
+      <point>354.210751, -0.248714</point>
+      <point>373.109151, -0.245178</point>
+      <point>392.227871, -0.242525</point>
+      <point>400, -0.241581</point>
+      <point>426.217704, -0.239423</point>
+      <point>467.191866, -0.237495</point>
+      <point>519.971197, -0.23623</point>
+      <point>582.194661, -0.235533</point>
+      <point>651.973432, -0.235189</point>
+      <point>727.796449, -0.235032</point>
+      <point>808.454863, -0.234965</point>
+      <point>892.981594, -0.234938</point>
+      <point>980.602979, -0.234927</point>
+      <point>1000, -0.234925</point>
+      <point>1035.51762, -0.234923</point>
+      <point>1083.93171, -0.234921</point>
+      <point>1142.66299, -0.234921</point>
+      <point>1209.64801, -0.23492</point>
+    </loadcurve>
+  </LoadData>
+</febio_optimize>

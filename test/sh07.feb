@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Problem Description:
+	1/8th symmetrical representation of an inflating balloon.  A pressure of
+	0 units at time t=0 to -0.0045 units at t=1 is applied to the shell disk.
+Main Features:
+	Shells
+	Pressure
+Secondary Features:
+	
+Materials:
+	Neo-Hookean
+Degrees of Freedom: 301
+Results:
+	Steps Completed: 14
+	Equilibrium Iterations: 143
+	Right Hand Evaluations: 222
+	Siffness Reformations: 21
+	Other:
+		The disk has a maximum z-displacement of 0.447 at time t=1.
+Comments:
+	In order to have consistent results with multiple threads, the material parameter
+	E was changed from 1 to 10 and the pressure was increased to the limit before
+	the results became inconsistent.
+-->
+<febio_spec version="1.2">
+	<Control>
+		<title>1/8th Balloon Inflation</title>
+		<time_steps>10</time_steps>
+		<step_size>0.1</step_size>
+		<max_refs>15</max_refs>
+		<max_ups>10</max_ups>
+		<dtol>0.001</dtol>
+		<etol>0.01</etol>
+		<rtol>0</rtol>
+		<lstol>0.9</lstol>
+		<time_stepper>
+			<dtmin>0.01</dtmin>
+			<dtmax>0.1</dtmax>
+			<max_retries>5</max_retries>
+			<opt_iter>10</opt_iter>
+		</time_stepper>
+		<pressure_stiffness>0</pressure_stiffness>
+	</Control>
+	<Material>
+		<material id="1" name="Material 3" type="neo-Hookean">
+			<E>10</E>
+			<v>0.45</v>
+		</material>
+	</Material>
+	<Geometry>
+		<Nodes>
+			<node id="1"> 0.0000000e+000, 0.0000000e+000, 0.0000000e+000</node>
+			<node id="2"> 0.0000000e+000, 1.1466437e-001, 0.0000000e+000</node>
+			<node id="3"> 0.0000000e+000, 2.3591883e-001, 0.0000000e+000</node>
+			<node id="4"> 0.0000000e+000, 3.4785349e-001, 0.0000000e+000</node>
+			<node id="5"> 1.1466437e-001, 0.0000000e+000, 0.0000000e+000</node>
+			<node id="6"> 1.1667262e-001, 1.1667262e-001, 0.0000000e+000</node>
+			<node id="7"> 1.1796353e-001, 2.3592706e-001, 0.0000000e+000</node>
+			<node id="8"> 1.1512514e-001, 3.4537541e-001, 0.0000000e+000</node>
+			<node id="9"> 2.3591883e-001, 0.0000000e+000, 0.0000000e+000</node>
+			<node id="10"> 2.3592706e-001, 1.1796353e-001, 0.0000000e+000</node>
+			<node id="11"> 2.3334524e-001, 2.3334524e-001, 0.0000000e+000</node>
+			<node id="12"> 2.2431403e-001, 3.3647104e-001, 0.0000000e+000</node>
+			<node id="13"> 3.4785349e-001, 0.0000000e+000, 0.0000000e+000</node>
+			<node id="14"> 3.4537541e-001, 1.1512514e-001, 0.0000000e+000</node>
+			<node id="15"> 3.3647104e-001, 2.2431403e-001, 0.0000000e+000</node>
+			<node id="16"> 3.1819805e-001, 3.1819805e-001, 0.0000000e+000</node>
+			<node id="17"> 4.5654457e-001, 0.0000000e+000, 0.0000000e+000</node>
+			<node id="18"> 4.4592672e-001, 1.4864224e-001, 0.0000000e+000</node>
+			<node id="19"> 4.1906758e-001, 2.7937839e-001, 0.0000000e+000</node>
+			<node id="20"> 3.8301617e-001, 3.8301617e-001, 0.0000000e+000</node>
+			<node id="21"> 2.7937839e-001, 4.1906758e-001, 0.0000000e+000</node>
+			<node id="22"> 1.4864224e-001, 4.4592672e-001, 0.0000000e+000</node>
+			<node id="23"> 0.0000000e+000, 4.5654457e-001, 0.0000000e+000</node>
+			<node id="24"> 5.6523566e-001, 0.0000000e+000, 0.0000000e+000</node>
+			<node id="25"> 5.4647804e-001, 1.8215935e-001, 0.0000000e+000</node>
+			<node id="26"> 5.0166413e-001, 3.3444275e-001, 0.0000000e+000</node>
+			<node id="27"> 4.4783429e-001, 4.4783429e-001, 0.0000000e+000</node>
+			<node id="28"> 3.3444275e-001, 5.0166413e-001, 0.0000000e+000</node>
+			<node id="29"> 1.8215935e-001, 5.4647804e-001, 0.0000000e+000</node>
+			<node id="30"> 0.0000000e+000, 5.6523566e-001, 0.0000000e+000</node>
+			<node id="31"> 6.7392674e-001, 0.0000000e+000, 0.0000000e+000</node>
+			<node id="32"> 6.4702935e-001, 2.1567645e-001, 0.0000000e+000</node>
+			<node id="33"> 5.8426067e-001, 3.8950711e-001, 0.0000000e+000</node>
+			<node id="34"> 5.1265242e-001, 5.1265242e-001, 0.0000000e+000</node>
+			<node id="35"> 3.8950711e-001, 5.8426067e-001, 0.0000000e+000</node>
+			<node id="36"> 2.1567645e-001, 6.4702935e-001, 0.0000000e+000</node>
+			<node id="37"> 0.0000000e+000, 6.7392674e-001, 0.0000000e+000</node>
+			<node id="38"> 7.8261783e-001, 0.0000000e+000, 0.0000000e+000</node>
+			<node id="39"> 7.4758067e-001, 2.4919356e-001, 0.0000000e+000</node>
+			<node id="40"> 6.6685721e-001, 4.4457147e-001, 0.0000000e+000</node>
+			<node id="41"> 5.7747054e-001, 5.7747054e-001, 0.0000000e+000</node>
+			<node id="42"> 4.4457147e-001, 6.6685721e-001, 0.0000000e+000</node>
+			<node id="43"> 2.4919356e-001, 7.4758067e-001, 0.0000000e+000</node>
+			<node id="44"> 0.0000000e+000, 7.8261783e-001, 0.0000000e+000</node>
+			<node id="45"> 8.9130891e-001, 0.0000000e+000, 0.0000000e+000</node>
+			<node id="46"> 8.4813198e-001, 2.8271066e-001, 0.0000000e+000</node>
+			<node id="47"> 7.4945375e-001, 4.9963583e-001, 0.0000000e+000</node>
+			<node id="48"> 6.4228866e-001, 6.4228866e-001, 0.0000000e+000</node>
+			<node id="49"> 4.9963583e-001, 7.4945375e-001, 0.0000000e+000</node>
+			<node id="50"> 2.8271066e-001, 8.4813198e-001, 0.0000000e+000</node>
+			<node id="51"> 0.0000000e+000, 8.9130891e-001, 0.0000000e+000</node>
+			<node id="52"> 1.0000000e+000, 0.0000000e+000, 0.0000000e+000</node>
+			<node id="53"> 9.4868330e-001, 3.1622777e-001, 0.0000000e+000</node>
+			<node id="54"> 8.3205029e-001, 5.5470020e-001, 0.0000000e+000</node>
+			<node id="55"> 7.0710678e-001, 7.0710678e-001, 0.0000000e+000</node>
+			<node id="56"> 5.5470020e-001, 8.3205029e-001, 0.0000000e+000</node>
+			<node id="57"> 3.1622777e-001, 9.4868330e-001, 0.0000000e+000</node>
+			<node id="58"> 0.0000000e+000, 1.0000000e+000, 0.0000000e+000</node>
+		</Nodes>
+		<Elements>
+			<quad4 id="1" mat="1">     1,     5,     6,     2</quad4>
+			<quad4 id="2" mat="1">     5,     9,    10,     6</quad4>
+			<quad4 id="3" mat="1">     9,    13,    14,    10</quad4>
+			<quad4 id="4" mat="1">     2,     6,     7,     3</quad4>
+			<quad4 id="5" mat="1">     6,    10,    11,     7</quad4>
+			<quad4 id="6" mat="1">    10,    14,    15,    11</quad4>
+			<quad4 id="7" mat="1">     3,     7,     8,     4</quad4>
+			<quad4 id="8" mat="1">     7,    11,    12,     8</quad4>
+			<quad4 id="9" mat="1">    11,    15,    16,    12</quad4>
+			<quad4 id="10" mat="1">    13,    17,    18,    14</quad4>
+			<quad4 id="11" mat="1">    14,    18,    19,    15</quad4>
+			<quad4 id="12" mat="1">    15,    19,    20,    16</quad4>
+			<quad4 id="13" mat="1">    16,    20,    21,    12</quad4>
+			<quad4 id="14" mat="1">    12,    21,    22,     8</quad4>
+			<quad4 id="15" mat="1">     8,    22,    23,     4</quad4>
+			<quad4 id="16" mat="1">    17,    24,    25,    18</quad4>
+			<quad4 id="17" mat="1">    18,    25,    26,    19</quad4>
+			<quad4 id="18" mat="1">    19,    26,    27,    20</quad4>
+			<quad4 id="19" mat="1">    20,    27,    28,    21</quad4>
+			<quad4 id="20" mat="1">    21,    28,    29,    22</quad4>
+			<quad4 id="21" mat="1">    22,    29,    30,    23</quad4>
+			<quad4 id="22" mat="1">    24,    31,    32,    25</quad4>
+			<quad4 id="23" mat="1">    25,    32,    33,    26</quad4>
+			<quad4 id="24" mat="1">    26,    33,    34,    27</quad4>
+			<quad4 id="25" mat="1">    27,    34,    35,    28</quad4>
+			<quad4 id="26" mat="1">    28,    35,    36,    29</quad4>
+			<quad4 id="27" mat="1">    29,    36,    37,    30</quad4>
+			<quad4 id="28" mat="1">    31,    38,    39,    32</quad4>
+			<quad4 id="29" mat="1">    32,    39,    40,    33</quad4>
+			<quad4 id="30" mat="1">    33,    40,    41,    34</quad4>
+			<quad4 id="31" mat="1">    34,    41,    42,    35</quad4>
+			<quad4 id="32" mat="1">    35,    42,    43,    36</quad4>
+			<quad4 id="33" mat="1">    36,    43,    44,    37</quad4>
+			<quad4 id="34" mat="1">    38,    45,    46,    39</quad4>
+			<quad4 id="35" mat="1">    39,    46,    47,    40</quad4>
+			<quad4 id="36" mat="1">    40,    47,    48,    41</quad4>
+			<quad4 id="37" mat="1">    41,    48,    49,    42</quad4>
+			<quad4 id="38" mat="1">    42,    49,    50,    43</quad4>
+			<quad4 id="39" mat="1">    43,    50,    51,    44</quad4>
+			<quad4 id="40" mat="1">    45,    52,    53,    46</quad4>
+			<quad4 id="41" mat="1">    46,    53,    54,    47</quad4>
+			<quad4 id="42" mat="1">    47,    54,    55,    48</quad4>
+			<quad4 id="43" mat="1">    48,    55,    56,    49</quad4>
+			<quad4 id="44" mat="1">    49,    56,    57,    50</quad4>
+			<quad4 id="45" mat="1">    50,    57,    58,    51</quad4>
+		</Elements>
+		<ElementData>
+			<element id="1">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="2">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="3">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="4">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="5">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="6">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="7">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="8">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="9">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="10">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="11">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="12">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="13">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="14">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="15">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="16">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="17">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="18">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="19">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="20">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="21">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="22">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="23">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="24">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="25">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="26">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="27">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="28">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="29">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="30">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="31">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="32">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="33">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="34">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="35">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="36">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="37">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="38">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="39">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="40">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="41">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="42">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="43">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="44">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="45">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+		</ElementData>
+	</Geometry>
+	<Boundary>
+		<fix>
+			<node id="1" bc="xy"></node>
+			<node id="1" bc="uv"></node>
+			<node id="2" bc="x"></node>
+			<node id="2" bc="u"></node>
+			<node id="3" bc="x"></node>
+			<node id="3" bc="u"></node>
+			<node id="4" bc="x"></node>
+			<node id="4" bc="u"></node>
+			<node id="5" bc="y"></node>
+			<node id="5" bc="v"></node>
+			<node id="9" bc="y"></node>
+			<node id="9" bc="v"></node>
+			<node id="13" bc="y"></node>
+			<node id="13" bc="v"></node>
+			<node id="17" bc="y"></node>
+			<node id="17" bc="v"></node>
+			<node id="23" bc="x"></node>
+			<node id="23" bc="u"></node>
+			<node id="24" bc="y"></node>
+			<node id="24" bc="v"></node>
+			<node id="30" bc="x"></node>
+			<node id="30" bc="u"></node>
+			<node id="31" bc="y"></node>
+			<node id="31" bc="v"></node>
+			<node id="37" bc="x"></node>
+			<node id="37" bc="u"></node>
+			<node id="38" bc="y"></node>
+			<node id="38" bc="v"></node>
+			<node id="44" bc="x"></node>
+			<node id="44" bc="u"></node>
+			<node id="45" bc="y"></node>
+			<node id="45" bc="v"></node>
+			<node id="51" bc="x"></node>
+			<node id="51" bc="u"></node>
+			<node id="52" bc="yz"></node>
+			<node id="52" bc="v"></node>
+			<node id="53" bc="z"></node>
+			<node id="54" bc="z"></node>
+			<node id="55" bc="z"></node>
+			<node id="56" bc="z"></node>
+			<node id="57" bc="z"></node>
+			<node id="58" bc="xz"></node>
+			<node id="58" bc="u"></node>
+		</fix>
+	</Boundary>
+	<Loads>
+		<pressure>
+			<quad4 id="1" lc="1" scale="1">     1,     5,     6,     2</quad4>
+			<quad4 id="2" lc="1" scale="1">     5,     9,    10,     6</quad4>
+			<quad4 id="3" lc="1" scale="1">     9,    13,    14,    10</quad4>
+			<quad4 id="4" lc="1" scale="1">     2,     6,     7,     3</quad4>
+			<quad4 id="5" lc="1" scale="1">     6,    10,    11,     7</quad4>
+			<quad4 id="6" lc="1" scale="1">    10,    14,    15,    11</quad4>
+			<quad4 id="7" lc="1" scale="1">     3,     7,     8,     4</quad4>
+			<quad4 id="8" lc="1" scale="1">     7,    11,    12,     8</quad4>
+			<quad4 id="9" lc="1" scale="1">    11,    15,    16,    12</quad4>
+			<quad4 id="10" lc="1" scale="1">    13,    17,    18,    14</quad4>
+			<quad4 id="11" lc="1" scale="1">    14,    18,    19,    15</quad4>
+			<quad4 id="12" lc="1" scale="1">    15,    19,    20,    16</quad4>
+			<quad4 id="13" lc="1" scale="1">    16,    20,    21,    12</quad4>
+			<quad4 id="14" lc="1" scale="1">    12,    21,    22,     8</quad4>
+			<quad4 id="15" lc="1" scale="1">     8,    22,    23,     4</quad4>
+			<quad4 id="16" lc="1" scale="1">    17,    24,    25,    18</quad4>
+			<quad4 id="17" lc="1" scale="1">    18,    25,    26,    19</quad4>
+			<quad4 id="18" lc="1" scale="1">    19,    26,    27,    20</quad4>
+			<quad4 id="19" lc="1" scale="1">    20,    27,    28,    21</quad4>
+			<quad4 id="20" lc="1" scale="1">    21,    28,    29,    22</quad4>
+			<quad4 id="21" lc="1" scale="1">    22,    29,    30,    23</quad4>
+			<quad4 id="22" lc="1" scale="1">    24,    31,    32,    25</quad4>
+			<quad4 id="23" lc="1" scale="1">    25,    32,    33,    26</quad4>
+			<quad4 id="24" lc="1" scale="1">    26,    33,    34,    27</quad4>
+			<quad4 id="25" lc="1" scale="1">    27,    34,    35,    28</quad4>
+			<quad4 id="26" lc="1" scale="1">    28,    35,    36,    29</quad4>
+			<quad4 id="27" lc="1" scale="1">    29,    36,    37,    30</quad4>
+			<quad4 id="28" lc="1" scale="1">    31,    38,    39,    32</quad4>
+			<quad4 id="29" lc="1" scale="1">    32,    39,    40,    33</quad4>
+			<quad4 id="30" lc="1" scale="1">    33,    40,    41,    34</quad4>
+			<quad4 id="31" lc="1" scale="1">    34,    41,    42,    35</quad4>
+			<quad4 id="32" lc="1" scale="1">    35,    42,    43,    36</quad4>
+			<quad4 id="33" lc="1" scale="1">    36,    43,    44,    37</quad4>
+			<quad4 id="34" lc="1" scale="1">    38,    45,    46,    39</quad4>
+			<quad4 id="35" lc="1" scale="1">    39,    46,    47,    40</quad4>
+			<quad4 id="36" lc="1" scale="1">    40,    47,    48,    41</quad4>
+			<quad4 id="37" lc="1" scale="1">    41,    48,    49,    42</quad4>
+			<quad4 id="38" lc="1" scale="1">    42,    49,    50,    43</quad4>
+			<quad4 id="39" lc="1" scale="1">    43,    50,    51,    44</quad4>
+			<quad4 id="40" lc="1" scale="1">    45,    52,    53,    46</quad4>
+			<quad4 id="41" lc="1" scale="1">    46,    53,    54,    47</quad4>
+			<quad4 id="42" lc="1" scale="1">    47,    54,    55,    48</quad4>
+			<quad4 id="43" lc="1" scale="1">    48,    55,    56,    49</quad4>
+			<quad4 id="44" lc="1" scale="1">    49,    56,    57,    50</quad4>
+			<quad4 id="45" lc="1" scale="1">    50,    57,    58,    51</quad4>
+		</pressure>
+	</Loads>
+	<LoadData>
+		<loadcurve id="1">
+			<loadpoint>0,0</loadpoint>
+			<loadpoint>1,-0.008</loadpoint>
+		</loadcurve>
+	</LoadData>
+	<Output>
+		<plotfile type="febio"></plotfile>  
+        <logfile>
+          <element_data data="sx">5</element_data>
+        </logfile>
+	</Output>
+</febio_spec>

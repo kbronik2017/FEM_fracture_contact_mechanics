@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CompactMatrix" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DEAAAAAAAEAAAAAAAARAQAAAAAAAIEBAAAAgAABCgAA=</HashCode>
+      <FileName>C:\Users\Kevin\Documents\febiosourcexxxx\NumCore\CompactMatrix.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CompactSymmMatrix" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAABAAAAAAAAAAAAQAQAAAAAAAAFAACAAAAAACAAA=</HashCode>
+      <FileName>C:\Users\Kevin\Documents\febiosourcexxxx\NumCore\CompactMatrix.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CompactUnSymmMatrix" Collapsed="true">
+    <Position X="2.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAEAAAQAQAAAAAAAAEABCAAAAAACAAA=</HashCode>
+      <FileName>C:\Users\Kevin\Documents\febiosourcexxxx\NumCore\CompactMatrix.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConjGradIterSolver" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAACAAAAAAAQEAQYABAAAAAAAAACAIAAAA=</HashCode>
+      <FileName>C:\Users\Kevin\Documents\febiosourcexxxx\NumCore\ConjGradIterSolver.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DenseMatrix" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAEAAAEAQAAgAAAAAQAEAACAAAAABCAAA=</HashCode>
+      <FileName>C:\Users\Kevin\Documents\febiosourcexxxx\NumCore\DenseMatrix.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LUSolver" Collapsed="true">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAACAAAAAAAAAAAAABAACAAAAAACAIAAAA=</HashCode>
+      <FileName>C:\Users\Kevin\Documents\febiosourcexxxx\NumCore\LUSolver.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PardisoSolver" Collapsed="true">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAADAAAAACAABAAAAAAAAQABEAAARAAEACGIwAQA=</HashCode>
+      <FileName>C:\Users\Kevin\Documents\febiosourcexxxx\NumCore\PardisoSolver.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PSLDLTSolver" Collapsed="true">
+    <Position X="5.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAACAAAAAAAAAAAAABAAAAAAAAACAIAAAA=</HashCode>
+      <FileName>C:\Users\Kevin\Documents\febiosourcexxxx\NumCore\PSLDLTSolver.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RCICGSolver" Collapsed="true">
+    <Position X="7" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAACAAAAAAAAAAAAABAAAAAAAAACAIAAAA=</HashCode>
+      <FileName>C:\Users\Kevin\Documents\febiosourcexxxx\NumCore\RCICGSolver.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SkylineMatrix" Collapsed="true">
+    <Position X="8.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAgAAQgQAAAQAAAAGBACAAAAABCAAA=</HashCode>
+      <FileName>C:\Users\Kevin\Documents\febiosourcexxxx\NumCore\SkylineMatrix.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SkylineSolver" Collapsed="true">
+    <Position X="10.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAACAAAAAAAAAAAAABAAAAAAAAACAIAAAA=</HashCode>
+      <FileName>C:\Users\Kevin\Documents\febiosourcexxxx\NumCore\SkylineSolver.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuperLUSolver" Collapsed="true">
+    <Position X="7" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AkFAACBAAQAACAAAAAgAAAAAAABAAgAAQIAIKCeCwCE=</HashCode>
+      <FileName>C:\Users\Kevin\Documents\febiosourcexxxx\NumCore\SuperLUSolver.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SuperLU_MT_Solver" Collapsed="true">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AxIAAABAAAAACAAQAAgACAAAQABAAAAAQIAACAOAgCA=</HashCode>
+      <FileName>C:\Users\Kevin\Documents\febiosourcexxxx\NumCore\SuperLU_MT_Solver.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WSMPSolver" Collapsed="true">
+    <Position X="8.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAABAAAAACABAAAAAAAAAQABAAAAQAAAACEIAAAA=</HashCode>
+      <FileName>C:\Users\Kevin\Documents\febiosourcexxxx\NumCore\WSMPSolver.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

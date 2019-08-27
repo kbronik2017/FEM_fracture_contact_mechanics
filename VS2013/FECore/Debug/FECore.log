@@ -1,0 +1,162 @@
+﻿Build started 09/02/2018 15:46:20.
+     1>Project "C:\Users\kbronik.ANNASACH\Desktop\working folder\test febio\febiosourceextendedversion2\febiosource2extended\VS2013\FECore\FECore.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /FR"Debug\\" /Gd /TP /analyze- /errorReport:prompt ..\..\FECore\Archive.cpp ..\..\FECore\BFGSSolver.cpp ..\..\FECore\colsol.cpp ..\..\FECore\DataStore.cpp ..\..\FECore\DOFS.cpp ..\..\FECore\DumpFile.cpp ..\..\FECore\DumpStream.cpp ..\..\FECore\ElementDataRecord.cpp ..\..\FECore\FEAnalysis.cpp ..\..\FECore\FEBodyLoad.cpp ..\..\FECore\FEBoundaryCondition.cpp ..\..\FECore\FEClosestPointProjection.cpp ..\..\FECore\FECoordSysMap.cpp ..\..\FECore\FECore.cpp ..\..\FECore\FECoreBase.cpp ..\..\FECore\FECoreFactory.cpp ..\..\FECore\FECoreKernel.cpp ..\..\FECore\FECoreTask.cpp ..\..\FECore\FEDiscreteDomain.cpp ..\..\FECore\FEDiscreteMaterial.cpp ..\..\FECore\FEDomain.cpp ..\..\FECore\FEElemElemList.cpp ..\..\FECore\FEElement.cpp ..\..\FECore\FEElementLibrary.cpp ..\..\FECore\FEElementTraits.cpp ..\..\FECore\FEException.cpp ..\..\FECore\FEGlobalData.cpp ..\..\FECore\FEGlobalMatrix.cpp ..\..\FECore\FEGlobalVector.cpp ..\..\FECore\FELevelStructure.cpp ..\..\FECore\FELinearConstraint.cpp ..\..\FECore\FEMaterial.cpp ..\..\FECore\FEMaterialPoint.cpp ..\..\FECore\FEMesh.cpp ..\..\FECore\FEModel.cpp ..\..\FECore\FEModelComponent.cpp ..\..\FECore\FENLConstraint.cpp ..\..\FECore\FENNQuery.cpp ..\..\FECore\FENodeElemList.cpp ..\..\FECore\FENodeNodeList.cpp ..\..\FECore\FENodeReorder.cpp ..\..\FECore\FENormalProjection.cpp ..\..\FECore\FEOctree.cpp ..\..\FECore\FEParameterList.cpp ..\..\FECore\FEPlotData.cpp ..\..\FECore\FERigidBody.cpp ..\..\FECore\FEShellDomain.cpp ..\..\FECore\FESolidDomain.cpp ..\..\FECore\FESolver.cpp ..\..\FECore\FESurface.cpp ..\..\FECore\FESurfaceLoad.cpp ..\..\FECore\FESurfacePairInteraction.cpp ..\..\FECore\FETrussDomain.cpp ..\..\FECore\Image.cpp ..\..\FECore\LinearSolver.cpp ..\..\FECore\LoadCurve.cpp ..\..\FECore\Logfile.cpp ..\..\FECore\mat3d.cpp ..\..\FECore\MathParser.cpp ..\..\FECore\matrix.cpp ..\..\FECore\MatrixProfile.cpp ..\..\FECore\NodeDataRecord.cpp ..\..\FECore\ObjectDataRecord.cpp ..\..\FECore\qsort.cpp ..\..\FECore\SparseMatrix.cpp ..\..\FECore\stdafx.cpp ..\..\FECore\svd.cpp ..\..\FECore\tens4d.cpp ..\..\FECore\Timer.cpp ..\..\FECore\vector.cpp
+         vector.cpp
+         Timer.cpp
+         tens4d.cpp
+         svd.cpp
+         stdafx.cpp
+         SparseMatrix.cpp
+         qsort.cpp
+         ObjectDataRecord.cpp
+         NodeDataRecord.cpp
+         MatrixProfile.cpp
+         matrix.cpp
+         MathParser.cpp
+         mat3d.cpp
+         Logfile.cpp
+         LoadCurve.cpp
+         LinearSolver.cpp
+         Image.cpp
+         FETrussDomain.cpp
+         FESurfacePairInteraction.cpp
+         FESurfaceLoad.cpp
+         Generating Code...
+         Compiling...
+         FESurface.cpp
+         FESolver.cpp
+         FESolidDomain.cpp
+         FEShellDomain.cpp
+         FERigidBody.cpp
+         FEPlotData.cpp
+         FEParameterList.cpp
+         FEOctree.cpp
+     1>c:\users\kbronik.annasach\desktop\working folder\test febio\febiosourceextendedversion2\febiosource2extended\fecore\feoctree.cpp(33): warning C4018: '>' : signed/unsigned mismatch
+     1>c:\users\kbronik.annasach\desktop\working folder\test febio\febiosourceextendedversion2\febiosource2extended\fecore\feoctree.cpp(267): warning C4018: '>' : signed/unsigned mismatch
+         FENormalProjection.cpp
+         FENodeReorder.cpp
+         FENodeNodeList.cpp
+         FENodeElemList.cpp
+         FENNQuery.cpp
+         FENLConstraint.cpp
+         FEModelComponent.cpp
+         FEModel.cpp
+         FEMesh.cpp
+         FEMaterialPoint.cpp
+         FEMaterial.cpp
+         FELinearConstraint.cpp
+         Generating Code...
+         Compiling...
+         FELevelStructure.cpp
+         FEGlobalVector.cpp
+         FEGlobalMatrix.cpp
+         FEGlobalData.cpp
+         FEException.cpp
+         FEElementTraits.cpp
+         FEElementLibrary.cpp
+         FEElement.cpp
+         FEElemElemList.cpp
+         FEDomain.cpp
+         FEDiscreteMaterial.cpp
+         FEDiscreteDomain.cpp
+         FECoreTask.cpp
+         FECoreKernel.cpp
+         FECoreFactory.cpp
+         FECoreBase.cpp
+         FECore.cpp
+         FECoordSysMap.cpp
+         FEClosestPointProjection.cpp
+         FEBoundaryCondition.cpp
+         Generating Code...
+         Compiling...
+         FEBodyLoad.cpp
+         FEAnalysis.cpp
+         ElementDataRecord.cpp
+         DumpStream.cpp
+         DumpFile.cpp
+         DOFS.cpp
+         DataStore.cpp
+         colsol.cpp
+         BFGSSolver.cpp
+         Archive.cpp
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\kbronik.ANNASACH\Desktop\working folder\test febio\febiosourceextendedversion2\febiosource2extended\VS2013\Debug\FECored.lib" /NOLOGO Debug\Archive.obj
+         Debug\BFGSSolver.obj
+         Debug\colsol.obj
+         Debug\DataStore.obj
+         Debug\DOFS.obj
+         Debug\DumpFile.obj
+         Debug\DumpStream.obj
+         Debug\ElementDataRecord.obj
+         Debug\FEAnalysis.obj
+         Debug\FEBodyLoad.obj
+         Debug\FEBoundaryCondition.obj
+         Debug\FEClosestPointProjection.obj
+         Debug\FECoordSysMap.obj
+         Debug\FECore.obj
+         Debug\FECoreBase.obj
+         Debug\FECoreFactory.obj
+         Debug\FECoreKernel.obj
+         Debug\FECoreTask.obj
+         Debug\FEDiscreteDomain.obj
+         Debug\FEDiscreteMaterial.obj
+         Debug\FEDomain.obj
+         Debug\FEElemElemList.obj
+         Debug\FEElement.obj
+         Debug\FEElementLibrary.obj
+         Debug\FEElementTraits.obj
+         Debug\FEException.obj
+         Debug\FEGlobalData.obj
+         Debug\FEGlobalMatrix.obj
+         Debug\FEGlobalVector.obj
+         Debug\FELevelStructure.obj
+         Debug\FELinearConstraint.obj
+         Debug\FEMaterial.obj
+         Debug\FEMaterialPoint.obj
+         Debug\FEMesh.obj
+         Debug\FEModel.obj
+         Debug\FEModelComponent.obj
+         Debug\FENLConstraint.obj
+         Debug\FENNQuery.obj
+         Debug\FENodeElemList.obj
+         Debug\FENodeNodeList.obj
+         Debug\FENodeReorder.obj
+         Debug\FENormalProjection.obj
+         Debug\FEOctree.obj
+         Debug\FEParameterList.obj
+         Debug\FEPlotData.obj
+         Debug\FERigidBody.obj
+         Debug\FEShellDomain.obj
+         Debug\FESolidDomain.obj
+         Debug\FESolver.obj
+         Debug\FESurface.obj
+         Debug\FESurfaceLoad.obj
+         Debug\FESurfacePairInteraction.obj
+         Debug\FETrussDomain.obj
+         Debug\Image.obj
+         Debug\LinearSolver.obj
+         Debug\LoadCurve.obj
+         Debug\Logfile.obj
+         Debug\mat3d.obj
+         Debug\MathParser.obj
+         Debug\matrix.obj
+         Debug\MatrixProfile.obj
+         Debug\NodeDataRecord.obj
+         Debug\ObjectDataRecord.obj
+         Debug\qsort.obj
+         Debug\SparseMatrix.obj
+         Debug\stdafx.obj
+         Debug\svd.obj
+         Debug\tens4d.obj
+         Debug\Timer.obj
+         Debug\vector.obj
+         FECore.vcxproj -> C:\Users\kbronik.ANNASACH\Desktop\working folder\test febio\febiosourceextendedversion2\febiosource2extended\VS2013\Debug\FECored.lib
+       BscMake:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\bscmake.exe /nologo /o"C:\Users\kbronik.ANNASACH\Desktop\working folder\test febio\febiosourceextendedversion2\febiosource2extended\VS2013\Debug\FECored.bsc" /n Debug\Archive.sbr Debug\BFGSSolver.sbr Debug\colsol.sbr Debug\DataStore.sbr Debug\DOFS.sbr Debug\DumpFile.sbr Debug\DumpStream.sbr Debug\ElementDataRecord.sbr Debug\FEAnalysis.sbr Debug\FEBodyLoad.sbr Debug\FEBoundaryCondition.sbr Debug\FEClosestPointProjection.sbr Debug\FECoordSysMap.sbr Debug\FECore.sbr Debug\FECoreBase.sbr Debug\FECoreFactory.sbr Debug\FECoreKernel.sbr Debug\FECoreTask.sbr Debug\FEDiscreteDomain.sbr Debug\FEDiscreteMaterial.sbr Debug\FEDomain.sbr Debug\FEElemElemList.sbr Debug\FEElement.sbr Debug\FEElementLibrary.sbr Debug\FEElementTraits.sbr Debug\FEException.sbr Debug\FEGlobalData.sbr Debug\FEGlobalMatrix.sbr Debug\FEGlobalVector.sbr Debug\FELevelStructure.sbr Debug\FELinearConstraint.sbr Debug\FEMaterial.sbr Debug\FEMaterialPoint.sbr Debug\FEMesh.sbr Debug\FEModel.sbr Debug\FEModelComponent.sbr Debug\FENLConstraint.sbr Debug\FENNQuery.sbr Debug\FENodeElemList.sbr Debug\FENodeNodeList.sbr Debug\FENodeReorder.sbr Debug\FENormalProjection.sbr Debug\FEOctree.sbr Debug\FEParameterList.sbr Debug\FEPlotData.sbr Debug\FERigidBody.sbr Debug\FEShellDomain.sbr Debug\FESolidDomain.sbr Debug\FESolver.sbr Debug\FESurface.sbr Debug\FESurfaceLoad.sbr Debug\FESurfacePairInteraction.sbr Debug\FETrussDomain.sbr Debug\Image.sbr Debug\LinearSolver.sbr Debug\LoadCurve.sbr Debug\Logfile.sbr Debug\mat3d.sbr Debug\MathParser.sbr Debug\matrix.sbr Debug\MatrixProfile.sbr Debug\NodeDataRecord.sbr Debug\ObjectDataRecord.sbr Debug\qsort.sbr Debug\SparseMatrix.sbr Debug\stdafx.sbr Debug\svd.sbr Debug\tens4d.sbr Debug\Timer.sbr Debug\vector.sbr
+     1>Done Building Project "C:\Users\kbronik.ANNASACH\Desktop\working folder\test febio\febiosourceextendedversion2\febiosource2extended\VS2013\FECore\FECore.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:01:06.50

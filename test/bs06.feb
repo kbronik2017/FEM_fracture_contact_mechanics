@@ -1,0 +1,1104 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Problem Description:
+	1D biphasic-solute contact between two bricks under load control (creep), 
+	using a rigid interface.
+Main Features:
+	Biphasic-solute contact under load control using a rigid interface
+	Permeability
+Secondary Features:
+	Must point curve
+Materials:
+	biphasic-solute
+	neo-Hookean
+Degrees of Freedom: 497
+Results:
+	Steps Completed: 65
+	Equilibrium Iterations: 193
+	Right Hand Evaluations: 353
+	Siffness Reformations: 193
+	Other:
+		The creep displacement at t=1e4 is -0.3593.
+Comments:
+	
+-->
+<febio_spec version="1.2">
+	<Module type="solute"/>
+	<Control>
+		<time_steps>100000</time_steps>
+		<step_size>0.1</step_size>
+		<max_refs>15</max_refs>
+		<max_ups>0</max_ups>
+		<dtol>0.001</dtol>
+		<etol>0.01</etol>
+		<rtol>0</rtol>
+		<ptol>0.01</ptol>
+		<ctol>0.01</ctol>
+		<lstol>0.9</lstol>
+		<time_stepper>
+			<dtmin>0.01</dtmin>
+			<dtmax lc="1"></dtmax>
+			<max_retries>5</max_retries>
+			<opt_iter>10</opt_iter>
+		</time_stepper>
+		<symmetric_biphasic>0</symmetric_biphasic>
+	</Control>
+	<Globals>
+		<Constants>
+			<T>293</T>
+			<R>8.314e-06</R>
+			<Fc>9.65e-05</Fc>
+		</Constants>
+		<Solutes>
+			<solute id="1" name="solute">
+				<charge_number>0</charge_number>
+				<molar_mass>1</molar_mass>
+				<density>1</density>
+			</solute>
+		</Solutes>
+	</Globals>
+	<Material>
+		<material id="1" name="Top foundation" type="rigid body">
+			<density>1</density>
+			<center_of_mass>0,0,2</center_of_mass>
+		</material>
+		<material id="2" name="Tissue top" type="biphasic-solute">
+			<phi0>0.2</phi0>
+			<solid type="neo-Hookean">
+				<density>1</density>
+				<E>1</E>
+				<v>0</v>
+			</solid>
+			<permeability type="perm-const-iso">
+				<perm>0.001</perm>
+			</permeability>
+			<osmotic_coefficient type="osm-coef-const">
+				<osmcoef>1</osmcoef>
+			</osmotic_coefficient>
+			<solute sol="1">
+				<diffusivity type="diff-const-iso">
+					<free_diff>0.002</free_diff>
+					<diff>0.001</diff>
+				</diffusivity>
+				<solubility type="solub-const">
+					<solub>1</solub>
+				</solubility>
+			</solute>
+		</material>
+		<material id="3" name="Tissue bottom" type="biphasic-solute">
+			<phi0>0.2</phi0>
+			<solid type="neo-Hookean">
+				<density>1</density>
+				<E>1</E>
+				<v>0</v>
+			</solid>
+			<permeability type="perm-const-iso">
+				<perm>0.001</perm>
+			</permeability>
+			<osmotic_coefficient type="osm-coef-const">
+				<osmcoef>1</osmcoef>
+			</osmotic_coefficient>
+			<solute sol="1">
+				<diffusivity type="diff-const-iso">
+					<free_diff>0.002</free_diff>
+					<diff>0.001</diff>
+				</diffusivity>
+				<solubility type="solub-const">
+					<solub>1</solub>
+				</solubility>
+			</solute>
+		</material>
+	</Material>
+	<Geometry>
+		<Nodes>
+			<node id="1"> -5.0000000e-01, -5.0000000e-01,  0.0000000e+00</node>
+			<node id="2"> -5.0000000e-01, -5.0000000e-01,  1.5036281e-02</node>
+			<node id="3"> -5.0000000e-01, -5.0000000e-01,  3.3831633e-02</node>
+			<node id="4"> -5.0000000e-01, -5.0000000e-01,  5.7325822e-02</node>
+			<node id="5"> -5.0000000e-01, -5.0000000e-01,  8.6693559e-02</node>
+			<node id="6"> -5.0000000e-01, -5.0000000e-01,  1.2340323e-01</node>
+			<node id="7"> -5.0000000e-01, -5.0000000e-01,  1.6929032e-01</node>
+			<node id="8"> -5.0000000e-01, -5.0000000e-01,  2.2664918e-01</node>
+			<node id="9"> -5.0000000e-01, -5.0000000e-01,  2.9834776e-01</node>
+			<node id="10"> -5.0000000e-01, -5.0000000e-01,  3.8797098e-01</node>
+			<node id="11"> -5.0000000e-01, -5.0000000e-01,  5.0000000e-01</node>
+			<node id="12"> -5.0000000e-01, -5.0000000e-01,  6.1202902e-01</node>
+			<node id="13"> -5.0000000e-01, -5.0000000e-01,  7.0165224e-01</node>
+			<node id="14"> -5.0000000e-01, -5.0000000e-01,  7.7335082e-01</node>
+			<node id="15"> -5.0000000e-01, -5.0000000e-01,  8.3070968e-01</node>
+			<node id="16"> -5.0000000e-01, -5.0000000e-01,  8.7659677e-01</node>
+			<node id="17"> -5.0000000e-01, -5.0000000e-01,  9.1330644e-01</node>
+			<node id="18"> -5.0000000e-01, -5.0000000e-01,  9.4267418e-01</node>
+			<node id="19"> -5.0000000e-01, -5.0000000e-01,  9.6616837e-01</node>
+			<node id="20"> -5.0000000e-01, -5.0000000e-01,  9.8496372e-01</node>
+			<node id="21"> -5.0000000e-01, -5.0000000e-01,  1.0000000e+00</node>
+			<node id="22"> -5.0000000e-01,  5.0000000e-01,  0.0000000e+00</node>
+			<node id="23"> -5.0000000e-01,  5.0000000e-01,  1.5036281e-02</node>
+			<node id="24"> -5.0000000e-01,  5.0000000e-01,  3.3831633e-02</node>
+			<node id="25"> -5.0000000e-01,  5.0000000e-01,  5.7325822e-02</node>
+			<node id="26"> -5.0000000e-01,  5.0000000e-01,  8.6693559e-02</node>
+			<node id="27"> -5.0000000e-01,  5.0000000e-01,  1.2340323e-01</node>
+			<node id="28"> -5.0000000e-01,  5.0000000e-01,  1.6929032e-01</node>
+			<node id="29"> -5.0000000e-01,  5.0000000e-01,  2.2664918e-01</node>
+			<node id="30"> -5.0000000e-01,  5.0000000e-01,  2.9834776e-01</node>
+			<node id="31"> -5.0000000e-01,  5.0000000e-01,  3.8797098e-01</node>
+			<node id="32"> -5.0000000e-01,  5.0000000e-01,  5.0000000e-01</node>
+			<node id="33"> -5.0000000e-01,  5.0000000e-01,  6.1202902e-01</node>
+			<node id="34"> -5.0000000e-01,  5.0000000e-01,  7.0165224e-01</node>
+			<node id="35"> -5.0000000e-01,  5.0000000e-01,  7.7335082e-01</node>
+			<node id="36"> -5.0000000e-01,  5.0000000e-01,  8.3070968e-01</node>
+			<node id="37"> -5.0000000e-01,  5.0000000e-01,  8.7659677e-01</node>
+			<node id="38"> -5.0000000e-01,  5.0000000e-01,  9.1330644e-01</node>
+			<node id="39"> -5.0000000e-01,  5.0000000e-01,  9.4267418e-01</node>
+			<node id="40"> -5.0000000e-01,  5.0000000e-01,  9.6616837e-01</node>
+			<node id="41"> -5.0000000e-01,  5.0000000e-01,  9.8496372e-01</node>
+			<node id="42"> -5.0000000e-01,  5.0000000e-01,  1.0000000e+00</node>
+			<node id="43">  5.0000000e-01, -5.0000000e-01,  0.0000000e+00</node>
+			<node id="44">  5.0000000e-01, -5.0000000e-01,  1.5036281e-02</node>
+			<node id="45">  5.0000000e-01, -5.0000000e-01,  3.3831633e-02</node>
+			<node id="46">  5.0000000e-01, -5.0000000e-01,  5.7325822e-02</node>
+			<node id="47">  5.0000000e-01, -5.0000000e-01,  8.6693559e-02</node>
+			<node id="48">  5.0000000e-01, -5.0000000e-01,  1.2340323e-01</node>
+			<node id="49">  5.0000000e-01, -5.0000000e-01,  1.6929032e-01</node>
+			<node id="50">  5.0000000e-01, -5.0000000e-01,  2.2664918e-01</node>
+			<node id="51">  5.0000000e-01, -5.0000000e-01,  2.9834776e-01</node>
+			<node id="52">  5.0000000e-01, -5.0000000e-01,  3.8797098e-01</node>
+			<node id="53">  5.0000000e-01, -5.0000000e-01,  5.0000000e-01</node>
+			<node id="54">  5.0000000e-01, -5.0000000e-01,  6.1202902e-01</node>
+			<node id="55">  5.0000000e-01, -5.0000000e-01,  7.0165224e-01</node>
+			<node id="56">  5.0000000e-01, -5.0000000e-01,  7.7335082e-01</node>
+			<node id="57">  5.0000000e-01, -5.0000000e-01,  8.3070968e-01</node>
+			<node id="58">  5.0000000e-01, -5.0000000e-01,  8.7659677e-01</node>
+			<node id="59">  5.0000000e-01, -5.0000000e-01,  9.1330644e-01</node>
+			<node id="60">  5.0000000e-01, -5.0000000e-01,  9.4267418e-01</node>
+			<node id="61">  5.0000000e-01, -5.0000000e-01,  9.6616837e-01</node>
+			<node id="62">  5.0000000e-01, -5.0000000e-01,  9.8496372e-01</node>
+			<node id="63">  5.0000000e-01, -5.0000000e-01,  1.0000000e+00</node>
+			<node id="64">  5.0000000e-01,  5.0000000e-01,  0.0000000e+00</node>
+			<node id="65">  5.0000000e-01,  5.0000000e-01,  1.5036281e-02</node>
+			<node id="66">  5.0000000e-01,  5.0000000e-01,  3.3831633e-02</node>
+			<node id="67">  5.0000000e-01,  5.0000000e-01,  5.7325822e-02</node>
+			<node id="68">  5.0000000e-01,  5.0000000e-01,  8.6693559e-02</node>
+			<node id="69">  5.0000000e-01,  5.0000000e-01,  1.2340323e-01</node>
+			<node id="70">  5.0000000e-01,  5.0000000e-01,  1.6929032e-01</node>
+			<node id="71">  5.0000000e-01,  5.0000000e-01,  2.2664918e-01</node>
+			<node id="72">  5.0000000e-01,  5.0000000e-01,  2.9834776e-01</node>
+			<node id="73">  5.0000000e-01,  5.0000000e-01,  3.8797098e-01</node>
+			<node id="74">  5.0000000e-01,  5.0000000e-01,  5.0000000e-01</node>
+			<node id="75">  5.0000000e-01,  5.0000000e-01,  6.1202902e-01</node>
+			<node id="76">  5.0000000e-01,  5.0000000e-01,  7.0165224e-01</node>
+			<node id="77">  5.0000000e-01,  5.0000000e-01,  7.7335082e-01</node>
+			<node id="78">  5.0000000e-01,  5.0000000e-01,  8.3070968e-01</node>
+			<node id="79">  5.0000000e-01,  5.0000000e-01,  8.7659677e-01</node>
+			<node id="80">  5.0000000e-01,  5.0000000e-01,  9.1330644e-01</node>
+			<node id="81">  5.0000000e-01,  5.0000000e-01,  9.4267418e-01</node>
+			<node id="82">  5.0000000e-01,  5.0000000e-01,  9.6616837e-01</node>
+			<node id="83">  5.0000000e-01,  5.0000000e-01,  9.8496372e-01</node>
+			<node id="84">  5.0000000e-01,  5.0000000e-01,  1.0000000e+00</node>
+			<node id="85"> -5.0000000e-01, -5.0000000e-01,  9.9900000e-01</node>
+			<node id="86"> -5.0000000e-01, -5.0000000e-01,  1.0140363e+00</node>
+			<node id="87"> -5.0000000e-01, -5.0000000e-01,  1.0328316e+00</node>
+			<node id="88"> -5.0000000e-01, -5.0000000e-01,  1.0563258e+00</node>
+			<node id="89"> -5.0000000e-01, -5.0000000e-01,  1.0856936e+00</node>
+			<node id="90"> -5.0000000e-01, -5.0000000e-01,  1.1224032e+00</node>
+			<node id="91"> -5.0000000e-01, -5.0000000e-01,  1.1682903e+00</node>
+			<node id="92"> -5.0000000e-01, -5.0000000e-01,  1.2256492e+00</node>
+			<node id="93"> -5.0000000e-01, -5.0000000e-01,  1.2973478e+00</node>
+			<node id="94"> -5.0000000e-01, -5.0000000e-01,  1.3869710e+00</node>
+			<node id="95"> -5.0000000e-01, -5.0000000e-01,  1.4990000e+00</node>
+			<node id="96"> -5.0000000e-01, -5.0000000e-01,  1.6110290e+00</node>
+			<node id="97"> -5.0000000e-01, -5.0000000e-01,  1.7006522e+00</node>
+			<node id="98"> -5.0000000e-01, -5.0000000e-01,  1.7723508e+00</node>
+			<node id="99"> -5.0000000e-01, -5.0000000e-01,  1.8297097e+00</node>
+			<node id="100"> -5.0000000e-01, -5.0000000e-01,  1.8755968e+00</node>
+			<node id="101"> -5.0000000e-01, -5.0000000e-01,  1.9123064e+00</node>
+			<node id="102"> -5.0000000e-01, -5.0000000e-01,  1.9416742e+00</node>
+			<node id="103"> -5.0000000e-01, -5.0000000e-01,  1.9651684e+00</node>
+			<node id="104"> -5.0000000e-01, -5.0000000e-01,  1.9839637e+00</node>
+			<node id="105"> -5.0000000e-01, -5.0000000e-01,  1.9990000e+00</node>
+			<node id="106"> -5.0000000e-01,  5.0000000e-01,  9.9900000e-01</node>
+			<node id="107"> -5.0000000e-01,  5.0000000e-01,  1.0140363e+00</node>
+			<node id="108"> -5.0000000e-01,  5.0000000e-01,  1.0328316e+00</node>
+			<node id="109"> -5.0000000e-01,  5.0000000e-01,  1.0563258e+00</node>
+			<node id="110"> -5.0000000e-01,  5.0000000e-01,  1.0856936e+00</node>
+			<node id="111"> -5.0000000e-01,  5.0000000e-01,  1.1224032e+00</node>
+			<node id="112"> -5.0000000e-01,  5.0000000e-01,  1.1682903e+00</node>
+			<node id="113"> -5.0000000e-01,  5.0000000e-01,  1.2256492e+00</node>
+			<node id="114"> -5.0000000e-01,  5.0000000e-01,  1.2973478e+00</node>
+			<node id="115"> -5.0000000e-01,  5.0000000e-01,  1.3869710e+00</node>
+			<node id="116"> -5.0000000e-01,  5.0000000e-01,  1.4990000e+00</node>
+			<node id="117"> -5.0000000e-01,  5.0000000e-01,  1.6110290e+00</node>
+			<node id="118"> -5.0000000e-01,  5.0000000e-01,  1.7006522e+00</node>
+			<node id="119"> -5.0000000e-01,  5.0000000e-01,  1.7723508e+00</node>
+			<node id="120"> -5.0000000e-01,  5.0000000e-01,  1.8297097e+00</node>
+			<node id="121"> -5.0000000e-01,  5.0000000e-01,  1.8755968e+00</node>
+			<node id="122"> -5.0000000e-01,  5.0000000e-01,  1.9123064e+00</node>
+			<node id="123"> -5.0000000e-01,  5.0000000e-01,  1.9416742e+00</node>
+			<node id="124"> -5.0000000e-01,  5.0000000e-01,  1.9651684e+00</node>
+			<node id="125"> -5.0000000e-01,  5.0000000e-01,  1.9839637e+00</node>
+			<node id="126"> -5.0000000e-01,  5.0000000e-01,  1.9990000e+00</node>
+			<node id="127">  5.0000000e-01, -5.0000000e-01,  9.9900000e-01</node>
+			<node id="128">  5.0000000e-01, -5.0000000e-01,  1.0140363e+00</node>
+			<node id="129">  5.0000000e-01, -5.0000000e-01,  1.0328316e+00</node>
+			<node id="130">  5.0000000e-01, -5.0000000e-01,  1.0563258e+00</node>
+			<node id="131">  5.0000000e-01, -5.0000000e-01,  1.0856936e+00</node>
+			<node id="132">  5.0000000e-01, -5.0000000e-01,  1.1224032e+00</node>
+			<node id="133">  5.0000000e-01, -5.0000000e-01,  1.1682903e+00</node>
+			<node id="134">  5.0000000e-01, -5.0000000e-01,  1.2256492e+00</node>
+			<node id="135">  5.0000000e-01, -5.0000000e-01,  1.2973478e+00</node>
+			<node id="136">  5.0000000e-01, -5.0000000e-01,  1.3869710e+00</node>
+			<node id="137">  5.0000000e-01, -5.0000000e-01,  1.4990000e+00</node>
+			<node id="138">  5.0000000e-01, -5.0000000e-01,  1.6110290e+00</node>
+			<node id="139">  5.0000000e-01, -5.0000000e-01,  1.7006522e+00</node>
+			<node id="140">  5.0000000e-01, -5.0000000e-01,  1.7723508e+00</node>
+			<node id="141">  5.0000000e-01, -5.0000000e-01,  1.8297097e+00</node>
+			<node id="142">  5.0000000e-01, -5.0000000e-01,  1.8755968e+00</node>
+			<node id="143">  5.0000000e-01, -5.0000000e-01,  1.9123064e+00</node>
+			<node id="144">  5.0000000e-01, -5.0000000e-01,  1.9416742e+00</node>
+			<node id="145">  5.0000000e-01, -5.0000000e-01,  1.9651684e+00</node>
+			<node id="146">  5.0000000e-01, -5.0000000e-01,  1.9839637e+00</node>
+			<node id="147">  5.0000000e-01, -5.0000000e-01,  1.9990000e+00</node>
+			<node id="148">  5.0000000e-01,  5.0000000e-01,  9.9900000e-01</node>
+			<node id="149">  5.0000000e-01,  5.0000000e-01,  1.0140363e+00</node>
+			<node id="150">  5.0000000e-01,  5.0000000e-01,  1.0328316e+00</node>
+			<node id="151">  5.0000000e-01,  5.0000000e-01,  1.0563258e+00</node>
+			<node id="152">  5.0000000e-01,  5.0000000e-01,  1.0856936e+00</node>
+			<node id="153">  5.0000000e-01,  5.0000000e-01,  1.1224032e+00</node>
+			<node id="154">  5.0000000e-01,  5.0000000e-01,  1.1682903e+00</node>
+			<node id="155">  5.0000000e-01,  5.0000000e-01,  1.2256492e+00</node>
+			<node id="156">  5.0000000e-01,  5.0000000e-01,  1.2973478e+00</node>
+			<node id="157">  5.0000000e-01,  5.0000000e-01,  1.3869710e+00</node>
+			<node id="158">  5.0000000e-01,  5.0000000e-01,  1.4990000e+00</node>
+			<node id="159">  5.0000000e-01,  5.0000000e-01,  1.6110290e+00</node>
+			<node id="160">  5.0000000e-01,  5.0000000e-01,  1.7006522e+00</node>
+			<node id="161">  5.0000000e-01,  5.0000000e-01,  1.7723508e+00</node>
+			<node id="162">  5.0000000e-01,  5.0000000e-01,  1.8297097e+00</node>
+			<node id="163">  5.0000000e-01,  5.0000000e-01,  1.8755968e+00</node>
+			<node id="164">  5.0000000e-01,  5.0000000e-01,  1.9123064e+00</node>
+			<node id="165">  5.0000000e-01,  5.0000000e-01,  1.9416742e+00</node>
+			<node id="166">  5.0000000e-01,  5.0000000e-01,  1.9651684e+00</node>
+			<node id="167">  5.0000000e-01,  5.0000000e-01,  1.9839637e+00</node>
+			<node id="168">  5.0000000e-01,  5.0000000e-01,  1.9990000e+00</node>
+		</Nodes>
+		<Elements>
+			<hex8 id="1" mat="3">     1,    43,    64,    22,     2,    44,    65,    23</hex8>
+			<hex8 id="2" mat="3">     2,    44,    65,    23,     3,    45,    66,    24</hex8>
+			<hex8 id="3" mat="3">     3,    45,    66,    24,     4,    46,    67,    25</hex8>
+			<hex8 id="4" mat="3">     4,    46,    67,    25,     5,    47,    68,    26</hex8>
+			<hex8 id="5" mat="3">     5,    47,    68,    26,     6,    48,    69,    27</hex8>
+			<hex8 id="6" mat="3">     6,    48,    69,    27,     7,    49,    70,    28</hex8>
+			<hex8 id="7" mat="3">     7,    49,    70,    28,     8,    50,    71,    29</hex8>
+			<hex8 id="8" mat="3">     8,    50,    71,    29,     9,    51,    72,    30</hex8>
+			<hex8 id="9" mat="3">     9,    51,    72,    30,    10,    52,    73,    31</hex8>
+			<hex8 id="10" mat="3">    10,    52,    73,    31,    11,    53,    74,    32</hex8>
+			<hex8 id="11" mat="3">    11,    53,    74,    32,    12,    54,    75,    33</hex8>
+			<hex8 id="12" mat="3">    12,    54,    75,    33,    13,    55,    76,    34</hex8>
+			<hex8 id="13" mat="3">    13,    55,    76,    34,    14,    56,    77,    35</hex8>
+			<hex8 id="14" mat="3">    14,    56,    77,    35,    15,    57,    78,    36</hex8>
+			<hex8 id="15" mat="3">    15,    57,    78,    36,    16,    58,    79,    37</hex8>
+			<hex8 id="16" mat="3">    16,    58,    79,    37,    17,    59,    80,    38</hex8>
+			<hex8 id="17" mat="3">    17,    59,    80,    38,    18,    60,    81,    39</hex8>
+			<hex8 id="18" mat="3">    18,    60,    81,    39,    19,    61,    82,    40</hex8>
+			<hex8 id="19" mat="3">    19,    61,    82,    40,    20,    62,    83,    41</hex8>
+			<hex8 id="20" mat="3">    20,    62,    83,    41,    21,    63,    84,    42</hex8>
+			<hex8 id="21" mat="2">    85,   127,   148,   106,    86,   128,   149,   107</hex8>
+			<hex8 id="22" mat="2">    86,   128,   149,   107,    87,   129,   150,   108</hex8>
+			<hex8 id="23" mat="2">    87,   129,   150,   108,    88,   130,   151,   109</hex8>
+			<hex8 id="24" mat="2">    88,   130,   151,   109,    89,   131,   152,   110</hex8>
+			<hex8 id="25" mat="2">    89,   131,   152,   110,    90,   132,   153,   111</hex8>
+			<hex8 id="26" mat="2">    90,   132,   153,   111,    91,   133,   154,   112</hex8>
+			<hex8 id="27" mat="2">    91,   133,   154,   112,    92,   134,   155,   113</hex8>
+			<hex8 id="28" mat="2">    92,   134,   155,   113,    93,   135,   156,   114</hex8>
+			<hex8 id="29" mat="2">    93,   135,   156,   114,    94,   136,   157,   115</hex8>
+			<hex8 id="30" mat="2">    94,   136,   157,   115,    95,   137,   158,   116</hex8>
+			<hex8 id="31" mat="2">    95,   137,   158,   116,    96,   138,   159,   117</hex8>
+			<hex8 id="32" mat="2">    96,   138,   159,   117,    97,   139,   160,   118</hex8>
+			<hex8 id="33" mat="2">    97,   139,   160,   118,    98,   140,   161,   119</hex8>
+			<hex8 id="34" mat="2">    98,   140,   161,   119,    99,   141,   162,   120</hex8>
+			<hex8 id="35" mat="2">    99,   141,   162,   120,   100,   142,   163,   121</hex8>
+			<hex8 id="36" mat="2">   100,   142,   163,   121,   101,   143,   164,   122</hex8>
+			<hex8 id="37" mat="2">   101,   143,   164,   122,   102,   144,   165,   123</hex8>
+			<hex8 id="38" mat="2">   102,   144,   165,   123,   103,   145,   166,   124</hex8>
+			<hex8 id="39" mat="2">   103,   145,   166,   124,   104,   146,   167,   125</hex8>
+			<hex8 id="40" mat="2">   104,   146,   167,   125,   105,   147,   168,   126</hex8>
+		</Elements>
+	</Geometry>
+	<Boundary>
+		<fix>
+			<node id="1" bc="x"/>
+			<node id="2" bc="x"/>
+			<node id="3" bc="x"/>
+			<node id="4" bc="x"/>
+			<node id="5" bc="x"/>
+			<node id="6" bc="x"/>
+			<node id="7" bc="x"/>
+			<node id="8" bc="x"/>
+			<node id="9" bc="x"/>
+			<node id="10" bc="x"/>
+			<node id="11" bc="x"/>
+			<node id="12" bc="x"/>
+			<node id="13" bc="x"/>
+			<node id="14" bc="x"/>
+			<node id="15" bc="x"/>
+			<node id="16" bc="x"/>
+			<node id="17" bc="x"/>
+			<node id="18" bc="x"/>
+			<node id="19" bc="x"/>
+			<node id="20" bc="x"/>
+			<node id="21" bc="x"/>
+			<node id="22" bc="x"/>
+			<node id="23" bc="x"/>
+			<node id="24" bc="x"/>
+			<node id="25" bc="x"/>
+			<node id="26" bc="x"/>
+			<node id="27" bc="x"/>
+			<node id="28" bc="x"/>
+			<node id="29" bc="x"/>
+			<node id="30" bc="x"/>
+			<node id="31" bc="x"/>
+			<node id="32" bc="x"/>
+			<node id="33" bc="x"/>
+			<node id="34" bc="x"/>
+			<node id="35" bc="x"/>
+			<node id="36" bc="x"/>
+			<node id="37" bc="x"/>
+			<node id="38" bc="x"/>
+			<node id="39" bc="x"/>
+			<node id="40" bc="x"/>
+			<node id="41" bc="x"/>
+			<node id="42" bc="x"/>
+			<node id="43" bc="x"/>
+			<node id="44" bc="x"/>
+			<node id="45" bc="x"/>
+			<node id="46" bc="x"/>
+			<node id="47" bc="x"/>
+			<node id="48" bc="x"/>
+			<node id="49" bc="x"/>
+			<node id="50" bc="x"/>
+			<node id="51" bc="x"/>
+			<node id="52" bc="x"/>
+			<node id="53" bc="x"/>
+			<node id="54" bc="x"/>
+			<node id="55" bc="x"/>
+			<node id="56" bc="x"/>
+			<node id="57" bc="x"/>
+			<node id="58" bc="x"/>
+			<node id="59" bc="x"/>
+			<node id="60" bc="x"/>
+			<node id="61" bc="x"/>
+			<node id="62" bc="x"/>
+			<node id="63" bc="x"/>
+			<node id="64" bc="x"/>
+			<node id="65" bc="x"/>
+			<node id="66" bc="x"/>
+			<node id="67" bc="x"/>
+			<node id="68" bc="x"/>
+			<node id="69" bc="x"/>
+			<node id="70" bc="x"/>
+			<node id="71" bc="x"/>
+			<node id="72" bc="x"/>
+			<node id="73" bc="x"/>
+			<node id="74" bc="x"/>
+			<node id="75" bc="x"/>
+			<node id="76" bc="x"/>
+			<node id="77" bc="x"/>
+			<node id="78" bc="x"/>
+			<node id="79" bc="x"/>
+			<node id="80" bc="x"/>
+			<node id="81" bc="x"/>
+			<node id="82" bc="x"/>
+			<node id="83" bc="x"/>
+			<node id="84" bc="x"/>
+			<node id="1" bc="x"/>
+			<node id="2" bc="x"/>
+			<node id="3" bc="x"/>
+			<node id="4" bc="x"/>
+			<node id="5" bc="x"/>
+			<node id="6" bc="x"/>
+			<node id="7" bc="x"/>
+			<node id="8" bc="x"/>
+			<node id="9" bc="x"/>
+			<node id="10" bc="x"/>
+			<node id="11" bc="x"/>
+			<node id="12" bc="x"/>
+			<node id="13" bc="x"/>
+			<node id="14" bc="x"/>
+			<node id="15" bc="x"/>
+			<node id="16" bc="x"/>
+			<node id="17" bc="x"/>
+			<node id="18" bc="x"/>
+			<node id="19" bc="x"/>
+			<node id="20" bc="x"/>
+			<node id="21" bc="x"/>
+			<node id="22" bc="x"/>
+			<node id="23" bc="x"/>
+			<node id="24" bc="x"/>
+			<node id="25" bc="x"/>
+			<node id="26" bc="x"/>
+			<node id="27" bc="x"/>
+			<node id="28" bc="x"/>
+			<node id="29" bc="x"/>
+			<node id="30" bc="x"/>
+			<node id="31" bc="x"/>
+			<node id="32" bc="x"/>
+			<node id="33" bc="x"/>
+			<node id="34" bc="x"/>
+			<node id="35" bc="x"/>
+			<node id="36" bc="x"/>
+			<node id="37" bc="x"/>
+			<node id="38" bc="x"/>
+			<node id="39" bc="x"/>
+			<node id="40" bc="x"/>
+			<node id="41" bc="x"/>
+			<node id="42" bc="x"/>
+			<node id="43" bc="x"/>
+			<node id="44" bc="x"/>
+			<node id="45" bc="x"/>
+			<node id="46" bc="x"/>
+			<node id="47" bc="x"/>
+			<node id="48" bc="x"/>
+			<node id="49" bc="x"/>
+			<node id="50" bc="x"/>
+			<node id="51" bc="x"/>
+			<node id="52" bc="x"/>
+			<node id="53" bc="x"/>
+			<node id="54" bc="x"/>
+			<node id="55" bc="x"/>
+			<node id="56" bc="x"/>
+			<node id="57" bc="x"/>
+			<node id="58" bc="x"/>
+			<node id="59" bc="x"/>
+			<node id="60" bc="x"/>
+			<node id="61" bc="x"/>
+			<node id="62" bc="x"/>
+			<node id="63" bc="x"/>
+			<node id="64" bc="x"/>
+			<node id="65" bc="x"/>
+			<node id="66" bc="x"/>
+			<node id="67" bc="x"/>
+			<node id="68" bc="x"/>
+			<node id="69" bc="x"/>
+			<node id="70" bc="x"/>
+			<node id="71" bc="x"/>
+			<node id="72" bc="x"/>
+			<node id="73" bc="x"/>
+			<node id="74" bc="x"/>
+			<node id="75" bc="x"/>
+			<node id="76" bc="x"/>
+			<node id="77" bc="x"/>
+			<node id="78" bc="x"/>
+			<node id="79" bc="x"/>
+			<node id="80" bc="x"/>
+			<node id="81" bc="x"/>
+			<node id="82" bc="x"/>
+			<node id="83" bc="x"/>
+			<node id="84" bc="x"/>
+			<node id="85" bc="x"/>
+			<node id="86" bc="x"/>
+			<node id="87" bc="x"/>
+			<node id="88" bc="x"/>
+			<node id="89" bc="x"/>
+			<node id="90" bc="x"/>
+			<node id="91" bc="x"/>
+			<node id="92" bc="x"/>
+			<node id="93" bc="x"/>
+			<node id="94" bc="x"/>
+			<node id="95" bc="x"/>
+			<node id="96" bc="x"/>
+			<node id="97" bc="x"/>
+			<node id="98" bc="x"/>
+			<node id="99" bc="x"/>
+			<node id="100" bc="x"/>
+			<node id="101" bc="x"/>
+			<node id="102" bc="x"/>
+			<node id="103" bc="x"/>
+			<node id="104" bc="x"/>
+			<node id="105" bc="x"/>
+			<node id="106" bc="x"/>
+			<node id="107" bc="x"/>
+			<node id="108" bc="x"/>
+			<node id="109" bc="x"/>
+			<node id="110" bc="x"/>
+			<node id="111" bc="x"/>
+			<node id="112" bc="x"/>
+			<node id="113" bc="x"/>
+			<node id="114" bc="x"/>
+			<node id="115" bc="x"/>
+			<node id="116" bc="x"/>
+			<node id="117" bc="x"/>
+			<node id="118" bc="x"/>
+			<node id="119" bc="x"/>
+			<node id="120" bc="x"/>
+			<node id="121" bc="x"/>
+			<node id="122" bc="x"/>
+			<node id="123" bc="x"/>
+			<node id="124" bc="x"/>
+			<node id="125" bc="x"/>
+			<node id="126" bc="x"/>
+			<node id="127" bc="x"/>
+			<node id="128" bc="x"/>
+			<node id="129" bc="x"/>
+			<node id="130" bc="x"/>
+			<node id="131" bc="x"/>
+			<node id="132" bc="x"/>
+			<node id="133" bc="x"/>
+			<node id="134" bc="x"/>
+			<node id="135" bc="x"/>
+			<node id="136" bc="x"/>
+			<node id="137" bc="x"/>
+			<node id="138" bc="x"/>
+			<node id="139" bc="x"/>
+			<node id="140" bc="x"/>
+			<node id="141" bc="x"/>
+			<node id="142" bc="x"/>
+			<node id="143" bc="x"/>
+			<node id="144" bc="x"/>
+			<node id="145" bc="x"/>
+			<node id="146" bc="x"/>
+			<node id="147" bc="x"/>
+			<node id="148" bc="x"/>
+			<node id="149" bc="x"/>
+			<node id="150" bc="x"/>
+			<node id="151" bc="x"/>
+			<node id="152" bc="x"/>
+			<node id="153" bc="x"/>
+			<node id="154" bc="x"/>
+			<node id="155" bc="x"/>
+			<node id="156" bc="x"/>
+			<node id="157" bc="x"/>
+			<node id="158" bc="x"/>
+			<node id="159" bc="x"/>
+			<node id="160" bc="x"/>
+			<node id="161" bc="x"/>
+			<node id="162" bc="x"/>
+			<node id="163" bc="x"/>
+			<node id="164" bc="x"/>
+			<node id="165" bc="x"/>
+			<node id="166" bc="x"/>
+			<node id="167" bc="x"/>
+			<node id="168" bc="x"/>
+			<node id="85" bc="x"/>
+			<node id="86" bc="x"/>
+			<node id="87" bc="x"/>
+			<node id="88" bc="x"/>
+			<node id="89" bc="x"/>
+			<node id="90" bc="x"/>
+			<node id="91" bc="x"/>
+			<node id="92" bc="x"/>
+			<node id="93" bc="x"/>
+			<node id="94" bc="x"/>
+			<node id="95" bc="x"/>
+			<node id="96" bc="x"/>
+			<node id="97" bc="x"/>
+			<node id="98" bc="x"/>
+			<node id="99" bc="x"/>
+			<node id="100" bc="x"/>
+			<node id="101" bc="x"/>
+			<node id="102" bc="x"/>
+			<node id="103" bc="x"/>
+			<node id="104" bc="x"/>
+			<node id="105" bc="x"/>
+			<node id="106" bc="x"/>
+			<node id="107" bc="x"/>
+			<node id="108" bc="x"/>
+			<node id="109" bc="x"/>
+			<node id="110" bc="x"/>
+			<node id="111" bc="x"/>
+			<node id="112" bc="x"/>
+			<node id="113" bc="x"/>
+			<node id="114" bc="x"/>
+			<node id="115" bc="x"/>
+			<node id="116" bc="x"/>
+			<node id="117" bc="x"/>
+			<node id="118" bc="x"/>
+			<node id="119" bc="x"/>
+			<node id="120" bc="x"/>
+			<node id="121" bc="x"/>
+			<node id="122" bc="x"/>
+			<node id="123" bc="x"/>
+			<node id="124" bc="x"/>
+			<node id="125" bc="x"/>
+			<node id="126" bc="x"/>
+			<node id="127" bc="x"/>
+			<node id="128" bc="x"/>
+			<node id="129" bc="x"/>
+			<node id="130" bc="x"/>
+			<node id="131" bc="x"/>
+			<node id="132" bc="x"/>
+			<node id="133" bc="x"/>
+			<node id="134" bc="x"/>
+			<node id="135" bc="x"/>
+			<node id="136" bc="x"/>
+			<node id="137" bc="x"/>
+			<node id="138" bc="x"/>
+			<node id="139" bc="x"/>
+			<node id="140" bc="x"/>
+			<node id="141" bc="x"/>
+			<node id="142" bc="x"/>
+			<node id="143" bc="x"/>
+			<node id="144" bc="x"/>
+			<node id="145" bc="x"/>
+			<node id="146" bc="x"/>
+			<node id="147" bc="x"/>
+			<node id="148" bc="x"/>
+			<node id="149" bc="x"/>
+			<node id="150" bc="x"/>
+			<node id="151" bc="x"/>
+			<node id="152" bc="x"/>
+			<node id="153" bc="x"/>
+			<node id="154" bc="x"/>
+			<node id="155" bc="x"/>
+			<node id="156" bc="x"/>
+			<node id="157" bc="x"/>
+			<node id="158" bc="x"/>
+			<node id="159" bc="x"/>
+			<node id="160" bc="x"/>
+			<node id="161" bc="x"/>
+			<node id="162" bc="x"/>
+			<node id="163" bc="x"/>
+			<node id="164" bc="x"/>
+			<node id="165" bc="x"/>
+			<node id="166" bc="x"/>
+			<node id="167" bc="x"/>
+			<node id="168" bc="x"/>
+		</fix>
+		<fix>
+			<node id="1" bc="y"/>
+			<node id="2" bc="y"/>
+			<node id="3" bc="y"/>
+			<node id="4" bc="y"/>
+			<node id="5" bc="y"/>
+			<node id="6" bc="y"/>
+			<node id="7" bc="y"/>
+			<node id="8" bc="y"/>
+			<node id="9" bc="y"/>
+			<node id="10" bc="y"/>
+			<node id="11" bc="y"/>
+			<node id="12" bc="y"/>
+			<node id="13" bc="y"/>
+			<node id="14" bc="y"/>
+			<node id="15" bc="y"/>
+			<node id="16" bc="y"/>
+			<node id="17" bc="y"/>
+			<node id="18" bc="y"/>
+			<node id="19" bc="y"/>
+			<node id="20" bc="y"/>
+			<node id="21" bc="y"/>
+			<node id="22" bc="y"/>
+			<node id="23" bc="y"/>
+			<node id="24" bc="y"/>
+			<node id="25" bc="y"/>
+			<node id="26" bc="y"/>
+			<node id="27" bc="y"/>
+			<node id="28" bc="y"/>
+			<node id="29" bc="y"/>
+			<node id="30" bc="y"/>
+			<node id="31" bc="y"/>
+			<node id="32" bc="y"/>
+			<node id="33" bc="y"/>
+			<node id="34" bc="y"/>
+			<node id="35" bc="y"/>
+			<node id="36" bc="y"/>
+			<node id="37" bc="y"/>
+			<node id="38" bc="y"/>
+			<node id="39" bc="y"/>
+			<node id="40" bc="y"/>
+			<node id="41" bc="y"/>
+			<node id="42" bc="y"/>
+			<node id="43" bc="y"/>
+			<node id="44" bc="y"/>
+			<node id="45" bc="y"/>
+			<node id="46" bc="y"/>
+			<node id="47" bc="y"/>
+			<node id="48" bc="y"/>
+			<node id="49" bc="y"/>
+			<node id="50" bc="y"/>
+			<node id="51" bc="y"/>
+			<node id="52" bc="y"/>
+			<node id="53" bc="y"/>
+			<node id="54" bc="y"/>
+			<node id="55" bc="y"/>
+			<node id="56" bc="y"/>
+			<node id="57" bc="y"/>
+			<node id="58" bc="y"/>
+			<node id="59" bc="y"/>
+			<node id="60" bc="y"/>
+			<node id="61" bc="y"/>
+			<node id="62" bc="y"/>
+			<node id="63" bc="y"/>
+			<node id="64" bc="y"/>
+			<node id="65" bc="y"/>
+			<node id="66" bc="y"/>
+			<node id="67" bc="y"/>
+			<node id="68" bc="y"/>
+			<node id="69" bc="y"/>
+			<node id="70" bc="y"/>
+			<node id="71" bc="y"/>
+			<node id="72" bc="y"/>
+			<node id="73" bc="y"/>
+			<node id="74" bc="y"/>
+			<node id="75" bc="y"/>
+			<node id="76" bc="y"/>
+			<node id="77" bc="y"/>
+			<node id="78" bc="y"/>
+			<node id="79" bc="y"/>
+			<node id="80" bc="y"/>
+			<node id="81" bc="y"/>
+			<node id="82" bc="y"/>
+			<node id="83" bc="y"/>
+			<node id="84" bc="y"/>
+			<node id="1" bc="y"/>
+			<node id="2" bc="y"/>
+			<node id="3" bc="y"/>
+			<node id="4" bc="y"/>
+			<node id="5" bc="y"/>
+			<node id="6" bc="y"/>
+			<node id="7" bc="y"/>
+			<node id="8" bc="y"/>
+			<node id="9" bc="y"/>
+			<node id="10" bc="y"/>
+			<node id="11" bc="y"/>
+			<node id="12" bc="y"/>
+			<node id="13" bc="y"/>
+			<node id="14" bc="y"/>
+			<node id="15" bc="y"/>
+			<node id="16" bc="y"/>
+			<node id="17" bc="y"/>
+			<node id="18" bc="y"/>
+			<node id="19" bc="y"/>
+			<node id="20" bc="y"/>
+			<node id="21" bc="y"/>
+			<node id="22" bc="y"/>
+			<node id="23" bc="y"/>
+			<node id="24" bc="y"/>
+			<node id="25" bc="y"/>
+			<node id="26" bc="y"/>
+			<node id="27" bc="y"/>
+			<node id="28" bc="y"/>
+			<node id="29" bc="y"/>
+			<node id="30" bc="y"/>
+			<node id="31" bc="y"/>
+			<node id="32" bc="y"/>
+			<node id="33" bc="y"/>
+			<node id="34" bc="y"/>
+			<node id="35" bc="y"/>
+			<node id="36" bc="y"/>
+			<node id="37" bc="y"/>
+			<node id="38" bc="y"/>
+			<node id="39" bc="y"/>
+			<node id="40" bc="y"/>
+			<node id="41" bc="y"/>
+			<node id="42" bc="y"/>
+			<node id="43" bc="y"/>
+			<node id="44" bc="y"/>
+			<node id="45" bc="y"/>
+			<node id="46" bc="y"/>
+			<node id="47" bc="y"/>
+			<node id="48" bc="y"/>
+			<node id="49" bc="y"/>
+			<node id="50" bc="y"/>
+			<node id="51" bc="y"/>
+			<node id="52" bc="y"/>
+			<node id="53" bc="y"/>
+			<node id="54" bc="y"/>
+			<node id="55" bc="y"/>
+			<node id="56" bc="y"/>
+			<node id="57" bc="y"/>
+			<node id="58" bc="y"/>
+			<node id="59" bc="y"/>
+			<node id="60" bc="y"/>
+			<node id="61" bc="y"/>
+			<node id="62" bc="y"/>
+			<node id="63" bc="y"/>
+			<node id="64" bc="y"/>
+			<node id="65" bc="y"/>
+			<node id="66" bc="y"/>
+			<node id="67" bc="y"/>
+			<node id="68" bc="y"/>
+			<node id="69" bc="y"/>
+			<node id="70" bc="y"/>
+			<node id="71" bc="y"/>
+			<node id="72" bc="y"/>
+			<node id="73" bc="y"/>
+			<node id="74" bc="y"/>
+			<node id="75" bc="y"/>
+			<node id="76" bc="y"/>
+			<node id="77" bc="y"/>
+			<node id="78" bc="y"/>
+			<node id="79" bc="y"/>
+			<node id="80" bc="y"/>
+			<node id="81" bc="y"/>
+			<node id="82" bc="y"/>
+			<node id="83" bc="y"/>
+			<node id="84" bc="y"/>
+			<node id="85" bc="y"/>
+			<node id="86" bc="y"/>
+			<node id="87" bc="y"/>
+			<node id="88" bc="y"/>
+			<node id="89" bc="y"/>
+			<node id="90" bc="y"/>
+			<node id="91" bc="y"/>
+			<node id="92" bc="y"/>
+			<node id="93" bc="y"/>
+			<node id="94" bc="y"/>
+			<node id="95" bc="y"/>
+			<node id="96" bc="y"/>
+			<node id="97" bc="y"/>
+			<node id="98" bc="y"/>
+			<node id="99" bc="y"/>
+			<node id="100" bc="y"/>
+			<node id="101" bc="y"/>
+			<node id="102" bc="y"/>
+			<node id="103" bc="y"/>
+			<node id="104" bc="y"/>
+			<node id="105" bc="y"/>
+			<node id="106" bc="y"/>
+			<node id="107" bc="y"/>
+			<node id="108" bc="y"/>
+			<node id="109" bc="y"/>
+			<node id="110" bc="y"/>
+			<node id="111" bc="y"/>
+			<node id="112" bc="y"/>
+			<node id="113" bc="y"/>
+			<node id="114" bc="y"/>
+			<node id="115" bc="y"/>
+			<node id="116" bc="y"/>
+			<node id="117" bc="y"/>
+			<node id="118" bc="y"/>
+			<node id="119" bc="y"/>
+			<node id="120" bc="y"/>
+			<node id="121" bc="y"/>
+			<node id="122" bc="y"/>
+			<node id="123" bc="y"/>
+			<node id="124" bc="y"/>
+			<node id="125" bc="y"/>
+			<node id="126" bc="y"/>
+			<node id="127" bc="y"/>
+			<node id="128" bc="y"/>
+			<node id="129" bc="y"/>
+			<node id="130" bc="y"/>
+			<node id="131" bc="y"/>
+			<node id="132" bc="y"/>
+			<node id="133" bc="y"/>
+			<node id="134" bc="y"/>
+			<node id="135" bc="y"/>
+			<node id="136" bc="y"/>
+			<node id="137" bc="y"/>
+			<node id="138" bc="y"/>
+			<node id="139" bc="y"/>
+			<node id="140" bc="y"/>
+			<node id="141" bc="y"/>
+			<node id="142" bc="y"/>
+			<node id="143" bc="y"/>
+			<node id="144" bc="y"/>
+			<node id="145" bc="y"/>
+			<node id="146" bc="y"/>
+			<node id="147" bc="y"/>
+			<node id="148" bc="y"/>
+			<node id="149" bc="y"/>
+			<node id="150" bc="y"/>
+			<node id="151" bc="y"/>
+			<node id="152" bc="y"/>
+			<node id="153" bc="y"/>
+			<node id="154" bc="y"/>
+			<node id="155" bc="y"/>
+			<node id="156" bc="y"/>
+			<node id="157" bc="y"/>
+			<node id="158" bc="y"/>
+			<node id="159" bc="y"/>
+			<node id="160" bc="y"/>
+			<node id="161" bc="y"/>
+			<node id="162" bc="y"/>
+			<node id="163" bc="y"/>
+			<node id="164" bc="y"/>
+			<node id="165" bc="y"/>
+			<node id="166" bc="y"/>
+			<node id="167" bc="y"/>
+			<node id="168" bc="y"/>
+			<node id="85" bc="y"/>
+			<node id="86" bc="y"/>
+			<node id="87" bc="y"/>
+			<node id="88" bc="y"/>
+			<node id="89" bc="y"/>
+			<node id="90" bc="y"/>
+			<node id="91" bc="y"/>
+			<node id="92" bc="y"/>
+			<node id="93" bc="y"/>
+			<node id="94" bc="y"/>
+			<node id="95" bc="y"/>
+			<node id="96" bc="y"/>
+			<node id="97" bc="y"/>
+			<node id="98" bc="y"/>
+			<node id="99" bc="y"/>
+			<node id="100" bc="y"/>
+			<node id="101" bc="y"/>
+			<node id="102" bc="y"/>
+			<node id="103" bc="y"/>
+			<node id="104" bc="y"/>
+			<node id="105" bc="y"/>
+			<node id="106" bc="y"/>
+			<node id="107" bc="y"/>
+			<node id="108" bc="y"/>
+			<node id="109" bc="y"/>
+			<node id="110" bc="y"/>
+			<node id="111" bc="y"/>
+			<node id="112" bc="y"/>
+			<node id="113" bc="y"/>
+			<node id="114" bc="y"/>
+			<node id="115" bc="y"/>
+			<node id="116" bc="y"/>
+			<node id="117" bc="y"/>
+			<node id="118" bc="y"/>
+			<node id="119" bc="y"/>
+			<node id="120" bc="y"/>
+			<node id="121" bc="y"/>
+			<node id="122" bc="y"/>
+			<node id="123" bc="y"/>
+			<node id="124" bc="y"/>
+			<node id="125" bc="y"/>
+			<node id="126" bc="y"/>
+			<node id="127" bc="y"/>
+			<node id="128" bc="y"/>
+			<node id="129" bc="y"/>
+			<node id="130" bc="y"/>
+			<node id="131" bc="y"/>
+			<node id="132" bc="y"/>
+			<node id="133" bc="y"/>
+			<node id="134" bc="y"/>
+			<node id="135" bc="y"/>
+			<node id="136" bc="y"/>
+			<node id="137" bc="y"/>
+			<node id="138" bc="y"/>
+			<node id="139" bc="y"/>
+			<node id="140" bc="y"/>
+			<node id="141" bc="y"/>
+			<node id="142" bc="y"/>
+			<node id="143" bc="y"/>
+			<node id="144" bc="y"/>
+			<node id="145" bc="y"/>
+			<node id="146" bc="y"/>
+			<node id="147" bc="y"/>
+			<node id="148" bc="y"/>
+			<node id="149" bc="y"/>
+			<node id="150" bc="y"/>
+			<node id="151" bc="y"/>
+			<node id="152" bc="y"/>
+			<node id="153" bc="y"/>
+			<node id="154" bc="y"/>
+			<node id="155" bc="y"/>
+			<node id="156" bc="y"/>
+			<node id="157" bc="y"/>
+			<node id="158" bc="y"/>
+			<node id="159" bc="y"/>
+			<node id="160" bc="y"/>
+			<node id="161" bc="y"/>
+			<node id="162" bc="y"/>
+			<node id="163" bc="y"/>
+			<node id="164" bc="y"/>
+			<node id="165" bc="y"/>
+			<node id="166" bc="y"/>
+			<node id="167" bc="y"/>
+			<node id="168" bc="y"/>
+		</fix>
+		<fix>
+			<node id="1" bc="z"/>
+			<node id="22" bc="z"/>
+			<node id="43" bc="z"/>
+			<node id="64" bc="z"/>
+		</fix>
+		<prescribe>
+			<node id="1" bc="c1" lc="2">1</node>
+			<node id="22" bc="c1" lc="2">1</node>
+			<node id="43" bc="c1" lc="2">1</node>
+			<node id="64" bc="c1" lc="2">1</node>
+		</prescribe>
+		<prescribe>
+			<node id="1" bc="p" lc="3">1</node>
+			<node id="22" bc="p" lc="3">1</node>
+			<node id="43" bc="p" lc="3">1</node>
+			<node id="64" bc="p" lc="3">1</node>
+		</prescribe>
+		<contact type="rigid">
+			<node id="105" rb="1"></node>
+			<node id="126" rb="1"></node>
+			<node id="147" rb="1"></node>
+			<node id="168" rb="1"></node>
+		</contact>
+		<contact type="sliding3">
+			<laugon>0</laugon>
+			<tolerance>0.2</tolerance>
+			<penalty>10</penalty>
+			<two_pass>1</two_pass>
+			<auto_penalty>1</auto_penalty>
+			<pressure_penalty>1</pressure_penalty>
+			<symmetric_stiffness>0</symmetric_stiffness>
+			<concentration_penalty>1</concentration_penalty>
+			<ambient_pressure>-0.002436</ambient_pressure>
+			<ambient_concentration>1</ambient_concentration>
+			<search_radius>1</search_radius>
+			<surface type="master">
+				<quad4 id="1">    85,   106,   148,   127</quad4>
+			</surface>
+			<surface type="slave">
+				<quad4 id="1">    21,    63,    84,    42</quad4>
+			</surface>
+		</contact>
+	</Boundary>
+	<Constraints>
+		<rigid_body mat="1">
+			<trans_x type="fixed"></trans_x>
+			<trans_y type="fixed"></trans_y>
+			<rot_x type="fixed"></rot_x>
+			<rot_y type="fixed"></rot_y>
+			<rot_z type="fixed"></rot_z>
+		</rigid_body>
+		<rigid_body mat="1">
+			<trans_z type="force" lc="4">1</trans_z>
+		</rigid_body>
+	</Constraints>
+	<LoadData>
+		<loadcurve id="1" type="step">
+			<loadpoint>0,0</loadpoint>
+			<loadpoint>1,0.1</loadpoint>
+			<loadpoint>10,1</loadpoint>
+			<loadpoint>100,10</loadpoint>
+			<loadpoint>1000,100</loadpoint>
+			<loadpoint>10000,1000</loadpoint>
+		</loadcurve>
+		<loadcurve id="2" type="step">
+			<loadpoint>0,0</loadpoint>
+			<loadpoint>1,1</loadpoint>
+		</loadcurve>
+		<loadcurve id="3" type="step">
+			<loadpoint>0,0</loadpoint>
+			<loadpoint>1,-0.002436</loadpoint>
+		</loadcurve>
+		<loadcurve id="4" type="step">
+			<loadpoint>0,0</loadpoint>
+			<loadpoint>1,-0.2</loadpoint>
+		</loadcurve>
+	</LoadData>
+	<Output>
+		<plotfile type="febio">
+			<var type="contact force"/>
+			<var type="contact gap"/>
+			<var type="contact pressure"/>
+			<var type="displacement"/>
+			<var type="effective fluid pressure"/>
+			<var type="effective solute 1 concentration"/>
+			<var type="fluid flux"/>
+			<var type="fluid force"/>
+			<var type="fluid pressure"/>
+			<var type="osmolarity"/>
+			<var type="pressure gap"/>
+			<var type="reaction forces"/>
+			<var type="relative volume"/>
+			<var type="solute 1 concentration"/>
+			<var type="solute 1 flux"/>
+			<var type="stress"/>
+		</plotfile>
+		<logfile>
+			<element_data data="c1">1</element_data>
+		</logfile>
+	</Output>
+</febio_spec>

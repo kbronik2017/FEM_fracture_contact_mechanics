@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Problem Description:
+	Uniaxial loading of a bar that is rotated about the Z-axis by 30 degrees.
+	The preferred material directions are aligned along and perpendicular
+	to the long axis of the bar.
+Main Features:
+	Material directions not along coordinate axes.
+Secondary Features:
+	Pressure
+Materials:
+	Linear Orthotropic
+Degrees of Freedom: 132
+Results:
+	Steps Completed: 10
+	Equilibrium Iterations: 52
+	Right Hand Evaluations: 62
+	Siffness Reformations: 10
+	Other:
+		The end of the bar has a total displacement of 0.85 units at time t = 1.
+Comments:
+	
+-->
+<febio_spec version="1.2">
+	<Module type="solid"/>
+	<Control>
+		<title>Linear Orthotropic</title>
+		<time_steps>10</time_steps>
+		<step_size>0.1</step_size>
+		<max_refs>15</max_refs>
+		<max_ups>10</max_ups>
+		<dtol>0.001</dtol>
+		<etol>0.01</etol>
+		<rtol>0</rtol>
+		<lstol>0.9</lstol>
+		<time_stepper>
+			<dtmin>0.01</dtmin>
+			<dtmax>0.1</dtmax>
+			<max_retries>5</max_retries>
+			<opt_iter>10</opt_iter>
+		</time_stepper>
+	</Control>
+	<Material>
+		<material id="1" name="Material1" type="orthotropic elastic">
+			<mat_axis type="vector">
+			  <a>0.866,0.5,0</a>
+			  <d>-0.5,0.866,0</d>
+			</mat_axis>
+			<density>1</density>
+			<E1>1</E1>
+			<E2>2</E2>
+			<E3>3</E3>
+			<G12>3</G12>
+			<G23>2</G23>
+			<G31>1</G31>
+			<v12>0.3</v12>
+			<v23>0.2</v23>
+			<v31>0.1</v31>
+		</material>
+	</Material>
+	<Geometry>
+		<Nodes>
+			<node id="1"> -4.0801270e+00, -2.9330127e+00,  5.5511151e-17</node>
+			<node id="2"> -4.0801270e+00, -2.9330127e+00,  1.0000000e+00</node>
+			<node id="3"> -4.5801270e+00, -2.0669873e+00,  5.5511151e-17</node>
+			<node id="4"> -4.5801270e+00, -2.0669873e+00,  1.0000000e+00</node>
+			<node id="5"> -3.2928312e+00, -2.4784672e+00,  5.5511151e-17</node>
+			<node id="6"> -3.2928312e+00, -2.4784672e+00,  1.0000000e+00</node>
+			<node id="7"> -3.7928312e+00, -1.6124418e+00,  5.5511151e-17</node>
+			<node id="8"> -3.7928312e+00, -1.6124418e+00,  1.0000000e+00</node>
+			<node id="9"> -2.5055354e+00, -2.0239218e+00,  5.5511151e-17</node>
+			<node id="10"> -2.5055354e+00, -2.0239218e+00,  1.0000000e+00</node>
+			<node id="11"> -3.0055354e+00, -1.1578964e+00,  5.5511151e-17</node>
+			<node id="12"> -3.0055354e+00, -1.1578964e+00,  1.0000000e+00</node>
+			<node id="13"> -1.7182396e+00, -1.5693763e+00,  5.5511151e-17</node>
+			<node id="14"> -1.7182396e+00, -1.5693763e+00,  1.0000000e+00</node>
+			<node id="15"> -2.2182396e+00, -7.0335091e-01,  5.5511151e-17</node>
+			<node id="16"> -2.2182396e+00, -7.0335091e-01,  1.0000000e+00</node>
+			<node id="17"> -9.3094374e-01, -1.1148309e+00,  5.5511151e-17</node>
+			<node id="18"> -9.3094374e-01, -1.1148309e+00,  1.0000000e+00</node>
+			<node id="19"> -1.4309437e+00, -2.4880547e-01,  5.5511151e-17</node>
+			<node id="20"> -1.4309437e+00, -2.4880547e-01,  1.0000000e+00</node>
+			<node id="21"> -1.4364792e-01, -6.6028543e-01,  5.5511151e-17</node>
+			<node id="22"> -1.4364792e-01, -6.6028543e-01,  1.0000000e+00</node>
+			<node id="23"> -6.4364791e-01,  2.0573998e-01,  5.5511151e-17</node>
+			<node id="24"> -6.4364791e-01,  2.0573998e-01,  1.0000000e+00</node>
+			<node id="25">  6.4364791e-01, -2.0573998e-01,  5.5511151e-17</node>
+			<node id="26">  6.4364791e-01, -2.0573998e-01,  1.0000000e+00</node>
+			<node id="27">  1.4364792e-01,  6.6028543e-01,  5.5511151e-17</node>
+			<node id="28">  1.4364792e-01,  6.6028543e-01,  1.0000000e+00</node>
+			<node id="29">  1.4309437e+00,  2.4880547e-01,  5.5511151e-17</node>
+			<node id="30">  1.4309437e+00,  2.4880547e-01,  1.0000000e+00</node>
+			<node id="31">  9.3094374e-01,  1.1148309e+00,  5.5511151e-17</node>
+			<node id="32">  9.3094374e-01,  1.1148309e+00,  1.0000000e+00</node>
+			<node id="33">  2.2182396e+00,  7.0335091e-01,  5.5511151e-17</node>
+			<node id="34">  2.2182396e+00,  7.0335091e-01,  1.0000000e+00</node>
+			<node id="35">  1.7182396e+00,  1.5693763e+00,  5.5511151e-17</node>
+			<node id="36">  1.7182396e+00,  1.5693763e+00,  1.0000000e+00</node>
+			<node id="37">  3.0055354e+00,  1.1578964e+00,  5.5511151e-17</node>
+			<node id="38">  3.0055354e+00,  1.1578964e+00,  1.0000000e+00</node>
+			<node id="39">  2.5055354e+00,  2.0239218e+00,  5.5511151e-17</node>
+			<node id="40">  2.5055354e+00,  2.0239218e+00,  1.0000000e+00</node>
+			<node id="41">  3.7928312e+00,  1.6124418e+00,  5.5511151e-17</node>
+			<node id="42">  3.7928312e+00,  1.6124418e+00,  1.0000000e+00</node>
+			<node id="43">  3.2928312e+00,  2.4784672e+00,  5.5511151e-17</node>
+			<node id="44">  3.2928312e+00,  2.4784672e+00,  1.0000000e+00</node>
+			<node id="45">  4.5801270e+00,  2.0669873e+00,  5.5511151e-17</node>
+			<node id="46">  4.5801270e+00,  2.0669873e+00,  1.0000000e+00</node>
+			<node id="47">  4.0801270e+00,  2.9330127e+00,  5.5511151e-17</node>
+			<node id="48">  4.0801270e+00,  2.9330127e+00,  1.0000000e+00</node>
+		</Nodes>
+		<Elements>
+			<hex8 id="1" mat="1">     1,     5,     7,     3,     2,     6,     8,     4</hex8>
+			<hex8 id="2" mat="1">     5,     9,    11,     7,     6,    10,    12,     8</hex8>
+			<hex8 id="3" mat="1">     9,    13,    15,    11,    10,    14,    16,    12</hex8>
+			<hex8 id="4" mat="1">    13,    17,    19,    15,    14,    18,    20,    16</hex8>
+			<hex8 id="5" mat="1">    17,    21,    23,    19,    18,    22,    24,    20</hex8>
+			<hex8 id="6" mat="1">    21,    25,    27,    23,    22,    26,    28,    24</hex8>
+			<hex8 id="7" mat="1">    25,    29,    31,    27,    26,    30,    32,    28</hex8>
+			<hex8 id="8" mat="1">    29,    33,    35,    31,    30,    34,    36,    32</hex8>
+			<hex8 id="9" mat="1">    33,    37,    39,    35,    34,    38,    40,    36</hex8>
+			<hex8 id="10" mat="1">    37,    41,    43,    39,    38,    42,    44,    40</hex8>
+			<hex8 id="11" mat="1">    41,    45,    47,    43,    42,    46,    48,    44</hex8>
+		</Elements>
+	</Geometry>
+	<Boundary>
+		<fix>
+			<node id="1" bc="xyz"/>
+			<node id="2" bc="xyz"/>
+			<node id="3" bc="xyz"/>
+			<node id="4" bc="xyz"/>
+		</fix>
+	</Boundary>
+	<Loads>
+		<pressure>
+			<quad4 id="1" lc="1" scale="-1">    45,    47,    48,    46</quad4>
+		</pressure>
+	</Loads>
+	<LoadData>
+		<loadcurve id="1" type="smooth">
+			<loadpoint>0,0</loadpoint>
+			<loadpoint>1,0.1</loadpoint>
+		</loadcurve>
+	</LoadData>
+	<Output>
+		<plotfile type="febio">
+			<var type="displacement"/>
+			<var type="stress"/>
+		</plotfile>
+	</Output>
+	<Output>
+		<plotfile type="febio"></plotfile>
+        <logfile>
+			<element_data data="sy">1</element_data>
+		</logfile>	
+	</Output>
+</febio_spec>

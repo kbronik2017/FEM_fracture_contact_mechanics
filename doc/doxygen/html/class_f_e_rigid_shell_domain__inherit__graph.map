@@ -1,0 +1,6 @@
+<map id="FERigidShellDomain" name="FERigidShellDomain">
+<area shape="rect" id="node2" href="$class_f_e_elastic_shell_domain.html" title="Domain described by 3D shell elements. " alt="" coords="63,166,245,197"/>
+<area shape="rect" id="node4" href="$class_f_e_shell_domain.html" title="Abstract base class for shell elements. " alt="" coords="5,86,139,117"/>
+<area shape="rect" id="node6" href="$class_f_e_domain.html" title="FEDomain" alt="" coords="23,6,121,37"/>
+<area shape="rect" id="node8" href="$class_f_e_elastic_domain.html" title="Abstract interface class for elastic domains. " alt="" coords="164,86,311,117"/>
+</map>

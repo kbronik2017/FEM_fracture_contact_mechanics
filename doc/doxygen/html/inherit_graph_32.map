@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_f_e_core_factory.html" title="The factory class contains the mechanism for instantiating a class. " alt="" coords="6,46,141,77"/>
+<area shape="rect" id="node3" href="$class_f_e_plugin_factory___t.html" title="FEPluginFactory_T\&lt;\l T, sid \&gt;" alt="" coords="203,5,375,54"/>
+<area shape="rect" id="node5" href="$class_f_e_register_class___t.html" title="This class helps with the registration of a class with the framework. " alt="" coords="189,78,389,109"/>
+</map>

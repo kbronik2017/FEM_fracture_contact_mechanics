@@ -1,0 +1,9 @@
+<map id="FEDiscreteMaterial" name="FEDiscreteMaterial">
+<area shape="rect" id="node9" href="$class_f_e_spring_material.html" title="material class for discrete elements " alt="" coords="175,326,323,357"/>
+<area shape="rect" id="node2" href="$class_f_e_material.html" title="Abstract base class for material types. " alt="" coords="199,166,299,197"/>
+<area shape="rect" id="node4" href="$class_f_e_core_base.html" title="FECoreBase" alt="" coords="191,86,307,117"/>
+<area shape="rect" id="node6" href="$class_f_e_param_container.html" title="Base class for classes that wish to support parameter lists. " alt="" coords="168,6,331,37"/>
+<area shape="rect" id="node11" href="$class_f_e_linear_spring.html" title="linear spring " alt="" coords="5,406,141,437"/>
+<area shape="rect" id="node13" href="$class_f_e_non_linear_spring.html" title="general purpose nonlinear spring " alt="" coords="166,406,332,437"/>
+<area shape="rect" id="node15" href="$class_f_e_tension_only_linear_spring.html" title="tension&#45;only linear spring " alt="" coords="357,406,584,437"/>
+</map>

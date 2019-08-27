@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Problem Description:
+	A 10-element bar of trans iso Mooney-Rivlin material udergoes active contraction
+	in the x-direction.
+Main Features:
+	Active contraction of transversely isotropic material
+Secondary Features:
+	
+Materials:
+	trans iso Mooney-Rivlin
+Degrees of Freedom: 84
+Results:
+	Steps Completed: 10
+	Equilibrium Iterations: 39
+	Right Hand Evaluations: 49
+	Siffness Reformations: 10
+	Other:
+		The bar has a maximum x-displacement of -1.08 units at time t=1.
+ 
+Comments:
+	
+-->
+<febio_spec version="1.2">
+	<Control>
+		<title>Active Contraction</title>
+		<time_steps>10</time_steps>
+		<step_size>0.1</step_size>
+		<max_refs>15</max_refs>
+		<max_ups>10</max_ups>
+		<dtol>0.001</dtol>
+		<etol>0.01</etol>
+		<rtol>0</rtol>
+		<lstol>0.9</lstol>
+		<time_stepper>
+			<dtmin>0.01</dtmin>
+			<dtmax>0.1</dtmax>
+			<max_retries>5</max_retries>
+			<opt_iter>10</opt_iter>
+		</time_stepper>
+	</Control>
+	<Material>
+		<material id="1" name="Material 1" type="trans iso Mooney-Rivlin">
+			<c1>1</c1>
+			<c2>0</c2>
+			<c3>1</c3>
+			<c4>1</c4>
+			<c5>1</c5>
+			<k>100</k>
+			<lam_max>10</lam_max>
+			<fiber type="vector"> 1.0000000e+000, 0.0000000e+000, 0.0000000e+000</fiber>
+			<active_contraction lc="1">
+				<ca0>4.75</ca0>
+				<beta>4.35</beta>
+				<l0>1.58</l0>
+				<refl>2.04</refl>
+			</active_contraction>
+		</material>
+	</Material>
+	<Geometry>
+		<Nodes>
+			<node id="1">-5.0000000e+000,-5.0000000e-001, 0.0000000e+000</node>
+			<node id="2">-5.0000000e+000,-5.0000000e-001, 1.0000000e+000</node>
+			<node id="3">-5.0000000e+000, 5.0000000e-001, 0.0000000e+000</node>
+			<node id="4">-5.0000000e+000, 5.0000000e-001, 1.0000000e+000</node>
+			<node id="5">-4.0000000e+000,-5.0000000e-001, 0.0000000e+000</node>
+			<node id="6">-4.0000000e+000,-5.0000000e-001, 1.0000000e+000</node>
+			<node id="7">-4.0000000e+000, 5.0000000e-001, 0.0000000e+000</node>
+			<node id="8">-4.0000000e+000, 5.0000000e-001, 1.0000000e+000</node>
+			<node id="9">-3.0000000e+000,-5.0000000e-001, 0.0000000e+000</node>
+			<node id="10">-3.0000000e+000,-5.0000000e-001, 1.0000000e+000</node>
+			<node id="11">-3.0000000e+000, 5.0000000e-001, 0.0000000e+000</node>
+			<node id="12">-3.0000000e+000, 5.0000000e-001, 1.0000000e+000</node>
+			<node id="13">-2.0000000e+000,-5.0000000e-001, 0.0000000e+000</node>
+			<node id="14">-2.0000000e+000,-5.0000000e-001, 1.0000000e+000</node>
+			<node id="15">-2.0000000e+000, 5.0000000e-001, 0.0000000e+000</node>
+			<node id="16">-2.0000000e+000, 5.0000000e-001, 1.0000000e+000</node>
+			<node id="17">-1.0000000e+000,-5.0000000e-001, 0.0000000e+000</node>
+			<node id="18">-1.0000000e+000,-5.0000000e-001, 1.0000000e+000</node>
+			<node id="19">-1.0000000e+000, 5.0000000e-001, 0.0000000e+000</node>
+			<node id="20">-1.0000000e+000, 5.0000000e-001, 1.0000000e+000</node>
+			<node id="21"> 0.0000000e+000,-5.0000000e-001, 0.0000000e+000</node>
+			<node id="22"> 0.0000000e+000,-5.0000000e-001, 1.0000000e+000</node>
+			<node id="23"> 0.0000000e+000, 5.0000000e-001, 0.0000000e+000</node>
+			<node id="24"> 0.0000000e+000, 5.0000000e-001, 1.0000000e+000</node>
+			<node id="25"> 1.0000000e+000,-5.0000000e-001, 0.0000000e+000</node>
+			<node id="26"> 1.0000000e+000,-5.0000000e-001, 1.0000000e+000</node>
+			<node id="27"> 1.0000000e+000, 5.0000000e-001, 0.0000000e+000</node>
+			<node id="28"> 1.0000000e+000, 5.0000000e-001, 1.0000000e+000</node>
+			<node id="29"> 2.0000000e+000,-5.0000000e-001, 0.0000000e+000</node>
+			<node id="30"> 2.0000000e+000,-5.0000000e-001, 1.0000000e+000</node>
+			<node id="31"> 2.0000000e+000, 5.0000000e-001, 0.0000000e+000</node>
+			<node id="32"> 2.0000000e+000, 5.0000000e-001, 1.0000000e+000</node>
+			<node id="33"> 3.0000000e+000,-5.0000000e-001, 0.0000000e+000</node>
+			<node id="34"> 3.0000000e+000,-5.0000000e-001, 1.0000000e+000</node>
+			<node id="35"> 3.0000000e+000, 5.0000000e-001, 0.0000000e+000</node>
+			<node id="36"> 3.0000000e+000, 5.0000000e-001, 1.0000000e+000</node>
+			<node id="37"> 4.0000000e+000,-5.0000000e-001, 0.0000000e+000</node>
+			<node id="38"> 4.0000000e+000,-5.0000000e-001, 1.0000000e+000</node>
+			<node id="39"> 4.0000000e+000, 5.0000000e-001, 0.0000000e+000</node>
+			<node id="40"> 4.0000000e+000, 5.0000000e-001, 1.0000000e+000</node>
+			<node id="41"> 5.0000000e+000,-5.0000000e-001, 0.0000000e+000</node>
+			<node id="42"> 5.0000000e+000,-5.0000000e-001, 1.0000000e+000</node>
+			<node id="43"> 5.0000000e+000, 5.0000000e-001, 0.0000000e+000</node>
+			<node id="44"> 5.0000000e+000, 5.0000000e-001, 1.0000000e+000</node>
+		</Nodes>
+		<Elements>
+			<hex8 id="1" mat="1">     1,     5,     7,     3,     2,     6,     8,     4</hex8>
+			<hex8 id="2" mat="1">     5,     9,    11,     7,     6,    10,    12,     8</hex8>
+			<hex8 id="3" mat="1">     9,    13,    15,    11,    10,    14,    16,    12</hex8>
+			<hex8 id="4" mat="1">    13,    17,    19,    15,    14,    18,    20,    16</hex8>
+			<hex8 id="5" mat="1">    17,    21,    23,    19,    18,    22,    24,    20</hex8>
+			<hex8 id="6" mat="1">    21,    25,    27,    23,    22,    26,    28,    24</hex8>
+			<hex8 id="7" mat="1">    25,    29,    31,    27,    26,    30,    32,    28</hex8>
+			<hex8 id="8" mat="1">    29,    33,    35,    31,    30,    34,    36,    32</hex8>
+			<hex8 id="9" mat="1">    33,    37,    39,    35,    34,    38,    40,    36</hex8>
+			<hex8 id="10" mat="1">    37,    41,    43,    39,    38,    42,    44,    40</hex8>
+		</Elements>
+	</Geometry>
+	<Boundary>
+		<fix>
+			<node id="1" bc="xyz"></node>
+			<node id="2" bc="xy"></node>
+			<node id="3" bc="xz"></node>
+			<node id="4" bc="x"></node>
+			<node id="5" bc="yz"></node>
+			<node id="6" bc="y"></node>
+			<node id="7" bc="z"></node>
+			<node id="9" bc="yz"></node>
+			<node id="10" bc="y"></node>
+			<node id="11" bc="z"></node>
+			<node id="13" bc="yz"></node>
+			<node id="14" bc="y"></node>
+			<node id="15" bc="z"></node>
+			<node id="17" bc="yz"></node>
+			<node id="18" bc="y"></node>
+			<node id="19" bc="z"></node>
+			<node id="21" bc="yz"></node>
+			<node id="22" bc="y"></node>
+			<node id="23" bc="z"></node>
+			<node id="25" bc="yz"></node>
+			<node id="26" bc="y"></node>
+			<node id="27" bc="z"></node>
+			<node id="29" bc="yz"></node>
+			<node id="30" bc="y"></node>
+			<node id="31" bc="z"></node>
+			<node id="33" bc="yz"></node>
+			<node id="34" bc="y"></node>
+			<node id="35" bc="z"></node>
+			<node id="37" bc="yz"></node>
+			<node id="38" bc="y"></node>
+			<node id="39" bc="z"></node>
+			<node id="41" bc="yz"></node>
+			<node id="42" bc="y"></node>
+			<node id="43" bc="z"></node>
+		</fix>
+	</Boundary>
+	<LoadData>
+		<loadcurve id="1">
+			<loadpoint>0,0</loadpoint>
+			<loadpoint>1,1</loadpoint>
+		</loadcurve>
+	</LoadData>
+	<Output>
+		<plotfile type="febio"></plotfile>
+	    <logfile>
+			<element_data data="Ex">10</element_data>
+	    </logfile></Output>
+</febio_spec>

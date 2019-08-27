@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Problem Description:
+	A 10x2 element shell cantilever has a z-force of 0 units at time t=0 to 1e-5 units
+	at t=1 applied to the nodes of the free end.
+Main Features:
+	Shells
+Secondary Features:
+	Nodal Force
+Materials:
+	Neo-Hookean
+Degrees of Freedom: 180
+Results:
+	Steps Completed: 15
+	Equilibrium Iterations: 134
+	Right Hand Evaluations: 166
+	Siffness Reformations: 19
+	Other:
+		The free end has a z-displacement of 3.97 units at time t=1.
+Comments:
+	All nodes needed to be constrained in y and Ry in order for
+	the termination stats to be consistent with the Pardiso solver.
+-->
+<febio_spec version="1.2">
+	<Module type="solid"/>
+	<Control>
+		<title>Cantilever Shell</title>
+		<time_steps>10</time_steps>
+		<step_size>0.1</step_size>
+		<max_refs>15</max_refs>
+		<max_ups>10</max_ups>
+		<dtol>0.001</dtol>
+		<etol>0.01</etol>
+		<rtol>0</rtol>
+		<lstol>0.9</lstol>
+		<time_stepper>
+			<dtmin>0.01</dtmin>
+			<dtmax>0.1</dtmax>
+			<max_retries>10</max_retries>
+			<opt_iter>10</opt_iter>
+		</time_stepper>
+	</Control>
+	<Material>
+		<material id="1" name="Material 2" type="neo-Hookean">
+			<density>1</density>
+			<E>1</E>
+			<v>0</v>
+		</material>
+	</Material>
+	<Geometry>
+		<Nodes>
+			<node id="1"> -2.5000000e+00, -5.0000000e-01,  0.0000000e+00</node>
+			<node id="2"> -2.5000000e+00,  0.0000000e+00,  0.0000000e+00</node>
+			<node id="3"> -2.5000000e+00,  5.0000000e-01,  0.0000000e+00</node>
+			<node id="4"> -2.0000000e+00, -5.0000000e-01,  0.0000000e+00</node>
+			<node id="5"> -2.0000000e+00,  0.0000000e+00,  0.0000000e+00</node>
+			<node id="6"> -2.0000000e+00,  5.0000000e-01,  0.0000000e+00</node>
+			<node id="7"> -1.5000000e+00, -5.0000000e-01,  0.0000000e+00</node>
+			<node id="8"> -1.5000000e+00,  0.0000000e+00,  0.0000000e+00</node>
+			<node id="9"> -1.5000000e+00,  5.0000000e-01,  0.0000000e+00</node>
+			<node id="10"> -1.0000000e+00, -5.0000000e-01,  0.0000000e+00</node>
+			<node id="11"> -1.0000000e+00,  0.0000000e+00,  0.0000000e+00</node>
+			<node id="12"> -1.0000000e+00,  5.0000000e-01,  0.0000000e+00</node>
+			<node id="13"> -5.0000000e-01, -5.0000000e-01,  0.0000000e+00</node>
+			<node id="14"> -5.0000000e-01,  0.0000000e+00,  0.0000000e+00</node>
+			<node id="15"> -5.0000000e-01,  5.0000000e-01,  0.0000000e+00</node>
+			<node id="16">  0.0000000e+00, -5.0000000e-01,  0.0000000e+00</node>
+			<node id="17">  0.0000000e+00,  0.0000000e+00,  0.0000000e+00</node>
+			<node id="18">  0.0000000e+00,  5.0000000e-01,  0.0000000e+00</node>
+			<node id="19">  5.0000000e-01, -5.0000000e-01,  0.0000000e+00</node>
+			<node id="20">  5.0000000e-01,  0.0000000e+00,  0.0000000e+00</node>
+			<node id="21">  5.0000000e-01,  5.0000000e-01,  0.0000000e+00</node>
+			<node id="22">  1.0000000e+00, -5.0000000e-01,  0.0000000e+00</node>
+			<node id="23">  1.0000000e+00,  0.0000000e+00,  0.0000000e+00</node>
+			<node id="24">  1.0000000e+00,  5.0000000e-01,  0.0000000e+00</node>
+			<node id="25">  1.5000000e+00, -5.0000000e-01,  0.0000000e+00</node>
+			<node id="26">  1.5000000e+00,  0.0000000e+00,  0.0000000e+00</node>
+			<node id="27">  1.5000000e+00,  5.0000000e-01,  0.0000000e+00</node>
+			<node id="28">  2.0000000e+00, -5.0000000e-01,  0.0000000e+00</node>
+			<node id="29">  2.0000000e+00,  0.0000000e+00,  0.0000000e+00</node>
+			<node id="30">  2.0000000e+00,  5.0000000e-01,  0.0000000e+00</node>
+			<node id="31">  2.5000000e+00, -5.0000000e-01,  0.0000000e+00</node>
+			<node id="32">  2.5000000e+00,  0.0000000e+00,  0.0000000e+00</node>
+			<node id="33">  2.5000000e+00,  5.0000000e-01,  0.0000000e+00</node>
+		</Nodes>
+		<Elements>
+			<quad4 id="1" mat="1">     1,     4,     5,     2</quad4>
+			<quad4 id="2" mat="1">     2,     5,     6,     3</quad4>
+			<quad4 id="3" mat="1">     4,     7,     8,     5</quad4>
+			<quad4 id="4" mat="1">     5,     8,     9,     6</quad4>
+			<quad4 id="5" mat="1">     7,    10,    11,     8</quad4>
+			<quad4 id="6" mat="1">     8,    11,    12,     9</quad4>
+			<quad4 id="7" mat="1">    10,    13,    14,    11</quad4>
+			<quad4 id="8" mat="1">    11,    14,    15,    12</quad4>
+			<quad4 id="9" mat="1">    13,    16,    17,    14</quad4>
+			<quad4 id="10" mat="1">    14,    17,    18,    15</quad4>
+			<quad4 id="11" mat="1">    16,    19,    20,    17</quad4>
+			<quad4 id="12" mat="1">    17,    20,    21,    18</quad4>
+			<quad4 id="13" mat="1">    19,    22,    23,    20</quad4>
+			<quad4 id="14" mat="1">    20,    23,    24,    21</quad4>
+			<quad4 id="15" mat="1">    22,    25,    26,    23</quad4>
+			<quad4 id="16" mat="1">    23,    26,    27,    24</quad4>
+			<quad4 id="17" mat="1">    25,    28,    29,    26</quad4>
+			<quad4 id="18" mat="1">    26,    29,    30,    27</quad4>
+			<quad4 id="19" mat="1">    28,    31,    32,    29</quad4>
+			<quad4 id="20" mat="1">    29,    32,    33,    30</quad4>
+		</Elements>
+		<ElementData>
+			<element id="1">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="2">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="3">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="4">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="5">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="6">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="7">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="8">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="9">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="10">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="11">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="12">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="13">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="14">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="15">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="16">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="17">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="18">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="19">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+			<element id="20">
+				<thickness>0.01,0.01,0.01,0.01</thickness>
+			</element>
+		</ElementData>
+	</Geometry>
+	<Boundary>
+		<fix>
+			<node id="1" bc="xyz"/>
+			<node id="1" bc="uvw"/>
+			<node id="2" bc="xyz"/>
+			<node id="2" bc="uvw"/>
+			<node id="3" bc="xyz"/>
+			<node id="3" bc="uvw"/>
+		</fix>
+		<fix>
+			<node id="1" bc="y"/>
+			<node id="1" bc="v"/>
+			<node id="2" bc="y"/>
+			<node id="2" bc="v"/>
+			<node id="3" bc="y"/>
+			<node id="3" bc="v"/>
+			<node id="4" bc="y"/>
+			<node id="4" bc="v"/>
+			<node id="5" bc="y"/>
+			<node id="5" bc="v"/>
+			<node id="6" bc="y"/>
+			<node id="6" bc="v"/>
+			<node id="7" bc="y"/>
+			<node id="7" bc="v"/>
+			<node id="8" bc="y"/>
+			<node id="8" bc="v"/>
+			<node id="9" bc="y"/>
+			<node id="9" bc="v"/>
+			<node id="10" bc="y"/>
+			<node id="10" bc="v"/>
+			<node id="11" bc="y"/>
+			<node id="11" bc="v"/>
+			<node id="12" bc="y"/>
+			<node id="12" bc="v"/>
+			<node id="13" bc="y"/>
+			<node id="13" bc="v"/>
+			<node id="14" bc="y"/>
+			<node id="14" bc="v"/>
+			<node id="15" bc="y"/>
+			<node id="15" bc="v"/>
+			<node id="16" bc="y"/>
+			<node id="16" bc="v"/>
+			<node id="17" bc="y"/>
+			<node id="17" bc="v"/>
+			<node id="18" bc="y"/>
+			<node id="18" bc="v"/>
+			<node id="19" bc="y"/>
+			<node id="19" bc="v"/>
+			<node id="20" bc="y"/>
+			<node id="20" bc="v"/>
+			<node id="21" bc="y"/>
+			<node id="21" bc="v"/>
+			<node id="22" bc="y"/>
+			<node id="22" bc="v"/>
+			<node id="23" bc="y"/>
+			<node id="23" bc="v"/>
+			<node id="24" bc="y"/>
+			<node id="24" bc="v"/>
+			<node id="25" bc="y"/>
+			<node id="25" bc="v"/>
+			<node id="26" bc="y"/>
+			<node id="26" bc="v"/>
+			<node id="27" bc="y"/>
+			<node id="27" bc="v"/>
+			<node id="28" bc="y"/>
+			<node id="28" bc="v"/>
+			<node id="29" bc="y"/>
+			<node id="29" bc="v"/>
+			<node id="30" bc="y"/>
+			<node id="30" bc="v"/>
+			<node id="31" bc="y"/>
+			<node id="31" bc="v"/>
+			<node id="32" bc="y"/>
+			<node id="32" bc="v"/>
+			<node id="33" bc="y"/>
+			<node id="33" bc="v"/>
+		</fix>
+	</Boundary>
+	<Loads>
+		<force>
+			<node id="31" bc="z" lc="1">1</node>
+			<node id="32" bc="z" lc="1">1</node>
+			<node id="33" bc="z" lc="1">1</node>
+		</force>
+	</Loads>
+	<LoadData>
+		<loadcurve id="1">
+			<loadpoint>0,0</loadpoint>
+			<loadpoint>1,1e-05</loadpoint>
+		</loadcurve>
+	</LoadData>
+	<Output>
+		<plotfile type="febio"></plotfile>
+        <logfile>
+          <element_data data="sx">3</element_data>
+        </logfile>
+	</Output>
+</febio_spec>

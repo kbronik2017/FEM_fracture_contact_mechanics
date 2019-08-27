@@ -1,0 +1,30 @@
+﻿Build started 07/10/2014 15:44:04.
+     1>Project "C:\Users\Kevin\Documents\febiosourcexxxx\VS2010\FEBioOpt\FEBioOpt.vcxproj" on node 4 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Kevin\Documents\levmar-2.6" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D HAVE_LEVMAR /D _DEBUG /D _WINDOWS /D _USRDLL /D FEBIOOPT_EXPORTS /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /FR"Debug\\" /Gd /TP /analyze- /errorReport:prompt ..\..\FEBioOpt\FEBioOpt.cpp ..\..\FEBioOpt\FEConstrainedLMOptimizeMethod.cpp ..\..\FEBioOpt\FEOptimize.cpp ..\..\FEBioOpt\FEOptimizer.cpp ..\..\FEBioOpt\FELMOptimizeMethod.cpp ..\..\FEBioOpt\FEPowellOptimizeMethod.cpp ..\..\FEBioOpt\FEScanOptimizeMethod.cpp
+         FEScanOptimizeMethod.cpp
+         FEPowellOptimizeMethod.cpp
+         FELMOptimizeMethod.cpp
+         FEOptimizer.cpp
+         FEOptimize.cpp
+         FEConstrainedLMOptimizeMethod.cpp
+         FEBioOpt.cpp
+         Generating Code...
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1361,5): warning MSB8012: TargetPath(C:\Users\Kevin\Documents\febiosourcexxxx\VS2010\Debug\FEBioOpt.lib) does not match the Library's OutputFile property value (C:\Users\Kevin\Documents\febiosourcexxxx\VS2010\Debug\FEBioOptd.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1363,5): warning MSB8012: TargetName(FEBioOpt) does not match the Library's OutputFile property value (FEBioOptd). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\Kevin\Documents\febiosourcexxxx\VS2010\Debug\FEBioOptd.lib" /NOLOGO Debug\FEBioOpt.obj
+         Debug\FEConstrainedLMOptimizeMethod.obj
+         Debug\FEOptimize.obj
+         Debug\FEOptimizer.obj
+         Debug\FELMOptimizeMethod.obj
+         Debug\FEPowellOptimizeMethod.obj
+         Debug\FEScanOptimizeMethod.obj
+         FEBioOpt.vcxproj -> C:\Users\Kevin\Documents\febiosourcexxxx\VS2010\Debug\FEBioOpt.lib
+       BscMake:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\bscmake.exe /nologo /o"C:\Users\Kevin\Documents\febiosourcexxxx\VS2010\Debug\FEBioOpt.bsc" /n Debug\FEBioOpt.sbr Debug\FEConstrainedLMOptimizeMethod.sbr Debug\FEOptimize.sbr Debug\FEOptimizer.sbr Debug\FELMOptimizeMethod.sbr Debug\FEPowellOptimizeMethod.sbr Debug\FEScanOptimizeMethod.sbr
+     1>Done Building Project "C:\Users\Kevin\Documents\febiosourcexxxx\VS2010\FEBioOpt\FEBioOpt.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:19.30

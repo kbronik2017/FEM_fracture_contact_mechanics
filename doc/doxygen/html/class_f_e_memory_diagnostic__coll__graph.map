@@ -1,0 +1,13 @@
+<map id="FEMemoryDiagnostic" name="FEMemoryDiagnostic">
+<area shape="rect" id="node2" href="$class_f_e_diagnostic.html" title="FEDiagnostic" alt="" coords="35,419,155,450"/>
+<area shape="rect" id="node4" href="$class_f_e_model.html" title="FEModel" alt="" coords="217,321,303,351"/>
+<area shape="rect" id="node6" href="$class_f_e_core_1_1_f_e_analysis.html" title="Base class for finite element analysis. " alt="" coords="277,518,448,549"/>
+<area shape="rect" id="node13" href="$class_f_e_solver.html" title="This is the base class for all FE solvers. " alt="" coords="400,419,488,450"/>
+<area shape="rect" id="node8" href="$class_f_e_core_base.html" title="FECoreBase" alt="" coords="533,321,648,351"/>
+<area shape="rect" id="node10" href="$class_f_e_param_container.html" title="Base class for classes that wish to support parameter lists. " alt="" coords="509,222,672,253"/>
+<area shape="rect" id="node17" href="$class_timer.html" title="This class implements a simple timer. " alt="" coords="415,321,477,351"/>
+<area shape="rect" id="node19" href="$class_f_e_mesh.html" title="Defines a finite element mesh. " alt="" coords="219,222,301,253"/>
+<area shape="rect" id="node21" href="$struct_f_e___b_o_u_n_d_i_n_g___b_o_x.html" title="FE_BOUNDING_BOX" alt="" coords="31,123,211,154"/>
+<area shape="rect" id="node23" href="$classvec3d.html" title="vec3d" alt="" coords="89,6,153,37"/>
+<area shape="rect" id="node25" href="$class_f_e_node_elem_list.html" title="FENodeElemList" alt="" coords="235,123,377,154"/>
+</map>

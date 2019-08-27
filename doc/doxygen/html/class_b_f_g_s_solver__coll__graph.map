@@ -1,0 +1,15 @@
+<map id="BFGSSolver" name="BFGSSolver">
+<area shape="rect" id="node2" href="$classmatrix.html" title="General purpose matrix class. " alt="" coords="459,206,524,237"/>
+<area shape="rect" id="node4" href="$class_f_e_solver.html" title="This is the base class for all FE solvers. " alt="" coords="177,206,265,237"/>
+<area shape="rect" id="node12" href="$class_f_e_core_1_1_f_e_analysis.html" title="Base class for finite element analysis. " alt="" coords="5,323,176,354"/>
+<area shape="rect" id="node6" href="$class_f_e_core_base.html" title="FECoreBase" alt="" coords="43,89,159,119"/>
+<area shape="rect" id="node8" href="$class_f_e_param_container.html" title="Base class for classes that wish to support parameter lists. " alt="" coords="20,6,183,37"/>
+<area shape="rect" id="node10" href="$class_f_e_model.html" title="FEModel" alt="" coords="141,422,227,453"/>
+<area shape="rect" id="node17" href="$class_f_e_mesh.html" title="Defines a finite element mesh. " alt="" coords="597,323,680,354"/>
+<area shape="rect" id="node19" href="$struct_f_e___b_o_u_n_d_i_n_g___b_o_x.html" title="FE_BOUNDING_BOX" alt="" coords="549,206,728,237"/>
+<area shape="rect" id="node21" href="$classvec3d.html" title="vec3d" alt="" coords="606,89,671,119"/>
+<area shape="rect" id="node23" href="$class_f_e_node_elem_list.html" title="FENodeElemList" alt="" coords="753,206,895,237"/>
+<area shape="rect" id="node25" href="$class_timer.html" title="This class implements a simple timer. " alt="" coords="190,89,252,119"/>
+<area shape="rect" id="node27" href="$class_linear_solver.html" title="base class for the linear solver classes " alt="" coords="315,206,428,237"/>
+<area shape="rect" id="node29" href="$class_sparse_matrix.html" title="Base class for sparse matrices. " alt="" coords="313,89,431,119"/>
+</map>

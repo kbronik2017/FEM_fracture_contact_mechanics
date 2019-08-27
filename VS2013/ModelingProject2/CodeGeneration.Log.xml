@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 12.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/CodeGenLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2014-09-11T15:11:43" Importance="High" Text="Code generation or text transformation started." />
+  <Message Timestamp="2014-09-11T15:11:43" Importance="Diagnostic" Text="Name = Template1" />
+  <Message Timestamp="2014-09-11T15:11:43" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2014-09-11T15:11:43" Importance="Diagnostic" Text="ProjectPath = ..\ModelingProject2Lib\ModelingProject2Lib.csproj" />
+  <Message Timestamp="2014-09-11T15:11:43" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2014-09-11T15:11:43" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2014-09-11T15:11:43" Importance="Diagnostic" Text="TemplateFilePath = " />
+  <Message Timestamp="2014-09-11T15:11:43" Importance="Diagnostic" Text="ResolvedTemplateFilePath = " />
+  <Message Timestamp="2014-09-11T15:11:44" Importance="Medium" Text="ModelingProject2's Text Template Binding: 'Template1' will apply  to: 'ModelingProject2' -  (ModelStoreModel) " />
+  <Error Timestamp="2014-09-11T15:11:44" Importance="High" Text="The following Template File Path property for 'ModelingProject2' -  (ModelStoreModel) does not exist: " />
+  <Message Timestamp="2014-09-11T15:11:44" Importance="Diagnostic" Text="'ModelingProject2' -  (ModelStoreModel): no file generated because the 'AppliesToElement' method of the template '' evaluated to false." />
+  <Message Timestamp="2014-09-11T15:11:48" Importance="High" Text="Code generation complete. Errors: 1. Warnings: 0." />
+</Log>

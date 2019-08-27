@@ -1,0 +1,26 @@
+var classtens4ds =
+[
+    [ "NNZ", "classtens4ds.html#a9f48d25ff6ccbf4e40066290765c33b1a6225159f87dfe83567c7847065b080fc", null ],
+    [ "tens4ds", "classtens4ds.html#a63966b3bbb1d20ce240c0ce038decd91", null ],
+    [ "tens4ds", "classtens4ds.html#aedfebbe2a2ae91c9b194940e30d74d94", null ],
+    [ "tens4ds", "classtens4ds.html#ab619bcf32c10bac182bfa8ff244ec34d", null ],
+    [ "dot", "classtens4ds.html#aee9144fe11d51a7d8cb38b382c3cbb66", null ],
+    [ "extract", "classtens4ds.html#a1876561f1aa617811d06eebb23342487", null ],
+    [ "inverse", "classtens4ds.html#a853bb9539ec619b2d73e22b0ed1fc4b0", null ],
+    [ "operator()", "classtens4ds.html#abb2f6712406b3c16c8ca2c70ebdb492d", null ],
+    [ "operator()", "classtens4ds.html#ac7d7b0177604ed282ae2929e77e07915", null ],
+    [ "operator()", "classtens4ds.html#aa7c1f31de12c0efa0d40baccb4ac68ad", null ],
+    [ "operator()", "classtens4ds.html#a0523bf3d5c794e49d8770bb3b5e2317e", null ],
+    [ "operator*", "classtens4ds.html#a1056275308c8321c05feb84e4330c782", null ],
+    [ "operator*=", "classtens4ds.html#a0ac0c5a942c173a4246509b2b3baa619", null ],
+    [ "operator+", "classtens4ds.html#aaac4cbcb2cec8ac265a6c49fbee511fe", null ],
+    [ "operator+=", "classtens4ds.html#a1081025e9c9301eab6da4a10ea786d4b", null ],
+    [ "operator-", "classtens4ds.html#a965a0fc6edb20dcd84e756a827e20a4b", null ],
+    [ "operator-", "classtens4ds.html#a37803d6622296da7b56c7f0de2fb72f6", null ],
+    [ "operator-=", "classtens4ds.html#a5d71c76144a75ae0a257f9d0caf16c72", null ],
+    [ "operator/", "classtens4ds.html#a0b1e127d764bbb3409a88a0cc777b8b1", null ],
+    [ "operator/=", "classtens4ds.html#a609fe2534894b3601e145f4a7ecfcf80", null ],
+    [ "tr", "classtens4ds.html#ab0c2a1b7797ad932a9fbff9748ec66d9", null ],
+    [ "zero", "classtens4ds.html#a81bc952ba0be869ca01a0303f4ed4c9b", null ],
+    [ "d", "classtens4ds.html#a1fe9b975ab44feb3581abfc1c695e28d", null ]
+];

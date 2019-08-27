@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Problem Description:
+	Nodal constraints are specified for the 1/8th symmetric representation of the
+	compression of a block in the x-direction.  The right end nodes are given a
+	prescribed x-displacement of -0.8 at time t=1.
+Main Features:
+	Nodal constraints
+	Prescribed displacement
+Secondary Features:
+	
+Materials:
+	Mooney-Rivlin
+Degrees of Freedom: 12
+Results:
+	Steps Completed: 50
+	Equilibrium Iterations: 125
+	Right Hand Evaluations: 179
+	Siffness Reformations: 125
+	Other:
+		The volume is 0.401 at time t=1.
+Comments:
+	
+-->
+<febio_spec version="1.2">
+	<Control>
+		<title>TrueGridauto</title>
+		<time_steps>50</time_steps>
+		<step_size>0.02</step_size>
+		<max_refs>50</max_refs>
+		<max_ups>1</max_ups>
+		<dtol>0.01</dtol>
+		<etol>0.01</etol>
+		<rtol>1e+010</rtol>
+		<lstol>0.9</lstol>
+		<pressure_stiffness>1</pressure_stiffness>
+		<time_stepper>
+			<dtmin>0.01</dtmin>
+			<dtmax>0.02</dtmax>
+			<max_retries>5</max_retries>
+			<opt_iter>20</opt_iter>
+		</time_stepper>
+		<plot_level>PLOT_DEFAULT</plot_level>
+	</Control>
+	<Material>
+		<material id="1" name="Material 1" type="Mooney-Rivlin">
+			<c1>1</c1>
+			<c2>10</c2>
+			<k>100</k>
+		</material>
+	</Material>
+	<Geometry>
+		<Nodes>
+			<node id="1"> 0.0000000e+000, 0.0000000e+000, 0.0000000e+000</node>
+			<node id="2"> 0.0000000e+000, 0.0000000e+000, 1.0000000e+000</node>
+			<node id="3"> 0.0000000e+000, 1.0000000e+000, 0.0000000e+000</node>
+			<node id="4"> 0.0000000e+000, 1.0000000e+000, 1.0000000e+000</node>
+			<node id="5"> 1.0000000e+000, 0.0000000e+000, 0.0000000e+000</node>
+			<node id="6"> 1.0000000e+000, 0.0000000e+000, 1.0000000e+000</node>
+			<node id="7"> 1.0000000e+000, 1.0000000e+000, 0.0000000e+000</node>
+			<node id="8"> 1.0000000e+000, 1.0000000e+000, 1.0000000e+000</node>
+		</Nodes>
+		<Elements>
+			<hex8 id="1" mat="1">     1,     5,     7,     3,     2,     6,     8,     4</hex8>
+		</Elements>
+	</Geometry>
+	<Boundary>
+		<fix>
+			<node id="1" bc="xyz"></node>
+			<node id="2" bc="xy"></node>
+			<node id="3" bc="xz"></node>
+			<node id="4" bc="x"></node>
+			<node id="5" bc="yz"></node>
+			<node id="6" bc="y"></node>
+			<node id="7" bc="z"></node>
+		</fix>
+		<prescribe>
+			<node id="5" bc="x" lc="1">1</node>
+			<node id="6" bc="x" lc="1">1</node>
+			<node id="7" bc="x" lc="1">1</node>
+			<node id="8" bc="x" lc="1">1</node>
+		</prescribe>
+	</Boundary>
+	<LoadData>
+		<loadcurve id="1">
+			<loadpoint>0,0</loadpoint>
+			<loadpoint>1,-0.8</loadpoint>
+		</loadcurve>
+	</LoadData>
+	<Output>
+		<plotfile type="febio"></plotfile>
+		<logfile>
+			<element_data data="Ey">1</element_data>
+		</logfile>
+	</Output>
+</febio_spec>

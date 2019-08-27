@@ -1,0 +1,20 @@
+﻿Build started 09/02/2018 15:50:56.
+     1>Project "C:\Users\kbronik.ANNASACH\Desktop\working folder\test febio\febiosourceextendedversion2\febiosource2extended\VS2013\FEBioPlot\FEBioPlot.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /FR"Debug\\" /Gd /TP /analyze- /errorReport:prompt ..\..\FEBioPlot\FEBioPlotFile.cpp ..\..\FEBioPlot\PlotFile.cpp ..\..\FEBioPlot\stdafx.cpp
+         stdafx.cpp
+         PlotFile.cpp
+         FEBioPlotFile.cpp
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\kbronik.ANNASACH\Desktop\working folder\test febio\febiosourceextendedversion2\febiosource2extended\VS2013\Debug\FEBioPlotd.lib" /NOLOGO Debug\FEBioPlotFile.obj
+         Debug\PlotFile.obj
+         Debug\stdafx.obj
+         FEBioPlot.vcxproj -> C:\Users\kbronik.ANNASACH\Desktop\working folder\test febio\febiosourceextendedversion2\febiosource2extended\VS2013\Debug\FEBioPlotd.lib
+       BscMake:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\bscmake.exe /nologo /o"C:\Users\kbronik.ANNASACH\Desktop\working folder\test febio\febiosourceextendedversion2\febiosource2extended\VS2013\Debug\FEBioPlotd.bsc" /n Debug\FEBioPlotFile.sbr Debug\PlotFile.sbr Debug\stdafx.sbr
+     1>Done Building Project "C:\Users\kbronik.ANNASACH\Desktop\working folder\test febio\febiosourceextendedversion2\febiosource2extended\VS2013\FEBioPlot\FEBioPlot.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.72

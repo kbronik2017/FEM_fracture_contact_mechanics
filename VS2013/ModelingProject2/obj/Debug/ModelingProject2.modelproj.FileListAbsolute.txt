@@ -1,0 +1,9 @@
+C:\Users\Kevin\Documents\febiosourcexxxx\VS2013\ModelingProject2\bin\Debug\FEBio2.exe
+C:\Users\Kevin\Documents\febiosourcexxxx\VS2013\ModelingProject2\bin\Debug\FEBio2.pdb
+C:\Users\Kevin\Documents\febiosourcexxxx\VS2013\ModelingProject2\obj\Debug\ModelingProject2.modelprojResolveAssemblyReference.cache
+C:\Users\Adminkevin\Desktop\febiosourcemixmodefrictionnothermodynamic\febiosourcexxxx\VS2013\ModelingProject2\bin\Debug\FEBio2.exe
+C:\Users\Adminkevin\Desktop\febiosourcemixmodefrictionnothermodynamic\febiosourcexxxx\VS2013\ModelingProject2\bin\Debug\FEBio2.pdb
+C:\Users\Adminkevin\Desktop\febiosourcemixmodefrictionnothermodynamic\febiosourcexxxx\VS2013\ModelingProject2\obj\Debug\ModelingProject2.modelprojResolveAssemblyReference.cache
+C:\Users\Adminkevin\Desktop\febiosource2final\febiosource2final\VS2013\ModelingProject2\bin\Debug\FEBio2.exe
+C:\Users\Adminkevin\Desktop\febiosource2final\febiosource2final\VS2013\ModelingProject2\bin\Debug\FEBio2.pdb
+C:\Users\Adminkevin\Desktop\febiosource2final\febiosource2final\VS2013\ModelingProject2\obj\Debug\ModelingProject2.modelprojResolveAssemblyReference.cache

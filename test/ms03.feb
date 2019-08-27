@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Problem Description:
+	Multi-step analysis.  An element has a prescribed x-displacement of 0.1 units at
+	time t=1 on it's right end, then dynamic analysis is applied to time t=25.
+Main Features:
+	Multi-step analysis
+	Dynamic analysis
+Secondary Features:
+	
+Materials:
+	Neo-Hookean
+Degrees of Freedom: 12
+Results:
+	Steps Completed: 48
+	Equilibrium Iterations: 96
+	Right Hand Evaluations: 144
+	Siffness Reformations: 48
+	Other:
+		The right end has an x-displacement of -0.0749 at time t=25.
+Comments:
+	
+-->
+<febio_spec version="1.2">
+	<Control>
+		<title>Multi-step Example</title>
+	</Control>
+	<Material>
+		<material id="1" name="Material 1" type="neo-Hookean">
+			<density>1.0</density>
+			<E>1</E>
+			<v>0.45</v>
+		</material>
+	</Material>
+	<Geometry>
+		<Nodes>
+			<node id="1">-2.0000000e+000,-5.0000000e-001, 0.0000000e+000</node>
+			<node id="2">-2.0000000e+000,-5.0000000e-001, 1.0000000e+000</node>
+			<node id="3">-2.0000000e+000, 5.0000000e-001, 0.0000000e+000</node>
+			<node id="4">-2.0000000e+000, 5.0000000e-001, 1.0000000e+000</node>
+			<node id="5"> 2.0000000e+000,-5.0000000e-001, 0.0000000e+000</node>
+			<node id="6"> 2.0000000e+000,-5.0000000e-001, 1.0000000e+000</node>
+			<node id="7"> 2.0000000e+000, 5.0000000e-001, 0.0000000e+000</node>
+			<node id="8"> 2.0000000e+000, 5.0000000e-001, 1.0000000e+000</node>
+		</Nodes>
+		<Elements>
+			<hex8 id="1" mat="1">     1,     5,     7,     3,     2,     6,     8,     4</hex8>
+		</Elements>
+	</Geometry>
+	<Boundary>
+		<fix>
+			<node id="1" bc="xyz"></node>
+			<node id="2" bc="xy"></node>
+			<node id="3" bc="xz"></node>
+			<node id="4" bc="x"></node>
+			<node id="5" bc="yz"></node>
+			<node id="6" bc="y"></node>
+			<node id="7" bc="z"></node>
+		</fix>
+	</Boundary>
+	<LoadData>
+		<loadcurve id="1">
+			<loadpoint>0,0</loadpoint>
+			<loadpoint>1,0.1</loadpoint>
+		</loadcurve>
+	</LoadData>
+	<Step>
+		<Control>
+			<time_steps>10</time_steps>
+			<step_size>0.1</step_size>
+		</Control>
+		<Boundary>
+			<prescribe>
+				<node id="5" bc="x" lc="1">1</node>
+				<node id="6" bc="x" lc="1">1</node>
+				<node id="7" bc="x" lc="1">1</node>
+				<node id="8" bc="x" lc="1">1</node>
+			</prescribe>
+		</Boundary>
+	</Step>
+	<Step>
+		<Control>
+			<time_steps>50</time_steps>
+			<step_size>0.5</step_size>
+			<analysis type="dynamic"></analysis>
+		</Control>
+	</Step>
+	<Output>
+		<plotfile type="febio"></plotfile>
+		<logfile>
+			<element_data data="sx">1</element_data>
+		</logfile>
+	</Output>
+</febio_spec>

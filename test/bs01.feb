@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Problem Description:
+	1D solute diffusion in a cube, with prescribed external concentration.
+	Units: length = mm, force = N, time = s, mole = nanomol; stress = MPa, concentration = mM.
+Main Features:
+	Biphasic with Solute
+Secondary Features:
+	
+Materials:
+	biphasic-solute
+Degrees of Freedom: 248
+Results:
+	Steps Completed: 28
+	Equilibrium Iterations: 32
+	Right Hand Evaluations: 70
+	Siffness Reformations: 32
+	Other:
+		The material has a minimum solute concentration of 0.986 at time t=2000.
+Comments:
+	
+-->
+<febio_spec version="1.2">
+	<Module type="solute"/>
+	<Control>
+		<title>Solute Diffusion - 1D</title>
+		<time_steps>20000</time_steps>
+		<step_size>0.1</step_size>
+		<max_refs>25</max_refs>
+		<max_ups>0</max_ups>
+		<dtol>0.001</dtol>
+		<etol>0.01</etol>
+		<rtol>0</rtol>
+		<ptol>0.01</ptol>
+		<ctol>0.01</ctol>
+		<lstol>0.9</lstol>
+		<time_stepper>
+			<dtmin>0.1</dtmin>
+			<dtmax>100</dtmax>
+			<max_retries>5</max_retries>
+			<opt_iter>10</opt_iter>
+		</time_stepper>
+		<symmetric_biphasic>0</symmetric_biphasic>
+	</Control>
+	<Globals>
+		<Constants>
+			<T>298</T>
+			<R>8.314e-06</R>
+			<Fc>0</Fc>
+		</Constants>
+		<Solutes>
+			<solute id="1" name="neutral">
+				<charge_number>0</charge_number>
+			</solute>
+		</Solutes>
+	</Globals>
+	<Material>
+		<material id="1" name="Biphasic with solute" type="biphasic-solute">
+			<phi0>0.2</phi0>
+			<solid type="Holmes-Mow">
+				<density>1</density>
+				<E>1</E>
+				<v>0</v>
+				<beta>0</beta>
+			</solid>
+			<permeability type="perm-Holmes-Mow">
+				<perm>0.001</perm>
+				<M>0</M>
+				<alpha>0</alpha>
+			</permeability>
+			<osmotic_coefficient type="osm-coef-const">
+				<osmcoef>1</osmcoef>
+			</osmotic_coefficient>
+			<solute sol="1">
+				<diffusivity type="diff-const-iso">
+					<free_diff>0.001</free_diff>
+					<diff>0.001</diff>
+				</diffusivity>
+				<solubility type="solub-const">
+					<solub>1</solub>
+				</solubility>
+			</solute>
+		</material>
+	</Material>
+	<Geometry>
+		<Nodes>
+			<node id="1"> -5.0000000e-01, -5.0000000e-01,  0.0000000e+00</node>
+			<node id="2"> -5.0000000e-01, -5.0000000e-01,  2.0233274e-01</node>
+			<node id="3"> -5.0000000e-01, -5.0000000e-01,  3.6419893e-01</node>
+			<node id="4"> -5.0000000e-01, -5.0000000e-01,  4.9369188e-01</node>
+			<node id="5"> -5.0000000e-01, -5.0000000e-01,  5.9728624e-01</node>
+			<node id="6"> -5.0000000e-01, -5.0000000e-01,  6.8016173e-01</node>
+			<node id="7"> -5.0000000e-01, -5.0000000e-01,  7.4646212e-01</node>
+			<node id="8"> -5.0000000e-01, -5.0000000e-01,  7.9950244e-01</node>
+			<node id="9"> -5.0000000e-01, -5.0000000e-01,  8.4193469e-01</node>
+			<node id="10"> -5.0000000e-01, -5.0000000e-01,  8.7588049e-01</node>
+			<node id="11"> -5.0000000e-01, -5.0000000e-01,  9.0303713e-01</node>
+			<node id="12"> -5.0000000e-01, -5.0000000e-01,  9.2476244e-01</node>
+			<node id="13"> -5.0000000e-01, -5.0000000e-01,  9.4214269e-01</node>
+			<node id="14"> -5.0000000e-01, -5.0000000e-01,  9.5604689e-01</node>
+			<node id="15"> -5.0000000e-01, -5.0000000e-01,  9.6717025e-01</node>
+			<node id="16"> -5.0000000e-01, -5.0000000e-01,  9.7606894e-01</node>
+			<node id="17"> -5.0000000e-01, -5.0000000e-01,  9.8318789e-01</node>
+			<node id="18"> -5.0000000e-01, -5.0000000e-01,  9.8888305e-01</node>
+			<node id="19"> -5.0000000e-01, -5.0000000e-01,  9.9343918e-01</node>
+			<node id="20"> -5.0000000e-01, -5.0000000e-01,  9.9708408e-01</node>
+			<node id="21"> -5.0000000e-01, -5.0000000e-01,  1.0000000e+00</node>
+			<node id="22"> -5.0000000e-01,  5.0000000e-01,  0.0000000e+00</node>
+			<node id="23"> -5.0000000e-01,  5.0000000e-01,  2.0233274e-01</node>
+			<node id="24"> -5.0000000e-01,  5.0000000e-01,  3.6419893e-01</node>
+			<node id="25"> -5.0000000e-01,  5.0000000e-01,  4.9369188e-01</node>
+			<node id="26"> -5.0000000e-01,  5.0000000e-01,  5.9728624e-01</node>
+			<node id="27"> -5.0000000e-01,  5.0000000e-01,  6.8016173e-01</node>
+			<node id="28"> -5.0000000e-01,  5.0000000e-01,  7.4646212e-01</node>
+			<node id="29"> -5.0000000e-01,  5.0000000e-01,  7.9950244e-01</node>
+			<node id="30"> -5.0000000e-01,  5.0000000e-01,  8.4193469e-01</node>
+			<node id="31"> -5.0000000e-01,  5.0000000e-01,  8.7588049e-01</node>
+			<node id="32"> -5.0000000e-01,  5.0000000e-01,  9.0303713e-01</node>
+			<node id="33"> -5.0000000e-01,  5.0000000e-01,  9.2476244e-01</node>
+			<node id="34"> -5.0000000e-01,  5.0000000e-01,  9.4214269e-01</node>
+			<node id="35"> -5.0000000e-01,  5.0000000e-01,  9.5604689e-01</node>
+			<node id="36"> -5.0000000e-01,  5.0000000e-01,  9.6717025e-01</node>
+			<node id="37"> -5.0000000e-01,  5.0000000e-01,  9.7606894e-01</node>
+			<node id="38"> -5.0000000e-01,  5.0000000e-01,  9.8318789e-01</node>
+			<node id="39"> -5.0000000e-01,  5.0000000e-01,  9.8888305e-01</node>
+			<node id="40"> -5.0000000e-01,  5.0000000e-01,  9.9343918e-01</node>
+			<node id="41"> -5.0000000e-01,  5.0000000e-01,  9.9708408e-01</node>
+			<node id="42"> -5.0000000e-01,  5.0000000e-01,  1.0000000e+00</node>
+			<node id="43">  5.0000000e-01, -5.0000000e-01,  0.0000000e+00</node>
+			<node id="44">  5.0000000e-01, -5.0000000e-01,  2.0233274e-01</node>
+			<node id="45">  5.0000000e-01, -5.0000000e-01,  3.6419893e-01</node>
+			<node id="46">  5.0000000e-01, -5.0000000e-01,  4.9369188e-01</node>
+			<node id="47">  5.0000000e-01, -5.0000000e-01,  5.9728624e-01</node>
+			<node id="48">  5.0000000e-01, -5.0000000e-01,  6.8016173e-01</node>
+			<node id="49">  5.0000000e-01, -5.0000000e-01,  7.4646212e-01</node>
+			<node id="50">  5.0000000e-01, -5.0000000e-01,  7.9950244e-01</node>
+			<node id="51">  5.0000000e-01, -5.0000000e-01,  8.4193469e-01</node>
+			<node id="52">  5.0000000e-01, -5.0000000e-01,  8.7588049e-01</node>
+			<node id="53">  5.0000000e-01, -5.0000000e-01,  9.0303713e-01</node>
+			<node id="54">  5.0000000e-01, -5.0000000e-01,  9.2476244e-01</node>
+			<node id="55">  5.0000000e-01, -5.0000000e-01,  9.4214269e-01</node>
+			<node id="56">  5.0000000e-01, -5.0000000e-01,  9.5604689e-01</node>
+			<node id="57">  5.0000000e-01, -5.0000000e-01,  9.6717025e-01</node>
+			<node id="58">  5.0000000e-01, -5.0000000e-01,  9.7606894e-01</node>
+			<node id="59">  5.0000000e-01, -5.0000000e-01,  9.8318789e-01</node>
+			<node id="60">  5.0000000e-01, -5.0000000e-01,  9.8888305e-01</node>
+			<node id="61">  5.0000000e-01, -5.0000000e-01,  9.9343918e-01</node>
+			<node id="62">  5.0000000e-01, -5.0000000e-01,  9.9708408e-01</node>
+			<node id="63">  5.0000000e-01, -5.0000000e-01,  1.0000000e+00</node>
+			<node id="64">  5.0000000e-01,  5.0000000e-01,  0.0000000e+00</node>
+			<node id="65">  5.0000000e-01,  5.0000000e-01,  2.0233274e-01</node>
+			<node id="66">  5.0000000e-01,  5.0000000e-01,  3.6419893e-01</node>
+			<node id="67">  5.0000000e-01,  5.0000000e-01,  4.9369188e-01</node>
+			<node id="68">  5.0000000e-01,  5.0000000e-01,  5.9728624e-01</node>
+			<node id="69">  5.0000000e-01,  5.0000000e-01,  6.8016173e-01</node>
+			<node id="70">  5.0000000e-01,  5.0000000e-01,  7.4646212e-01</node>
+			<node id="71">  5.0000000e-01,  5.0000000e-01,  7.9950244e-01</node>
+			<node id="72">  5.0000000e-01,  5.0000000e-01,  8.4193469e-01</node>
+			<node id="73">  5.0000000e-01,  5.0000000e-01,  8.7588049e-01</node>
+			<node id="74">  5.0000000e-01,  5.0000000e-01,  9.0303713e-01</node>
+			<node id="75">  5.0000000e-01,  5.0000000e-01,  9.2476244e-01</node>
+			<node id="76">  5.0000000e-01,  5.0000000e-01,  9.4214269e-01</node>
+			<node id="77">  5.0000000e-01,  5.0000000e-01,  9.5604689e-01</node>
+			<node id="78">  5.0000000e-01,  5.0000000e-01,  9.6717025e-01</node>
+			<node id="79">  5.0000000e-01,  5.0000000e-01,  9.7606894e-01</node>
+			<node id="80">  5.0000000e-01,  5.0000000e-01,  9.8318789e-01</node>
+			<node id="81">  5.0000000e-01,  5.0000000e-01,  9.8888305e-01</node>
+			<node id="82">  5.0000000e-01,  5.0000000e-01,  9.9343918e-01</node>
+			<node id="83">  5.0000000e-01,  5.0000000e-01,  9.9708408e-01</node>
+			<node id="84">  5.0000000e-01,  5.0000000e-01,  1.0000000e+00</node>
+		</Nodes>
+		<Elements>
+			<hex8 id="1" mat="1">     1,    43,    64,    22,     2,    44,    65,    23</hex8>
+			<hex8 id="2" mat="1">     2,    44,    65,    23,     3,    45,    66,    24</hex8>
+			<hex8 id="3" mat="1">     3,    45,    66,    24,     4,    46,    67,    25</hex8>
+			<hex8 id="4" mat="1">     4,    46,    67,    25,     5,    47,    68,    26</hex8>
+			<hex8 id="5" mat="1">     5,    47,    68,    26,     6,    48,    69,    27</hex8>
+			<hex8 id="6" mat="1">     6,    48,    69,    27,     7,    49,    70,    28</hex8>
+			<hex8 id="7" mat="1">     7,    49,    70,    28,     8,    50,    71,    29</hex8>
+			<hex8 id="8" mat="1">     8,    50,    71,    29,     9,    51,    72,    30</hex8>
+			<hex8 id="9" mat="1">     9,    51,    72,    30,    10,    52,    73,    31</hex8>
+			<hex8 id="10" mat="1">    10,    52,    73,    31,    11,    53,    74,    32</hex8>
+			<hex8 id="11" mat="1">    11,    53,    74,    32,    12,    54,    75,    33</hex8>
+			<hex8 id="12" mat="1">    12,    54,    75,    33,    13,    55,    76,    34</hex8>
+			<hex8 id="13" mat="1">    13,    55,    76,    34,    14,    56,    77,    35</hex8>
+			<hex8 id="14" mat="1">    14,    56,    77,    35,    15,    57,    78,    36</hex8>
+			<hex8 id="15" mat="1">    15,    57,    78,    36,    16,    58,    79,    37</hex8>
+			<hex8 id="16" mat="1">    16,    58,    79,    37,    17,    59,    80,    38</hex8>
+			<hex8 id="17" mat="1">    17,    59,    80,    38,    18,    60,    81,    39</hex8>
+			<hex8 id="18" mat="1">    18,    60,    81,    39,    19,    61,    82,    40</hex8>
+			<hex8 id="19" mat="1">    19,    61,    82,    40,    20,    62,    83,    41</hex8>
+			<hex8 id="20" mat="1">    20,    62,    83,    41,    21,    63,    84,    42</hex8>
+		</Elements>
+	</Geometry>
+	<Boundary>
+		<fix>
+			<node id="1" bc="x"/>
+			<node id="2" bc="x"/>
+			<node id="3" bc="x"/>
+			<node id="4" bc="x"/>
+			<node id="5" bc="x"/>
+			<node id="6" bc="x"/>
+			<node id="7" bc="x"/>
+			<node id="8" bc="x"/>
+			<node id="9" bc="x"/>
+			<node id="10" bc="x"/>
+			<node id="11" bc="x"/>
+			<node id="12" bc="x"/>
+			<node id="13" bc="x"/>
+			<node id="14" bc="x"/>
+			<node id="15" bc="x"/>
+			<node id="16" bc="x"/>
+			<node id="17" bc="x"/>
+			<node id="18" bc="x"/>
+			<node id="19" bc="x"/>
+			<node id="20" bc="x"/>
+			<node id="21" bc="x"/>
+			<node id="22" bc="x"/>
+			<node id="23" bc="x"/>
+			<node id="24" bc="x"/>
+			<node id="25" bc="x"/>
+			<node id="26" bc="x"/>
+			<node id="27" bc="x"/>
+			<node id="28" bc="x"/>
+			<node id="29" bc="x"/>
+			<node id="30" bc="x"/>
+			<node id="31" bc="x"/>
+			<node id="32" bc="x"/>
+			<node id="33" bc="x"/>
+			<node id="34" bc="x"/>
+			<node id="35" bc="x"/>
+			<node id="36" bc="x"/>
+			<node id="37" bc="x"/>
+			<node id="38" bc="x"/>
+			<node id="39" bc="x"/>
+			<node id="40" bc="x"/>
+			<node id="41" bc="x"/>
+			<node id="42" bc="x"/>
+			<node id="43" bc="x"/>
+			<node id="44" bc="x"/>
+			<node id="45" bc="x"/>
+			<node id="46" bc="x"/>
+			<node id="47" bc="x"/>
+			<node id="48" bc="x"/>
+			<node id="49" bc="x"/>
+			<node id="50" bc="x"/>
+			<node id="51" bc="x"/>
+			<node id="52" bc="x"/>
+			<node id="53" bc="x"/>
+			<node id="54" bc="x"/>
+			<node id="55" bc="x"/>
+			<node id="56" bc="x"/>
+			<node id="57" bc="x"/>
+			<node id="58" bc="x"/>
+			<node id="59" bc="x"/>
+			<node id="60" bc="x"/>
+			<node id="61" bc="x"/>
+			<node id="62" bc="x"/>
+			<node id="63" bc="x"/>
+			<node id="64" bc="x"/>
+			<node id="65" bc="x"/>
+			<node id="66" bc="x"/>
+			<node id="67" bc="x"/>
+			<node id="68" bc="x"/>
+			<node id="69" bc="x"/>
+			<node id="70" bc="x"/>
+			<node id="71" bc="x"/>
+			<node id="72" bc="x"/>
+			<node id="73" bc="x"/>
+			<node id="74" bc="x"/>
+			<node id="75" bc="x"/>
+			<node id="76" bc="x"/>
+			<node id="77" bc="x"/>
+			<node id="78" bc="x"/>
+			<node id="79" bc="x"/>
+			<node id="80" bc="x"/>
+			<node id="81" bc="x"/>
+			<node id="82" bc="x"/>
+			<node id="83" bc="x"/>
+			<node id="84" bc="x"/>
+		</fix>
+		<fix>
+			<node id="1" bc="y"/>
+			<node id="2" bc="y"/>
+			<node id="3" bc="y"/>
+			<node id="4" bc="y"/>
+			<node id="5" bc="y"/>
+			<node id="6" bc="y"/>
+			<node id="7" bc="y"/>
+			<node id="8" bc="y"/>
+			<node id="9" bc="y"/>
+			<node id="10" bc="y"/>
+			<node id="11" bc="y"/>
+			<node id="12" bc="y"/>
+			<node id="13" bc="y"/>
+			<node id="14" bc="y"/>
+			<node id="15" bc="y"/>
+			<node id="16" bc="y"/>
+			<node id="17" bc="y"/>
+			<node id="18" bc="y"/>
+			<node id="19" bc="y"/>
+			<node id="20" bc="y"/>
+			<node id="21" bc="y"/>
+			<node id="22" bc="y"/>
+			<node id="23" bc="y"/>
+			<node id="24" bc="y"/>
+			<node id="25" bc="y"/>
+			<node id="26" bc="y"/>
+			<node id="27" bc="y"/>
+			<node id="28" bc="y"/>
+			<node id="29" bc="y"/>
+			<node id="30" bc="y"/>
+			<node id="31" bc="y"/>
+			<node id="32" bc="y"/>
+			<node id="33" bc="y"/>
+			<node id="34" bc="y"/>
+			<node id="35" bc="y"/>
+			<node id="36" bc="y"/>
+			<node id="37" bc="y"/>
+			<node id="38" bc="y"/>
+			<node id="39" bc="y"/>
+			<node id="40" bc="y"/>
+			<node id="41" bc="y"/>
+			<node id="42" bc="y"/>
+			<node id="43" bc="y"/>
+			<node id="44" bc="y"/>
+			<node id="45" bc="y"/>
+			<node id="46" bc="y"/>
+			<node id="47" bc="y"/>
+			<node id="48" bc="y"/>
+			<node id="49" bc="y"/>
+			<node id="50" bc="y"/>
+			<node id="51" bc="y"/>
+			<node id="52" bc="y"/>
+			<node id="53" bc="y"/>
+			<node id="54" bc="y"/>
+			<node id="55" bc="y"/>
+			<node id="56" bc="y"/>
+			<node id="57" bc="y"/>
+			<node id="58" bc="y"/>
+			<node id="59" bc="y"/>
+			<node id="60" bc="y"/>
+			<node id="61" bc="y"/>
+			<node id="62" bc="y"/>
+			<node id="63" bc="y"/>
+			<node id="64" bc="y"/>
+			<node id="65" bc="y"/>
+			<node id="66" bc="y"/>
+			<node id="67" bc="y"/>
+			<node id="68" bc="y"/>
+			<node id="69" bc="y"/>
+			<node id="70" bc="y"/>
+			<node id="71" bc="y"/>
+			<node id="72" bc="y"/>
+			<node id="73" bc="y"/>
+			<node id="74" bc="y"/>
+			<node id="75" bc="y"/>
+			<node id="76" bc="y"/>
+			<node id="77" bc="y"/>
+			<node id="78" bc="y"/>
+			<node id="79" bc="y"/>
+			<node id="80" bc="y"/>
+			<node id="81" bc="y"/>
+			<node id="82" bc="y"/>
+			<node id="83" bc="y"/>
+			<node id="84" bc="y"/>
+		</fix>
+		<fix>
+			<node id="1" bc="z"/>
+			<node id="22" bc="z"/>
+			<node id="43" bc="z"/>
+			<node id="64" bc="z"/>
+		</fix>
+		<prescribe>
+			<node id="21" bc="p" lc="1">-0.00247757</node>
+			<node id="42" bc="p" lc="1">-0.00247757</node>
+			<node id="63" bc="p" lc="1">-0.00247757</node>
+			<node id="84" bc="p" lc="1">-0.00247757</node>
+		</prescribe>
+		<prescribe>
+			<node id="21" bc="c1" lc="2">1</node>
+			<node id="42" bc="c1" lc="2">1</node>
+			<node id="63" bc="c1" lc="2">1</node>
+			<node id="84" bc="c1" lc="2">1</node>
+		</prescribe>
+	</Boundary>
+	<LoadData>
+		<loadcurve id="1" type="step">
+			<loadpoint>0,0</loadpoint>
+			<loadpoint>1,1</loadpoint>
+		</loadcurve>
+		<loadcurve id="2" type="step">
+			<loadpoint>0,0</loadpoint>
+			<loadpoint>1,1</loadpoint>
+		</loadcurve>
+	</LoadData>
+	<Output>
+		<plotfile type="febio">
+			<var type="displacement"/>
+			<var type="effective fluid pressure"/>
+			<var type="effective solute 1 concentration"/>
+			<var type="fluid flux"/>
+			<var type="fluid pressure"/>
+			<var type="relative volume"/>
+			<var type="solute 1 concentration"/>
+			<var type="solute 1 flux"/>
+			<var type="stress"/>
+		</plotfile>
+	          <logfile>
+		          <element_data data="c1">20</element_data>
+	          </logfile>
+     </Output>
+</febio_spec>

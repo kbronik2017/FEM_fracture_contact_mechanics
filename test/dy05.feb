@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Problem Description:
+	An element has a body force of 0 units at t=0 to 1 unit at t=1 applied in the z-direction.
+Main Features:
+	Body force
+	Dynamic analysis
+Secondary Features:
+	Rigid body
+Materials:
+	Rigid body
+Degrees of Freedom: 6
+Results:
+	Steps Completed: 10
+	Equilibrium Iterations: 10
+	Right Hand Evaluations: 20
+	Siffness Reformations: 10
+	Other:
+		At time t=1 all nodes have a z-displacement of -0.452
+Comments:
+	Same as dy01.feb except that the element is a rigid body instead of a Neo-Hookean material.
+-->
+<febio_spec version="1.2">
+	<Control>
+		<title>Dynamic Element with Body Force</title>
+		<time_steps>10</time_steps>
+		<step_size>0.1</step_size>
+		<max_refs>15</max_refs>
+		<max_ups>10</max_ups>
+		<dtol>0.001</dtol>
+		<etol>0.01</etol>
+		<rtol>0</rtol>
+		<lstol>0.9</lstol>
+		<time_stepper>
+			<dtmin>0.01</dtmin>
+			<dtmax>0.1</dtmax>
+			<max_retries>5</max_retries>
+			<opt_iter>10</opt_iter>
+		</time_stepper>
+		<plot_level>PLOT_DEFAULT</plot_level>
+		<analysis type="dynamic"></analysis>
+	</Control>
+	<Material>
+		<material id="1" name="Material 1" type="rigid body">
+			<density>1</density>
+		</material>
+	</Material>
+	<Geometry>
+		<Nodes>
+			<node id="1">-5.0000000e-001,-5.0000000e-001, 0.0000000e+000</node>
+			<node id="2">-5.0000000e-001,-5.0000000e-001, 1.0000000e+000</node>
+			<node id="3">-5.0000000e-001, 5.0000000e-001, 0.0000000e+000</node>
+			<node id="4">-5.0000000e-001, 5.0000000e-001, 1.0000000e+000</node>
+			<node id="5"> 5.0000000e-001,-5.0000000e-001, 0.0000000e+000</node>
+			<node id="6"> 5.0000000e-001,-5.0000000e-001, 1.0000000e+000</node>
+			<node id="7"> 5.0000000e-001, 5.0000000e-001, 0.0000000e+000</node>
+			<node id="8"> 5.0000000e-001, 5.0000000e-001, 1.0000000e+000</node>
+		</Nodes>
+		<Elements>
+			<hex8 id="1" mat="1">     1,     5,     7,     3,     2,     6,     8,     4</hex8>
+		</Elements>
+	</Geometry>
+	<Loads>
+		<body_force>
+			<z lc="1">1</z>
+		</body_force>
+	</Loads>
+	<LoadData>
+		<loadcurve id="1">
+			<loadpoint>0,1</loadpoint>
+			<loadpoint>1,1</loadpoint>
+		</loadcurve>
+	</LoadData>
+	<Output>
+		<plotfile type="febio"></plotfile>
+	    <logfile>
+			<node_data data="uz">2</node_data>
+		</logfile>
+	</Output>
+</febio_spec>

@@ -1,0 +1,27 @@
+var class_b_f_g_s_solver =
+[
+    [ "BFGSSolver", "class_b_f_g_s_solver.html#a6cb8f87c53b2160d3fba4f2e1d12a163", null ],
+    [ "Init", "class_b_f_g_s_solver.html#a1bfeed31bc963ccd388883fadb41cd91", null ],
+    [ "LineSearch", "class_b_f_g_s_solver.html#a2f09d78cb0693d2852dfefcaa6a24d80", null ],
+    [ "LineSearchCG", "class_b_f_g_s_solver.html#a2085b9e9ec399bd91d872c70b04b0c68", null ],
+    [ "SolveEquations", "class_b_f_g_s_solver.html#a72482e88f9d1d4160bfa0c5ff53dd6d8", null ],
+    [ "Update", "class_b_f_g_s_solver.html#a08b50f45a3977743e6bb2a8cd831a8fe", null ],
+    [ "m_cmax", "class_b_f_g_s_solver.html#a16f519decb9ef86bf6559a8f125dabbc", null ],
+    [ "m_D", "class_b_f_g_s_solver.html#a6a39e7dcaea8cb6f5d9969e1d8dc7a89", null ],
+    [ "m_G", "class_b_f_g_s_solver.html#a30c8472ef2dfff8c4a49546de0680fd3", null ],
+    [ "m_H", "class_b_f_g_s_solver.html#aaa122c80b460936a7076d2a9f68c5472", null ],
+    [ "m_LSiter", "class_b_f_g_s_solver.html#a0f940801fc7e45b8e51911821c69f4e5", null ],
+    [ "m_LSmin", "class_b_f_g_s_solver.html#a26d815792c6bf9c43bbe541c75d11237", null ],
+    [ "m_LStol", "class_b_f_g_s_solver.html#aa56234d39670a80054b4d70b1e6a811a", null ],
+    [ "m_maxref", "class_b_f_g_s_solver.html#a16ac9e33a5ee9f0e8183ee828750cfc8", null ],
+    [ "m_maxups", "class_b_f_g_s_solver.html#a14e757f25e81242d7f125fdf8ef5b66f", null ],
+    [ "m_neq", "class_b_f_g_s_solver.html#a4a0ab0566935c20b80339ef5da65f9ef", null ],
+    [ "m_nups", "class_b_f_g_s_solver.html#a27e555b34f8586f25d566b9f6f19db87", null ],
+    [ "m_plinsolve", "class_b_f_g_s_solver.html#a5f1744fbc21d87caa725743c2fad9879", null ],
+    [ "m_pNLS", "class_b_f_g_s_solver.html#a2c9afedf5c153b693de660f0634e0d0f", null ],
+    [ "m_R0", "class_b_f_g_s_solver.html#a243ff66f8e12039ea0777f88d18bbe51", null ],
+    [ "m_R1", "class_b_f_g_s_solver.html#a707b2534c3ec8e3ad1b45b6c1417e943", null ],
+    [ "m_ui", "class_b_f_g_s_solver.html#af95c9420dcd5d6a82435590644ec4b50", null ],
+    [ "m_V", "class_b_f_g_s_solver.html#ae9567cd74d38b4e27a75367aed636d67", null ],
+    [ "m_W", "class_b_f_g_s_solver.html#a489f74d6a2524405665a9059622e8f90", null ]
+];

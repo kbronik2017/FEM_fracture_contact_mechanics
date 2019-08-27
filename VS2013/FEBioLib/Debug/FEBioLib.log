@@ -1,0 +1,33 @@
+﻿Build started 09/02/2018 15:50:46.
+     1>Project "C:\Users\kbronik.ANNASACH\Desktop\working folder\test febio\febiosourceextendedversion2\febiosource2extended\VS2013\FEBioLib\FEBioLib.vcxproj" on node 3 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _CRT_SECURE_NO_WARNINGS /D PARDISO /D MKL_ISS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /FR"Debug\\" /Gd /TP /analyze- /errorReport:prompt ..\..\FEBioLib\FEBioModel.cpp ..\..\FEBioLib\FEBox.cpp ..\..\FEBioLib\getapppath.cpp ..\..\FEBioLib\hello.cpp ..\..\FEBioLib\InitLibrary.cpp ..\..\FEBioLib\input.cpp ..\..\FEBioLib\stdafx.cpp ..\..\FEBioLib\validate.cpp
+         validate.cpp
+         stdafx.cpp
+         input.cpp
+         InitLibrary.cpp
+         hello.cpp
+         getapppath.cpp
+         FEBox.cpp
+         FEBioModel.cpp
+     1>c:\users\kbronik.annasach\desktop\working folder\test febio\febiosourceextendedversion2\febiosource2extended\fecore\color.h(10): warning C4244: 'argument' : conversion from 'DWORD' to 'WORD', possible loss of data
+         Generating Code...
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1354,5): warning MSB8012: TargetPath(C:\Users\kbronik.ANNASACH\Desktop\working folder\test febio\febiosourceextendedversion2\febiosource2extended\VS2013\Debug\FEBioLib.lib) does not match the Library's OutputFile property value (C:\Users\kbronik.ANNASACH\Desktop\working folder\test febio\febiosourceextendedversion2\febiosource2extended\VS2013\Debug\FEBioLibd.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1356,5): warning MSB8012: TargetName(FEBioLib) does not match the Library's OutputFile property value (FEBioLibd). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\kbronik.ANNASACH\Desktop\working folder\test febio\febiosourceextendedversion2\febiosource2extended\VS2013\Debug\FEBioLibd.lib" /NOLOGO Debug\FEBioModel.obj
+         Debug\FEBox.obj
+         Debug\getapppath.obj
+         Debug\hello.obj
+         Debug\InitLibrary.obj
+         Debug\input.obj
+         Debug\stdafx.obj
+         Debug\validate.obj
+         FEBioLib.vcxproj -> C:\Users\kbronik.ANNASACH\Desktop\working folder\test febio\febiosourceextendedversion2\febiosource2extended\VS2013\Debug\FEBioLib.lib
+       BscMake:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\bscmake.exe /nologo /o"C:\Users\kbronik.ANNASACH\Desktop\working folder\test febio\febiosourceextendedversion2\febiosource2extended\VS2013\Debug\FEBioLib.bsc" /n Debug\FEBioModel.sbr Debug\FEBox.sbr Debug\getapppath.sbr Debug\hello.sbr Debug\InitLibrary.sbr Debug\input.sbr Debug\stdafx.sbr Debug\validate.sbr
+     1>Done Building Project "C:\Users\kbronik.ANNASACH\Desktop\working folder\test febio\febiosourceextendedversion2\febiosource2extended\VS2013\FEBioLib\FEBioLib.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:09.33

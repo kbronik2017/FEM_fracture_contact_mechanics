@@ -1,0 +1,20 @@
+<map id="FECoupledHeatSolidSolver" name="FECoupledHeatSolidSolver">
+<area shape="rect" id="node2" href="$class_f_e_solver.html" title="This is the base class for all FE solvers. " alt="" coords="405,206,493,237"/>
+<area shape="rect" id="node10" href="$class_f_e_core_1_1_f_e_analysis.html" title="Base class for finite element analysis. " alt="" coords="527,305,697,335"/>
+<area shape="rect" id="node25" href="$class_f_e_heat_solver.html" title="FEHeatSolver" alt="" coords="383,601,504,631"/>
+<area shape="rect" id="node40" href="$class_f_e_linear_solid_solver.html" title="FELinearSolidSolver" alt="" coords="89,601,260,631"/>
+<area shape="rect" id="node4" href="$class_f_e_core_base.html" title="FECoreBase" alt="" coords="537,89,652,119"/>
+<area shape="rect" id="node6" href="$class_f_e_param_container.html" title="Base class for classes that wish to support parameter lists. " alt="" coords="513,6,676,37"/>
+<area shape="rect" id="node8" href="$class_f_e_model.html" title="FEModel" alt="" coords="450,403,536,434"/>
+<area shape="rect" id="node28" href="$class_f_e_heat_stiffness_matrix.html" title="The &quot;stiffness&quot; matrix for a heat&#45;transfer problem. " alt="" coords="411,502,593,533"/>
+<area shape="rect" id="node44" href="$class_f_e_stiffness_matrix.html" title="FEStiffnessMatrix" alt="" coords="100,502,249,533"/>
+<area shape="rect" id="node15" href="$class_f_e_mesh.html" title="Defines a finite element mesh. " alt="" coords="801,305,884,335"/>
+<area shape="rect" id="node17" href="$struct_f_e___b_o_u_n_d_i_n_g___b_o_x.html" title="FE_BOUNDING_BOX" alt="" coords="921,206,1100,237"/>
+<area shape="rect" id="node19" href="$classvec3d.html" title="vec3d" alt="" coords="978,89,1043,119"/>
+<area shape="rect" id="node21" href="$class_f_e_node_elem_list.html" title="FENodeElemList" alt="" coords="754,206,896,237"/>
+<area shape="rect" id="node23" href="$class_timer.html" title="This class implements a simple timer. " alt="" coords="418,89,480,119"/>
+<area shape="rect" id="node30" href="$class_f_e_global_matrix.html" title="This class implements a global system matrix. " alt="" coords="136,403,267,434"/>
+<area shape="rect" id="node32" href="$class_sparse_matrix_profile.html" title="SparseMatrixProfile" alt="" coords="94,305,257,335"/>
+<area shape="rect" id="node34" href="$class_sparse_matrix.html" title="Base class for sparse matrices. " alt="" coords="283,305,400,335"/>
+<area shape="rect" id="node37" href="$class_linear_solver.html" title="base class for the linear solver classes " alt="" coords="274,502,387,533"/>
+</map>

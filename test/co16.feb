@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Problem Description:
+	A smaller element with a prescribed z-displacement of -0.1 units from time t=0 to
+	t=0.5 and x-displacement of 0.3 units from time t=0.5 to t=1 compresses a larger
+	element with contact and friction.
+Main Features:
+	Sliding Contact with Friction
+Secondary Features:
+	
+Materials:
+	Neo-Hookean
+Degrees of Freedom: 32
+Results:
+	Steps Completed: 50
+	Equilibrium Iterations: 448
+	Right Hand Evaluations: 735
+	Siffness Reformations: 62
+	Other:
+		The minimum edge angle for the smaller element is 72.4 degrees at time t=1.
+Comments:
+	
+-->
+<febio_spec version="1.2">
+	<Control>
+		<title>Element Contact with Friction</title>
+		<time_steps>50</time_steps>
+		<step_size>0.02</step_size>
+		<max_refs>15</max_refs>
+		<max_ups>10</max_ups>
+		<dtol>0.001</dtol>
+		<etol>0.01</etol>
+		<rtol>0</rtol>
+		<lstol>0.9</lstol>
+		<plot_level>PLOT_DEFAULT</plot_level>
+	</Control>
+	<Material>
+		<material id="1" name="Material 1" type="neo-Hookean">
+			<E>1</E>
+			<v>0</v>
+		</material>
+		<material id="2" name="Material 2" type="neo-Hookean">
+			<E>1</E>
+			<v>0</v>
+		</material>
+	</Material>
+	<Geometry>
+		<Nodes>
+			<node id="1">-5.0000000e-001,-5.0000000e-001, 0.0000000e+000</node>
+			<node id="2">-5.0000000e-001,-5.0000000e-001, 1.0000000e+000</node>
+			<node id="3">-5.0000000e-001, 5.0000000e-001, 0.0000000e+000</node>
+			<node id="4">-5.0000000e-001, 5.0000000e-001, 1.0000000e+000</node>
+			<node id="5"> 5.0000000e-001,-5.0000000e-001, 0.0000000e+000</node>
+			<node id="6"> 5.0000000e-001,-5.0000000e-001, 1.0000000e+000</node>
+			<node id="7"> 5.0000000e-001, 5.0000000e-001, 0.0000000e+000</node>
+			<node id="8"> 5.0000000e-001, 5.0000000e-001, 1.0000000e+000</node>
+			<node id="9">-2.5000000e-001,-2.5000000e-001, 1.0000000e+000</node>
+			<node id="10">-2.5000000e-001,-2.5000000e-001, 1.5000000e+000</node>
+			<node id="11">-2.5000000e-001, 2.5000000e-001, 1.0000000e+000</node>
+			<node id="12">-2.5000000e-001, 2.5000000e-001, 1.5000000e+000</node>
+			<node id="13"> 2.5000000e-001,-2.5000000e-001, 1.0000000e+000</node>
+			<node id="14"> 2.5000000e-001,-2.5000000e-001, 1.5000000e+000</node>
+			<node id="15"> 2.5000000e-001, 2.5000000e-001, 1.0000000e+000</node>
+			<node id="16"> 2.5000000e-001, 2.5000000e-001, 1.5000000e+000</node>
+		</Nodes>
+		<Elements>
+			<hex8 id="1" mat="2">     1,     5,     7,     3,     2,     6,     8,     4</hex8>
+			<hex8 id="2" mat="1">     9,    13,    15,    11,    10,    14,    16,    12</hex8>
+		</Elements>
+	</Geometry>
+	<Boundary>
+		<fix>
+			<node id="1" bc="xyz"></node>
+			<node id="3" bc="xyz"></node>
+			<node id="5" bc="xyz"></node>
+			<node id="7" bc="xyz"></node>
+			<node id="10" bc="y"></node>
+			<node id="12" bc="y"></node>
+			<node id="14" bc="y"></node>
+			<node id="16" bc="y"></node>
+		</fix>
+		<prescribe>
+			<node id="10" bc="x" lc="1">1</node>
+			<node id="10" bc="z" lc="2">1</node>
+			<node id="12" bc="x" lc="1">1</node>
+			<node id="12" bc="z" lc="2">1</node>
+			<node id="14" bc="x" lc="1">1</node>
+			<node id="14" bc="z" lc="2">1</node>
+			<node id="16" bc="x" lc="1">1</node>
+			<node id="16" bc="z" lc="2">1</node>
+		</prescribe>
+		<contact type="sliding_with_gaps">
+			<laugon>1</laugon>
+			<tolerance>0.01</tolerance>
+			<penalty>5</penalty>
+			<fric_coeff>0.99</fric_coeff>
+			<fric_penalty>5.0</fric_penalty>
+			<two_pass>0</two_pass>
+			<surface type="master">
+				<quad4 id="1">     2,     6,     8,     4</quad4>
+			</surface>
+			<surface type="slave">
+				<quad4 id="2">    11,    15,    13,     9</quad4>
+			</surface>
+		</contact>
+	</Boundary>
+	<LoadData>
+		<loadcurve id="1">
+			<loadpoint>0,0</loadpoint>
+			<loadpoint>0.5,0</loadpoint>
+			<loadpoint>1,0.3</loadpoint>
+		</loadcurve>
+		<loadcurve id="2">
+			<loadpoint>0,0</loadpoint>
+			<loadpoint>0.5,-0.1</loadpoint>
+			<loadpoint>1,-0.1</loadpoint>
+		</loadcurve>
+	</LoadData>
+	<Output>
+		<plotfile type="febio"></plotfile>
+	    <logfile>
+			<element_data data="Ez">2</element_data>
+		</logfile>
+	</Output>
+</febio_spec>

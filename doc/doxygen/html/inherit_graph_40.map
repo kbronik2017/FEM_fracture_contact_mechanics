@@ -1,0 +1,44 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_f_e_element_traits.html" title="This class is the base class for all element trait&#39;s classes. " alt="" coords="5,286,147,317"/>
+<area shape="rect" id="node3" href="$class_f_e_discrete_element_traits.html" title="FEDiscreteElementTraits" alt="" coords="195,75,397,106"/>
+<area shape="rect" id="node5" href="$class_f_e_shell_element_traits.html" title="FEShellElementTraits" alt="" coords="208,130,384,161"/>
+<area shape="rect" id="node11" href="$class_f_e_solid_element_traits.html" title="FESolidElementTraits" alt="" coords="207,286,385,317"/>
+<area shape="rect" id="node47" href="$class_f_e_surface_element_traits.html" title="FESurfaceElementTraits" alt="" coords="197,715,395,746"/>
+<area shape="rect" id="node83" href="$class_f_e_truss_element_traits.html" title="FETrussElementTraits" alt="" coords="205,770,387,801"/>
+<area shape="rect" id="node7" href="$class_f_e_shell_quad_element_traits.html" title="FEShellQuadElementTraits" alt="" coords="446,13,661,43"/>
+<area shape="rect" id="node9" href="$class_f_e_shell_tri_element_traits.html" title="FEShellTriElementTraits" alt="" coords="456,67,651,98"/>
+<area shape="rect" id="node13" href="$class_f_e_hex20__.html" title="Base class for 20&#45;node quadratic hexahedral element. " alt="" coords="505,122,602,153"/>
+<area shape="rect" id="node17" href="$class_f_e_hex8__.html" title="Base class for 8&#45;node hexahedral elements. " alt="" coords="509,177,597,207"/>
+<area shape="rect" id="node25" href="$class_f_e_penta6__.html" title="Base class for 6&#45;node pentahedral &quot;wedge&quot; elements. " alt="" coords="502,245,605,275"/>
+<area shape="rect" id="node29" href="$class_f_e_tet10__.html" title="Base class for 10&#45;node quadratic tetrahedral elements. " alt="" coords="507,326,599,357"/>
+<area shape="rect" id="node37" href="$class_f_e_tet15__.html" title="Base class for 15&#45;node quadratic tetrahedral elements. " alt="" coords="507,407,599,438"/>
+<area shape="rect" id="node41" href="$class_f_e_tet4__.html" title="Base class for 4&#45;node linear tetrahedrons. " alt="" coords="512,497,595,527"/>
+<area shape="rect" id="node15" href="$class_f_e_hex20_g27.html" title="FEHex20G27" alt="" coords="711,5,830,35"/>
+<area shape="rect" id="node19" href="$class_f_e_hex8_g1.html" title="FEHex8G1" alt="" coords="721,59,821,90"/>
+<area shape="rect" id="node21" href="$class_f_e_hex8_g8.html" title="FEHex8G8" alt="" coords="721,114,821,145"/>
+<area shape="rect" id="node23" href="$class_f_e_hex8_r_i.html" title="FEHex8RI" alt="" coords="723,169,818,199"/>
+<area shape="rect" id="node27" href="$class_f_e_penta6_g6.html" title="FEPenta6G6" alt="" coords="713,223,828,254"/>
+<area shape="rect" id="node31" href="$class_f_e_tet10_g4.html" title="FETet10G4" alt="" coords="719,278,823,309"/>
+<area shape="rect" id="node33" href="$class_f_e_tet10_g8.html" title="FETet10G8" alt="" coords="719,333,823,363"/>
+<area shape="rect" id="node35" href="$class_f_e_tet10_g_l11.html" title="FETet10GL11" alt="" coords="709,387,832,418"/>
+<area shape="rect" id="node39" href="$class_f_e_tet15_g8.html" title="FETet15G8" alt="" coords="719,442,823,473"/>
+<area shape="rect" id="node43" href="$class_f_e_tet4_g1.html" title="FETet4G1" alt="" coords="723,497,818,527"/>
+<area shape="rect" id="node45" href="$class_f_e_tet4_g4.html" title="FETet4G4" alt="" coords="723,551,818,582"/>
+<area shape="rect" id="node49" href="$class_f_e_quad4__.html" title="FEQuad4_" alt="" coords="503,661,603,691"/>
+<area shape="rect" id="node55" href="$class_f_e_quad8__.html" title="Base class for 8&#45;node quadratic quadrilaterals. " alt="" coords="503,715,603,746"/>
+<area shape="rect" id="node59" href="$class_f_e_tri3__.html" title="Base class for linear triangles. " alt="" coords="513,797,593,827"/>
+<area shape="rect" id="node67" href="$class_f_e_tri6__.html" title="FETri6_" alt="" coords="513,1015,593,1046"/>
+<area shape="rect" id="node79" href="$class_f_e_tri7__.html" title="FETri7_" alt="" coords="513,1151,593,1182"/>
+<area shape="rect" id="node51" href="$class_f_e_quad4_g4.html" title="FEQuad4G4" alt="" coords="715,606,827,637"/>
+<area shape="rect" id="node53" href="$class_f_e_quad4_n_i.html" title="FEQuad4NI" alt="" coords="717,661,824,691"/>
+<area shape="rect" id="node57" href="$class_f_e_quad8_g9.html" title="class implementing 8&#45;node quad quadrilateral with 9 integration points " alt="" coords="715,715,827,746"/>
+<area shape="rect" id="node61" href="$class_f_e_tri3_g1.html" title="3&#45;node triangular element with 1&#45;point gaussian quadrature " alt="" coords="725,770,817,801"/>
+<area shape="rect" id="node63" href="$class_f_e_tri3_g3.html" title="3&#45;node triangular element with 3&#45;point gaussian quadrature " alt="" coords="725,825,817,855"/>
+<area shape="rect" id="node65" href="$class_f_e_tri3_n_i.html" title="FETri3NI" alt="" coords="727,879,814,910"/>
+<area shape="rect" id="node69" href="$class_f_e_tri6_g3.html" title="FETri6G3" alt="" coords="725,934,817,965"/>
+<area shape="rect" id="node71" href="$class_f_e_tri6_g4.html" title="FETri6G4" alt="" coords="725,989,817,1019"/>
+<area shape="rect" id="node73" href="$class_f_e_tri6_g7.html" title="FETri6G7" alt="" coords="725,1043,817,1074"/>
+<area shape="rect" id="node75" href="$class_f_e_tri6_g_l7.html" title="FETri6GL7" alt="" coords="720,1098,821,1129"/>
+<area shape="rect" id="node77" href="$class_f_e_tri6_n_i.html" title="FETri6NI" alt="" coords="727,1153,814,1183"/>
+<area shape="rect" id="node81" href="$class_f_e_tri7_g7.html" title="FETri7G7" alt="" coords="725,1207,817,1238"/>
+</map>

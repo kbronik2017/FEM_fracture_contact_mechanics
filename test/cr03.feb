@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- 
+Problem Description:
+Dissociation of NaCl using reversible chemical reaction,
+
+[NaCl] <-> [Na+] + [Cl-]
+
+The three chemical species are described by three solutes in a multiphasic mixture. 
+Initially the mixture contains only NaCl at a concentration of 1, which then dissociates 
+reversibly into its cation and anion components.  The analysis is performed in a domain 
+consisting of a single finite element suitable for describing homogeneous processes. 
+Since [Na+] and [Cl-] are charged, and since their concentrations are not prescribed on 
+the boundaries of the finite element domain, it is necessary to ground the mixture electrically
+to prevent unbounded fluctuations in the electric potential.  Therefore two additional 
+ions are included in the mixture, [K+] and [HCO3-], with prescribed boundary conditions 
+that enforce zero electric potential.
+ 
+Main Features:
+	Reversible chemical reaction involving charged solutes
+Secondary Features:
+	Electrical grounding of multiphasic mixture
+Materials:
+	Multiphasic
+	neo-Hookean
+	Constant Isotropic Permeability
+	Constant Osmotic Coefficient
+	Constant Isotropic Diffusivity
+	Constant Solubility
+	Mass-Action-Reversible
+	Constant Reaction Rate
+Degrees of Freedom: 60
+Results:
+	Steps Completed: 303
+	Equilibrium Iterations: 450
+	Right Hand Evaluations: 753
+	Siffness Reformations: 450
+	Other:
+		The final NaCl concentration is 0.0848 and the final Na+ and Cl- concentrations are 0.9152, at time t=6.
+ 
+Comments:
+	
+-->
+<febio_spec version="1.2">
+	<Module type="multiphasic"/>
+	<Control>
+		<time_steps>600</time_steps>
+		<step_size>0.01</step_size>
+		<max_refs>15</max_refs>
+		<max_ups>0</max_ups>
+		<dtol>0.001</dtol>
+		<etol>0.01</etol>
+		<rtol>0</rtol>
+		<ptol>0.01</ptol>
+		<ctol>0.01</ctol>
+		<lstol>0.9</lstol>
+		<time_stepper>
+			<dtmin>0.001</dtmin>
+			<dtmax>0.02</dtmax>
+			<max_retries>5</max_retries>
+			<opt_iter>10</opt_iter>
+		</time_stepper>
+		<symmetric_biphasic>0</symmetric_biphasic>
+	</Control>
+	<Globals>
+		<Constants>
+			<T>293</T>
+			<R>8.314e-06</R>
+			<Fc>9.65e-05</Fc>
+		</Constants>
+		<Solutes>
+			<solute id="1" name="NaCl">
+				<charge_number>0</charge_number>
+				<density>2.16e-9</density>
+				<molar_mass>58.44e-15</molar_mass>
+			</solute>
+			<solute id="2" name="Na+">
+				<charge_number>1</charge_number>
+				<density>0.968e-9</density>
+				<molar_mass>22.99e-15</molar_mass>
+			</solute>
+			<solute id="3" name="Cl-">
+				<charge_number>-1</charge_number>
+				<density>3.214e-9</density>
+				<molar_mass>35.45e-15</molar_mass>
+			</solute>
+			<solute id="4" name="K+">
+				<charge_number>1</charge_number>
+			</solute>
+			<solute id="5" name="HCO3-">
+				<charge_number>-1</charge_number>
+			</solute>
+		</Solutes>
+	</Globals>
+	<Material>
+		<material id="1" name="Salt Solution" type="multiphasic">
+			<phi0>0</phi0>
+			<fixed_charge_density>0</fixed_charge_density>
+			<solid type="neo-Hookean">
+				<density>1</density>
+				<E>1e+06</E>
+				<v>0</v>
+			</solid>
+			<permeability type="perm-const-iso">
+				<perm>1</perm>
+			</permeability>
+			<osmotic_coefficient type="osm-coef-const">
+				<osmcoef>1</osmcoef>
+			</osmotic_coefficient>
+			<solute sol="1">
+				<diffusivity type="diff-const-iso">
+					<free_diff>1</free_diff>
+					<diff>1</diff>
+				</diffusivity>
+				<solubility type="solub-const">
+					<solub>1</solub>
+				</solubility>
+			</solute>
+			<solute sol="2">
+				<diffusivity type="diff-const-iso">
+					<free_diff>1</free_diff>
+					<diff>1</diff>
+				</diffusivity>
+				<solubility type="solub-const">
+					<solub>1</solub>
+				</solubility>
+			</solute>
+			<solute sol="3">
+				<diffusivity type="diff-const-iso">
+					<free_diff>1</free_diff>
+					<diff>1</diff>
+				</diffusivity>
+				<solubility type="solub-const">
+					<solub>1</solub>
+				</solubility>
+			</solute>
+			<solute sol="4">
+				<diffusivity type="diff-const-iso">
+					<free_diff>1</free_diff>
+					<diff>1</diff>
+				</diffusivity>
+				<solubility type="solub-const">
+					<solub>1</solub>
+				</solubility>
+			</solute>
+			<solute sol="5">
+				<diffusivity type="diff-const-iso">
+					<free_diff>1</free_diff>
+					<diff>1</diff>
+				</diffusivity>
+				<solubility type="solub-const">
+					<solub>1</solub>
+				</solubility>
+			</solute>
+			<reaction name="NaCl dissociation" type="mass-action-reversible">
+			  <vR sol="1">1</vR>
+			  <vP sol="2">1</vP>
+			  <vP sol="3">1</vP>
+			  <forward_rate type="constant reaction rate">
+			    <k>1</k>
+			  </forward_rate>
+			  <reverse_rate type="constant reaction rate">
+			    <k>0.1</k>
+			  </reverse_rate>
+			</reaction>
+		</material>
+	</Material>
+	<Geometry>
+		<Nodes>
+			<node id="1"> -5.0000000e-01, -5.0000000e-01,  0.0000000e+00</node>
+			<node id="2"> -5.0000000e-01, -5.0000000e-01,  1.0000000e+00</node>
+			<node id="3"> -5.0000000e-01,  5.0000000e-01,  0.0000000e+00</node>
+			<node id="4"> -5.0000000e-01,  5.0000000e-01,  1.0000000e+00</node>
+			<node id="5">  5.0000000e-01, -5.0000000e-01,  0.0000000e+00</node>
+			<node id="6">  5.0000000e-01, -5.0000000e-01,  1.0000000e+00</node>
+			<node id="7">  5.0000000e-01,  5.0000000e-01,  0.0000000e+00</node>
+			<node id="8">  5.0000000e-01,  5.0000000e-01,  1.0000000e+00</node>
+		</Nodes>
+		<Elements>
+			<hex8 id="1" mat="1">     1,     5,     7,     3,     2,     6,     8,     4</hex8>
+		</Elements>
+	</Geometry>
+	<Boundary>
+		<fix>
+			<node id="1" bc="xyz"/>
+			<node id="3" bc="xyz"/>
+			<node id="5" bc="xyz"/>
+			<node id="7" bc="xyz"/>
+		</fix>
+		<prescribe>
+			<node id="2" bc="c4" lc="1">1</node>
+			<node id="4" bc="c4" lc="1">1</node>
+			<node id="6" bc="c4" lc="1">1</node>
+			<node id="8" bc="c4" lc="1">1</node>
+		</prescribe>
+		<prescribe>
+			<node id="2" bc="c5" lc="2">1</node>
+			<node id="4" bc="c5" lc="2">1</node>
+			<node id="6" bc="c5" lc="2">1</node>
+			<node id="8" bc="c5" lc="2">1</node>
+		</prescribe>
+	</Boundary>
+	<Initial>
+		<concentration sol="1">
+			<node id="1">1</node>
+			<node id="2">1</node>
+			<node id="3">1</node>
+			<node id="4">1</node>
+			<node id="5">1</node>
+			<node id="6">1</node>
+			<node id="7">1</node>
+			<node id="8">1</node>
+		</concentration>
+		<concentration sol="4">
+			<node id="1">1</node>
+			<node id="2">1</node>
+			<node id="3">1</node>
+			<node id="4">1</node>
+			<node id="5">1</node>
+			<node id="6">1</node>
+			<node id="7">1</node>
+			<node id="8">1</node>
+		</concentration>
+		<concentration sol="5">
+			<node id="1">1</node>
+			<node id="2">1</node>
+			<node id="3">1</node>
+			<node id="4">1</node>
+			<node id="5">1</node>
+			<node id="6">1</node>
+			<node id="7">1</node>
+			<node id="8">1</node>
+		</concentration>
+		<fluid_pressure>
+			<node id="1">-0.007308</node>
+			<node id="2">-0.007308</node>
+			<node id="3">-0.007308</node>
+			<node id="4">-0.007308</node>
+			<node id="5">-0.007308</node>
+			<node id="6">-0.007308</node>
+			<node id="7">-0.007308</node>
+			<node id="8">-0.007308</node>
+		</fluid_pressure>
+	</Initial>
+	<LoadData>
+		<loadcurve id="1" type="step">
+			<loadpoint>0,0</loadpoint>
+			<loadpoint>1,1</loadpoint>
+		</loadcurve>
+		<loadcurve id="2" type="step">
+			<loadpoint>0,0</loadpoint>
+			<loadpoint>1,1</loadpoint>
+		</loadcurve>
+	</LoadData>
+	<Output>
+		<plotfile type="febio">
+			<var type="current density"/>
+			<var type="displacement"/>
+			<var type="effective fluid pressure"/>
+			<var type="effective solute 1 concentration"/>
+			<var type="effective solute 2 concentration"/>
+			<var type="effective solute 3 concentration"/>
+			<var type="effective solute 4 concentration"/>
+			<var type="effective solute 5 concentration"/>
+			<var type="electric potential"/>
+			<var type="fluid flux"/>
+			<var type="fluid pressure"/>
+			<var type="relative volume"/>
+			<var type="solute 1 concentration"/>
+			<var type="solute 2 concentration"/>
+			<var type="solute 3 concentration"/>
+			<var type="solute 4 concentration"/>
+			<var type="solute 5 concentration"/>
+			<var type="solute 1 flux"/>
+			<var type="solute 2 flux"/>
+			<var type="solute 3 flux"/>
+			<var type="solute 4 flux"/>
+			<var type="solute 5 flux"/>
+			<var type="stress"/>
+		</plotfile>
+		<logfile>
+			<element_data data="c1">1</element_data>
+		</logfile>
+	</Output>
+</febio_spec>

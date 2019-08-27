@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Problem Description:
+	A displacement of 1 unit in the z-direction is prescribed for node 8.  Nodes 2, 4 and 6
+	(the other nodes on the top of the element) are constrained to have the same z component
+	as element 8.
+Main Features:
+	Linear constraints
+Secondary Features:
+	
+Materials:
+	Neo-Hookean
+Degrees of Freedom: 12
+Results:
+	Steps Completed: 10
+	Equilibrium Iterations: 52
+	Right Hand Evaluations: 70
+	Siffness Reformations: 10
+	Other:
+		The volume is 1.05 units at time t=1.
+Comments:
+	
+-->
+<febio_spec version="1.2">
+	<Control>
+		<title>Linear Constraints</title>
+		<time_steps>10</time_steps>
+		<step_size>0.1</step_size>
+		<max_refs>15</max_refs>
+		<max_ups>10</max_ups>
+		<dtol>0.001</dtol>
+		<etol>0.01</etol>
+		<rtol>0</rtol>
+		<lstol>0.9</lstol>
+		<pressure_stiffness>1</pressure_stiffness>
+		<time_stepper>
+			<dtmin>0.01</dtmin>
+			<dtmax>0.1</dtmax>
+			<max_retries>5</max_retries>
+			<opt_iter>10</opt_iter>
+		</time_stepper>
+		<plot_level>PLOT_DEFAULT</plot_level>
+	</Control>
+	<Material>
+		<material id="1" name="Material 1" type="neo-Hookean">
+			<E>1</E>
+			<v>.45</v>
+		</material>
+	</Material>
+	<Geometry>
+		<Nodes>
+			<node id="1">-5.0000000e-001,-5.0000000e-001, 0.0000000e+000</node>
+			<node id="2">-5.0000000e-001,-5.0000000e-001, 1.0000000e+000</node>
+			<node id="3">-5.0000000e-001, 5.0000000e-001, 0.0000000e+000</node>
+			<node id="4">-5.0000000e-001, 5.0000000e-001, 1.0000000e+000</node>
+			<node id="5"> 5.0000000e-001,-5.0000000e-001, 0.0000000e+000</node>
+			<node id="6"> 5.0000000e-001,-5.0000000e-001, 1.0000000e+000</node>
+			<node id="7"> 5.0000000e-001, 5.0000000e-001, 0.0000000e+000</node>
+			<node id="8"> 5.0000000e-001, 5.0000000e-001, 1.0000000e+000</node>
+		</Nodes>
+		<Elements>
+			<hex8 id="1" mat="1">     1,     5,     7,     3,     2,     6,     8,     4</hex8>
+		</Elements>
+	</Geometry>
+	<Boundary>
+		<fix>
+			<node id="1" bc="xyz"></node>
+			<node id="2" bc="xy"></node>
+			<node id="3" bc="xz"></node>
+			<node id="4" bc="x"></node>
+			<node id="5" bc="yz"></node>
+			<node id="6" bc="y"></node>
+			<node id="7" bc="z"></node>
+		</fix>
+		<contact type="linear constraint">
+			<tol>0.1</tol>
+			<penalty>50</penalty>
+			<linear_constraint>
+				<node id="4" bc="z"> 1.0</node>
+				<node id="8" bc="z">-1.0</node>
+			</linear_constraint>
+			<linear_constraint>
+				<node id="2" bc="z"> 1.0</node>
+				<node id="8" bc="z">-1.0</node>
+			</linear_constraint>
+			<linear_constraint>
+				<node id="6" bc="z"> 1.0</node>
+				<node id="8" bc="z">-1.0</node>
+			</linear_constraint>
+		</contact>
+		<prescribe>
+			<node id="8" bc="z" lc="1">1</node>
+		</prescribe>
+	</Boundary>
+	<LoadData>
+		<loadcurve id="1">
+			<loadpoint>0,0</loadpoint>
+			<loadpoint>1,1</loadpoint>
+		</loadcurve>
+	</LoadData>
+	<Output>
+	    <plotfile type="febio"></plotfile>
+	    <logfile>
+			<element_data data="Ez">1</element_data>
+		</logfile>
+	</Output>
+</febio_spec>

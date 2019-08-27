@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerDiagram dslVersion="1.0.0.0" Id="47c90d59-ac6f-4448-a767-6dad8406a844" absoluteBounds="0, 0, 12.375, 8.5" name="LayerDiagramfebio">
+  <layerModelMoniker Id="a9f8d592-e544-4847-867c-5ccd684b1bf7" />
+  <nestedChildShapes>
+    <layerShape Id="8028aaba-f429-47ac-b242-6fc23e59bed5" absoluteBounds="9.375, 2, 2.75, 1.25" customColor="161, 199, 231">
+      <layerMoniker Id="e0624683-65b8-4e7c-bf1a-258460a32ef4" />
+      <nestedChildShapes>
+        <layerShape Id="2950e33f-d8ae-4b2b-9f39-a6bfc401f525" absoluteBounds="10, 2.375, 2, 0.75" customColor="161, 199, 231">
+          <layerMoniker Id="72f3a5cd-ce25-4e0d-894b-063f872c4c49" />
+        </layerShape>
+      </nestedChildShapes>
+    </layerShape>
+  </nestedChildShapes>
+</layerDiagram>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Problem Description:
+	Two rigid plates have a rigid joint at their center.  Each plate has a 5 element block
+	of neo-Hookean material attached by rigid contact to the top of the plate.  The free
+	end block on the left is constrained in x,yz.  The free end of the block on the right
+	has a prescribed x-displacement of 1 unit at time t=1.
+Main Features:
+	Rigid Joints
+Secondary Features:
+	
+Materials:
+	Neo-Hookean
+	Rigid Bodies
+Degrees of Freedom: 108
+Results:
+	Steps Completed: 10
+	Equilibrium Iterations: 53
+	Right Hand Evaluations: 77
+	Siffness Reformations: 10
+	Other:
+		The top edges of the plates have a z-displacement of 0.150 at time t=1.
+Comments:
+	
+-->
+<febio_spec version="1.2">
+	<Control>
+		<title>Plates with Rigid Joint</title>
+		<time_steps>10</time_steps>
+		<step_size>0.1</step_size>
+		<time_stepper>
+			<dtmin>0.01</dtmin>
+			<dtmax>0.1</dtmax>
+			<max_retries>15</max_retries>
+			<opt_iter>10</opt_iter>
+		</time_stepper>
+	</Control>
+	<Material>
+		<material id="1" type="neo-Hookean" name="deformable">
+			<E>1</E>
+			<v>0</v>
+		</material>
+		<material id="2" type="rigid body" name="rigid 1">
+			<density>1</density>
+		</material>
+		<material id="3" type="rigid body" name="rigid2">
+			<density>1</density>
+		</material>
+	</Material>
+	<Geometry>
+		<Nodes>
+			<node id="1">-5.0000000e-001,-1.0000000e-001, 0.0000000e+000</node>
+			<node id="2">-5.0000000e-001,-1.0000000e-001, 1.0000000e+000</node>
+			<node id="3">-5.0000000e-001, 1.0000000e-001, 0.0000000e+000</node>
+			<node id="4">-5.0000000e-001, 1.0000000e-001, 1.0000000e+000</node>
+			<node id="5"> 5.0000000e-001,-1.0000000e-001, 0.0000000e+000</node>
+			<node id="6"> 5.0000000e-001,-1.0000000e-001, 1.0000000e+000</node>
+			<node id="7"> 5.0000000e-001, 1.0000000e-001, 0.0000000e+000</node>
+			<node id="8"> 5.0000000e-001, 1.0000000e-001, 1.0000000e+000</node>
+			<node id="9">-5.0000000e-001, 1.0000000e-001, 0.0000000e+000</node>
+			<node id="10">-5.0000000e-001, 1.0000000e-001, 1.0000000e+000</node>
+			<node id="11">-5.0000000e-001, 3.0000001e-001, 0.0000000e+000</node>
+			<node id="12">-5.0000000e-001, 3.0000001e-001, 1.0000000e+000</node>
+			<node id="13"> 5.0000000e-001, 1.0000000e-001, 0.0000000e+000</node>
+			<node id="14"> 5.0000000e-001, 1.0000000e-001, 1.0000000e+000</node>
+			<node id="15"> 5.0000000e-001, 3.0000001e-001, 0.0000000e+000</node>
+			<node id="16"> 5.0000000e-001, 3.0000001e-001, 1.0000000e+000</node>
+			<node id="17"> 5.0000000e-001, 1.0000000e-001, 8.0000001e-001</node>
+			<node id="18"> 5.0000000e-001, 1.0000000e-001, 1.0000000e+000</node>
+			<node id="19"> 5.0000000e-001, 3.0000001e-001, 8.0000001e-001</node>
+			<node id="20"> 5.0000000e-001, 3.0000001e-001, 1.0000000e+000</node>
+			<node id="21"> 6.9999999e-001, 1.0000000e-001, 8.0000001e-001</node>
+			<node id="22"> 6.9999999e-001, 1.0000000e-001, 1.0000000e+000</node>
+			<node id="23"> 6.9999999e-001, 3.0000001e-001, 8.0000001e-001</node>
+			<node id="24"> 6.9999999e-001, 3.0000001e-001, 1.0000000e+000</node>
+			<node id="25"> 8.9999998e-001, 1.0000000e-001, 8.0000001e-001</node>
+			<node id="26"> 8.9999998e-001, 1.0000000e-001, 1.0000000e+000</node>
+			<node id="27"> 8.9999998e-001, 3.0000001e-001, 8.0000001e-001</node>
+			<node id="28"> 8.9999998e-001, 3.0000001e-001, 1.0000000e+000</node>
+			<node id="29"> 1.1000000e+000, 1.0000000e-001, 8.0000001e-001</node>
+			<node id="30"> 1.1000000e+000, 1.0000000e-001, 1.0000000e+000</node>
+			<node id="31"> 1.1000000e+000, 3.0000001e-001, 8.0000001e-001</node>
+			<node id="32"> 1.1000000e+000, 3.0000001e-001, 1.0000000e+000</node>
+			<node id="33"> 1.3000000e+000, 1.0000000e-001, 8.0000001e-001</node>
+			<node id="34"> 1.3000000e+000, 1.0000000e-001, 1.0000000e+000</node>
+			<node id="35"> 1.3000000e+000, 3.0000001e-001, 8.0000001e-001</node>
+			<node id="36"> 1.3000000e+000, 3.0000001e-001, 1.0000000e+000</node>
+			<node id="37"> 1.5000000e+000, 1.0000000e-001, 8.0000001e-001</node>
+			<node id="38"> 1.5000000e+000, 1.0000000e-001, 1.0000000e+000</node>
+			<node id="39"> 1.5000000e+000, 3.0000001e-001, 8.0000001e-001</node>
+			<node id="40"> 1.5000000e+000, 3.0000001e-001, 1.0000000e+000</node>
+			<node id="41">-1.5000000e+000,-1.0000000e-001, 8.0000001e-001</node>
+			<node id="42">-1.5000000e+000,-1.0000000e-001, 1.0000000e+000</node>
+			<node id="43">-1.5000000e+000, 1.0000000e-001, 8.0000001e-001</node>
+			<node id="44">-1.5000000e+000, 1.0000000e-001, 1.0000000e+000</node>
+			<node id="45">-1.3000000e+000,-1.0000000e-001, 8.0000001e-001</node>
+			<node id="46">-1.3000000e+000,-1.0000000e-001, 1.0000000e+000</node>
+			<node id="47">-1.3000000e+000, 1.0000000e-001, 8.0000001e-001</node>
+			<node id="48">-1.3000000e+000, 1.0000000e-001, 1.0000000e+000</node>
+			<node id="49">-1.1000000e+000,-1.0000000e-001, 8.0000001e-001</node>
+			<node id="50">-1.1000000e+000,-1.0000000e-001, 1.0000000e+000</node>
+			<node id="51">-1.1000000e+000, 1.0000000e-001, 8.0000001e-001</node>
+			<node id="52">-1.1000000e+000, 1.0000000e-001, 1.0000000e+000</node>
+			<node id="53">-8.9999998e-001,-1.0000000e-001, 8.0000001e-001</node>
+			<node id="54">-8.9999998e-001,-1.0000000e-001, 1.0000000e+000</node>
+			<node id="55">-8.9999998e-001, 1.0000000e-001, 8.0000001e-001</node>
+			<node id="56">-8.9999998e-001, 1.0000000e-001, 1.0000000e+000</node>
+			<node id="57">-6.9999999e-001,-1.0000000e-001, 8.0000001e-001</node>
+			<node id="58">-6.9999999e-001,-1.0000000e-001, 1.0000000e+000</node>
+			<node id="59">-6.9999999e-001, 1.0000000e-001, 8.0000001e-001</node>
+			<node id="60">-6.9999999e-001, 1.0000000e-001, 1.0000000e+000</node>
+			<node id="61">-5.0000000e-001,-1.0000000e-001, 8.0000001e-001</node>
+			<node id="62">-5.0000000e-001,-1.0000000e-001, 1.0000000e+000</node>
+			<node id="63">-5.0000000e-001, 1.0000000e-001, 8.0000001e-001</node>
+			<node id="64">-5.0000000e-001, 1.0000000e-001, 1.0000000e+000</node>
+		</Nodes>
+		<Elements>
+			<hex8 id="1" mat="2">     1,     5,     7,     3,     2,     6,     8,     4</hex8>
+			<hex8 id="2" mat="3">     9,    13,    15,    11,    10,    14,    16,    12</hex8>
+			<hex8 id="3" mat="1">    17,    21,    23,    19,    18,    22,    24,    20</hex8>
+			<hex8 id="4" mat="1">    21,    25,    27,    23,    22,    26,    28,    24</hex8>
+			<hex8 id="5" mat="1">    25,    29,    31,    27,    26,    30,    32,    28</hex8>
+			<hex8 id="6" mat="1">    29,    33,    35,    31,    30,    34,    36,    32</hex8>
+			<hex8 id="7" mat="1">    33,    37,    39,    35,    34,    38,    40,    36</hex8>
+			<hex8 id="8" mat="1">    41,    45,    47,    43,    42,    46,    48,    44</hex8>
+			<hex8 id="9" mat="1">    45,    49,    51,    47,    46,    50,    52,    48</hex8>
+			<hex8 id="10" mat="1">    49,    53,    55,    51,    50,    54,    56,    52</hex8>
+			<hex8 id="11" mat="1">    53,    57,    59,    55,    54,    58,    60,    56</hex8>
+			<hex8 id="12" mat="1">    57,    61,    63,    59,    58,    62,    64,    60</hex8>
+		</Elements>
+	</Geometry>
+	<Boundary>
+		<fix>
+			<node id="41" bc="x"></node>
+			<node id="41" bc="y"></node>
+			<node id="41" bc="z"></node>
+			<node id="42" bc="x"></node>
+			<node id="42" bc="y"></node>
+			<node id="42" bc="z"></node>
+			<node id="43" bc="x"></node>
+			<node id="43" bc="y"></node>
+			<node id="43" bc="z"></node>
+			<node id="44" bc="x"></node>
+			<node id="44" bc="y"></node>
+			<node id="44" bc="z"></node>
+			<node id="37" bc="z"></node>
+			<node id="38" bc="z"></node>
+			<node id="39" bc="z"></node>
+			<node id="40" bc="z"></node>
+		</fix>
+		<prescribe>
+			<node id="37" bc="x" lc="1">1</node>
+			<node id="38" bc="x" lc="1">1</node>
+			<node id="39" bc="x" lc="1">1</node>
+			<node id="40" bc="x" lc="1">1</node>
+		</prescribe>
+		<contact type="rigid">
+			<node id="17" rb="3"></node>
+			<node id="18" rb="3"></node>
+			<node id="19" rb="3"></node>
+			<node id="20" rb="3"></node>
+		</contact>
+		<contact type="rigid">
+			<node id="61" rb="2"></node>
+			<node id="62" rb="2"></node>
+			<node id="63" rb="2"></node>
+			<node id="64" rb="2"></node>
+		</contact>
+		<contact type="rigid joint">
+			<tolerance>0.01</tolerance>
+			<penalty>1000</penalty>
+			<body_a>2</body_a>
+			<body_b>3</body_b>
+			<joint>0,0.1,0.5</joint>
+		</contact>
+	</Boundary>
+	<Constraints>
+		<rigid_body mat="2">
+			<trans_y type="fixed"/>
+			<trans_z type="fixed"/>
+			<rot_x type="fixed"/>
+			<rot_z type="fixed"/>
+		</rigid_body>
+		<rigid_body mat="3">
+			<trans_y type="fixed"/>
+			<trans_z type="fixed"/>
+			<rot_x type="fixed"/>
+			<rot_z type="fixed"/>
+		</rigid_body>
+	</Constraints>
+	<LoadData>
+		<loadcurve id="1">
+			<loadpoint>0,0</loadpoint>
+			<loadpoint>1,1</loadpoint>
+		</loadcurve>
+	</LoadData>
+	<Output>
+		<plotfile type="febio"></plotfile>
+		<logfile>
+			<element_data data="sx">6</element_data>
+		</logfile>
+	</Output>
+</febio_spec>
