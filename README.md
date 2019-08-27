@@ -1,6 +1,6 @@
 
  <br>
- <img height="300" src="AfterClickOK.jpg" />
+ <img height="300" src="largedeformationteartest.png" />
  </br>
 
 
