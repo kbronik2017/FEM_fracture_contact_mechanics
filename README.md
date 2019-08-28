@@ -1,4 +1,4 @@
-
+A modification of the classical contact to provide a specific implementation of a mesh-independent treatment for straightforward modelling of (non-linear) fracture mechanical processes using a mixed mode cohesive zone method
  <br>
 <img src="images/largedeformationteartest.png" alt="Example" width="1000" height="400" />
  </br>
