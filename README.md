@@ -8,6 +8,6 @@
 -Incorporation of friction and frictional heat generation in the contact model (consideration of interfacial representations of total energy balance and entropy production)
  
  <br>
- <img src="0001.jpg" alt="Example" width="2500" height="1800" />
+ <img src="images/page1.jpg" alt="Example" width="2500" height="1800" />
  </br>
 
