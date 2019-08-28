@@ -4,6 +4,6 @@
  </br>
  This a modified version of FEBIO 
  <br>
- <img src="0001.jpg" alt="Example" width="1800" height="1800" />
+ <img src="0001.jpg" alt="Example" width="2500" height="1800" />
  </br>
 
