@@ -3,7 +3,7 @@ A modification of the classical contact to provide a specific implementation of 
 <img src="images/largedeformation.png" alt="Example" width="2000" height="300" />
  </br>
  
- ## This is a modified version of open source code  FEBio  https://febio.org/ (version 2.0) which deals with the following problems:
+ ## This is an extended version of open source code  FEBio  https://febio.org/ (version 2.0) which deals with the following problems:
 
 
 - Modification and implementation of large deformation contact mechanics using a mixed mode cohesive zone model (development of a cohesive fracture model through contact mechanics)
