@@ -16,7 +16,7 @@ A modification of the classical contact to provide a specific implementation of 
 
 https://www.morebooks.de/store/gb/book/large-deformation-cohesive-damage-model-through-contact-mechanics/isbn/978-613-9-92761-6
  <br>
- <img src="images/pub.jpg" alt="Example" width="1000" height="800" />
+ <img src="images/pub.jpg" alt="Example" width="1000" height="700" />
  </br>
 
  <br>
