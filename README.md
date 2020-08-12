@@ -9,7 +9,14 @@ A modification of the classical contact to provide a specific implementation of 
 - Modification and implementation of large deformation contact mechanics using a mixed mode cohesive zone model (development of a cohesive fracture model through contact mechanics)
 
 
-- Incorporation of friction and frictional heat generation in the contact model (consideration of interfacial representations of total energy balance and entropy production)                         
+- Incorporation of friction and frictional heat generation in the contact model (consideration of interfacial representations of total energy balance and entropy production) 
+
+
+## Publication
+
+https://www.morebooks.de/store/gb/book/large-deformation-cohesive-damage-model-through-contact-mechanics/isbn/978-613-9-92761-6
+
+
  <br>
  <img src="images/page1.jpg" alt="Example" width="2500" height="1500" />
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
