@@ -22,7 +22,7 @@ https://www.morebooks.de/store/gb/book/large-deformation-cohesive-damage-model-t
 ## Mathematical and mechanical description:
  <br>
  <img src="images/page1.jpg" alt="Example" width="2500" height="1500" />
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
  <img src="images/page2.jpg" alt="Example" width="2500" height="1500" />
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
  <img src="images/page3.jpg" alt="Example" width="2500" height="1500" />
