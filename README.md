@@ -1,7 +1,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/kbronik2017/FEM_fracture_contact_mechanics)](https://github.com/kbronik2017/UFEM_fracture_contact_mechanics/issues)
 [![GitHub forks](https://img.shields.io/github/forks/kbronik2017/FEM_fracture_contact_mechanics)](https://github.com/kbronik2017/FEM_fracture_contact_mechanics/network)
 [![GitHub stars](https://img.shields.io/github/stars/kbronik2017/FEM_fracture_contact_mechanics)](https://github.com/kbronik2017/FEM_fracture_contact_mechanics/stargazers)
-[![GitHub license](https://img.shields.io/github/license/kbronik2017/FEM_fracture_contact_mechanics)](https://github.com/kbronik2017/FEM_fracture_contact_mechanics/blob/master/LICENSE)
+
 
 
 
