@@ -26,7 +26,7 @@ https://www.morebooks.de/store/gb/book/large-deformation-cohesive-damage-model-t
  <img src="images/pub.jpg" alt="Example" width="1000" height="700" />
  </br>
 
-## Mathematical and mechanical description:
+## Mathematical and mechanical description(Kevin Bronik):
  <br>
  <img src="images/page1.jpg" alt="Example" width="2500" height="1500" />
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
