@@ -3,6 +3,9 @@
 [![GitHub stars](https://img.shields.io/github/stars/kbronik2017/FEM_fracture_contact_mechanics)](https://github.com/kbronik2017/FEM_fracture_contact_mechanics/stargazers)
 
 
+<br>
+ <img height="310" src="images/tear.gif"/>
+</br>
 
 
 ## A modification of the classical contact to provide a specific implementation of a mesh-independent treatment for straightforward modelling of (non-linear) fracture mechanical processes using a mixed mode cohesive zone method
